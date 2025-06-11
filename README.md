@@ -52,7 +52,7 @@
 
 | Titile                                                       | Venue | Date      |      |      |      |
 | ------------------------------------------------------------ | ----- | --------- | ---- | ---- | ---- |
-| ![Star](assets/VQASynth.svg+xml)[SpatialVLM Endowing Vision-Language Models with Spatial Reasoning Capabilities](https://arxiv.org/pdf/2504.01805v2) | CVPR  | Jan, 2024 |      |      |      |
+|![Star](https://img.shields.io/github/stars/remyxai/VQASynth.svg?style=social&label=Star)<br/>[SpatialVLM Endowing Vision-Language Models with Spatial Reasoning Capabilities](https://arxiv.org/abs/2504.01805) | CVPR  | Jan, 2024 |      |      |      |
 |                                                              |       |           |      |      |      |
 |                                                              |       |           |      |      |      |
 
