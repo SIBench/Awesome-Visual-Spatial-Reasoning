@@ -51,12 +51,12 @@
 
 ## Single Image
 
-| Titile                                                       | Venue | Date      | Code | Impact                                                       | Illustration |
-| ------------------------------------------------------------ | ----- | --------- | ---- | ------------------------------------------------------------ | ------------ |
-| [SpatialVLM Endowing Vision-Language Models with Spatial Reasoning Capabilities](https://arxiv.org/abs/2504.01805) | CVPR  | Jan, 2024 | [link](https://spatial-vlm.github.io/#community-implementation) | ![Star](https://img.shields.io/github/stars/remyxai/VQASynth.svg?style=social&label=Star) , ||
-|              ||||||
-|                                                              |       |           |      |                                                              |              |
-|                                                              |       |           |      |                                                              |              |
+| Title                                                       | Venue | Date      | Code | Impact                                                       | Benchmark                                              | Illustration |
+| ------------------------------------------------------------ | ----- | --------- | ---- | ------------------------------------------------------------ | ------------ | ------------ |
+| [SpatialVLM Endowing Vision-Language Models with Spatial Reasoning Capabilities](https://arxiv.org/abs/2504.01805) | CVPR  | 2024-01 | [link](https://spatial-vlm.github.io/#community-implementation) | ![Star](https://img.shields.io/github/stars/remyxai/VQASynth.svg?style=social&label=Star) | -- ||
+|              |||||||
+|                                                              |       |           |      |                                                              |                                                              |              |
+|                                                              |       |           |      |                                                              |                                                              |              |
 
 
 
