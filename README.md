@@ -41,8 +41,7 @@ The research community is increasingly focused on the **visual spatial reasoning
 
 ## Task Expalnation
 
-> Visual spatial understanding is a key task at the intersection of computer vision and cognitive science. It aims to **enable intelligent agents** (such as robots and AI systems) to **parse spatial relationships** in the environment **through visual inputs** (images, videos, etc.), forming an abstract cognition of the physical world. In Embodied Intelligence, it serves as the foundation for agents to achieve the "perception-decision-action" loop—only by understanding attributes like object positions, distances, sizes, and orientations in space can intelligent agents navigate environments, manipulate objects, or interact with humans.
->
+Visual spatial understanding is a key task at the intersection of computer vision and cognitive science. It aims to **enable intelligent agents** (such as robots and AI systems) to **parse spatial relationships** in the environment **through visual inputs** (images, videos, etc.), forming an abstract cognition of the physical world. In Embodied Intelligence, it serves as the foundation for agents to achieve the "perception-decision-action" loop—only by understanding attributes like object positions, distances, sizes, and orientations in space can intelligent agents navigate environments, manipulate objects, or interact with humans.
 
 
 
