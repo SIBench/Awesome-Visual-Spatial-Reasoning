@@ -2,7 +2,7 @@
 
 ------
 
-$^1$Hao Ju$^🎱$, $^2$[Songsong Yu](https://song2yu.github.io/)$^🎱$, $^3$Lianjie Jia$^🎱$, $^3$Rundi Cui$^🎱$, $^3$[Zaibin Zhang](https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en)$^🎱$, $^2$[Zhipeng Zhang](https://zhipengzhang.cn/), $^4$[Yuxin Chen](https://github.com/Uason-Chen)$^🌟$
+$^1$Hao Ju<sup>🎱</sup>, $^2$[Songsong Yu](https://song2yu.github.io/)<sup>🎱</sup>, $^3$Lianjie Jia<sup>🎱</sup>, $^3$Rundi Cui<sup>🎱</sup>, $^3$[Zaibin Zhang](https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en)<sup>🎱</sup>, $^2$[Zhipeng Zhang](https://zhipengzhang.cn/), $^4$[Yuxin Chen](https://github.com/Uason-Chen)<sup>🌟</sup>
 
 $^1$University of Macau, $^2$Shanghai Jiao Tong University, $^3$ Dalian University of Technology, $^4$ARC Lab, Tencent PCG
 
