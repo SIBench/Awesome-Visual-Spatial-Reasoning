@@ -7,7 +7,7 @@ Hao Ju, [Songsong Yu](https://song2yu.github.io/), Lianjie Jia, Rundi Cui, [Zaib
 
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Tencent_Logo_2022.svg" width="80">
+  <img src="https://www.tencent.net.cn/wp-content/uploads/2023/02/logo-vertical-blue-1.png" width="80">
   <img src="https://upload.wikimedia.org/wikipedia/zh/d/d5/SJTU_emblem.svg" width="80">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/University_of_Macau_logo.svg" width="80">
   <img src="https://upload.wikimedia.org/wikipedia/zh/7/76/Dalian_University_of_Technology_logo.svg" width="80">
