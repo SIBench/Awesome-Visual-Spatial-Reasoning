@@ -1,0 +1,20 @@
+{
+    "files.exclude": {
+        // "**/output": true,
+        
+    },
+    "search.exclude": {
+        "**/output": true,
+        "**/weight": true,
+        "**/checkpoints": true,
+        "**/record": true,
+        "**/three_view_long_share_d0.75_256_s1_google": true,
+        "**/model": true,
+        "**/pretrained": true,
+        // feature_output
+        "**/feature_output": true,
+        "**/id_output": true,
+        
+        
+    }
+}
