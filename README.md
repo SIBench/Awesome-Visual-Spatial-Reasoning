@@ -86,10 +86,10 @@
 
 # 🌍 Visitor Statistics
 
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=qwnP2zURlJr_dpMIFJj47-CNhM7vXZlnnbcTbZy1BW4"></script>
+[![Visitor Map](https://clustrmaps.com/map_v2.png?d=qwnP2zUR1Jr_dpMlFJj47-CNhM7vXZ1nnbcTbZy1Bw4)](https://clustrmaps.com/site/1btRk)
 
  
 
-## Star History
+# Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&type=Date)](https://www.star-history.com/#prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&Date)
