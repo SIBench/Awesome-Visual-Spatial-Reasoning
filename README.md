@@ -39,8 +39,8 @@
 ## Table of Contents
 
 - [Papers](#Papers)
-  - [Single Image](#Single Image)
-  - [Monocular Video](#Monocular Video)
+  - [Single Image](#Single-image)
+  - [Monocular Video](#Monocular-video)
   - [Others](#Others)
 
 
