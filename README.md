@@ -1,14 +1,10 @@
 # Awesome Visual Spatial Reasoning
 
-------
-
 <sup>1</sup>Hao Ju<sup>🎱</sup>, <sup>2</sup>[Songsong Yu](https://song2yu.github.io/)<sup>🎱</sup>, <sup>3</sup>Lianjie Jia<sup>🎱</sup>, <sup>3</sup>Rundi Cui<sup>🎱</sup>, <sup>3</sup>[Zaibin Zhang](https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en)<sup>🎱</sup>, <sup>2</sup>[Zhipeng Zhang](https://zhipengzhang.cn/), <sup>4</sup>[Yuxin Chen](https://github.com/Uason-Chen)<sup>🌟</sup>
 
 $^1$University of Macau, $^2$Shanghai Jiao Tong University, $^3$ Dalian University of Technology, $^4$ARC Lab, Tencent PCG
 
 🎱 Equal Contribution, 🌟 Project Lead
-
-------
 
 # News and Updates
 
