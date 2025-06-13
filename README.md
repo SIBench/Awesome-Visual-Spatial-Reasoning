@@ -56,7 +56,7 @@ Visual spatial understanding is a key task at the intersection of computer visio
 
 ## Timeline
 
-![](./assets/timeline.png)
+![Visual Spatial Intelligence-A Survey](./assets/Visual%20Spatial%20Intelligence-A%20Survey-1749795674636-2.svg)
 
 
 
