@@ -62,13 +62,7 @@ Visual spatial understanding is a key task at the intersection of computer visio
 
 ## Table of Contents
 
-- [Papers](#Papers)
-  - [Single Image](#Single-image)
-  - [Monocular Video](#Monocular-video)
-  - [Multi-View Images](#Multi-View Images)
-  - [Others](#Others)
-
-
+[TOC]
 
 # Papers
 
