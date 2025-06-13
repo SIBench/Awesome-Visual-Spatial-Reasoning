@@ -48,7 +48,7 @@ Hao Ju, [Songsong Yu](https://song2yu.github.io/), Lianjie Jia, Rundi Cui, [Zaib
 
 The research community is increasingly focused on the **visual spatial reasoning** (VSR) abilities of Vision-Language Models (VLMs). Yet, the field **lacks** a **clear overview of its evolution** and a **standardized benchmark for evaluation**. Current assessment methods are disparate and **lack a common toolkit**. This project aims to fill that void. We are developing a unified, comprehensive, and diverse evaluation toolkit, along with an accompanying survey paper. We are actively seeking collaboration and discussion with fellow experts to advance this initiative. 
 
-## Task Expalnation
+## Task Explanation
 
 Visual spatial understanding is a key task at the intersection of computer vision and cognitive science. It aims to **enable intelligent agents** (such as robots and AI systems) to **parse spatial relationships** in the environment **through visual inputs** (images, videos, etc.), forming an abstract cognition of the physical world. In Embodied Intelligence, it serves as the foundation for agents to achieve the "perception-decision-action" loop—only by understanding attributes like object positions, distances, sizes, and orientations in space can intelligent agents navigate environments, manipulate objects, or interact with humans.
 
