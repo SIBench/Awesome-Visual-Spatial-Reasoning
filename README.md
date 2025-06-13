@@ -2,7 +2,7 @@
 
 Contributors: 
 
-Hao Ju, [Songsong Yu](https://song2yu.github.io/), Lianjie Jia, Rundi Cui, [Zaibin Zhang](https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en), [Zhipeng Zhang](https://zhipengzhang.cn/), [Yuxin Chen](https://github.com/Uason-Chen)<sup>🌟</sup>
+Hao Ju, [Songsong Yu](https://song2yu.github.io/), Lianjie Jia, Rundi Cui, [Zaibin Zhang](https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en), [Zhipeng Zhang](https://zhipengzhang.cn/), [Lin Song]([StevenGrove (Lin Song)](https://github.com/StevenGrove)), [Yuxin Chen](https://github.com/Uason-Chen)<sup>🌟</sup>
 
 
 
