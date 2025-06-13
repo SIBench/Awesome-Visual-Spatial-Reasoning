@@ -56,7 +56,7 @@ Visual spatial understanding is a key task at the intersection of computer visio
 
 ## Timeline
 
-![timeline](C:\Users\brucessyu\Desktop\timeline.png)
+![timeline](C:\Users\brucessyu\Desktop\Awesome-Visual-Spatial-Reasoning\assets\timeline.png)
 
 
 
