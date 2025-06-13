@@ -17,6 +17,15 @@ Hao Ju, [Songsong Yu](https://song2yu.github.io/), Lianjie Jia, Rundi Cui, [Zaib
 
 # News and Updates
 
+- [ ] Preprint a survey article on visual spatial reasoning tasks
+- [ ] Open-source evaluation toolkit.
+- [ ] Open-source evaluation data for visual spatial reasoning tasks.
+- [ ] Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
+- [x] 25.6.16 - The "Awesome Visual Spatial Reasoning" project is now live!
+
+- [x] 25.6.12 - The project has conducted research and collected 100 relevant works.
+- [x] 25.6.10 - We launches a review project on visual spatial reasoning.
+
 
 
 # Contributing
@@ -45,9 +54,9 @@ Visual spatial understanding is a key task at the intersection of computer visio
 
 
 
-## 图
+## Timeline
 
-
+![timeline](C:\Users\brucessyu\Desktop\timeline.png)
 
 
 
@@ -56,6 +65,7 @@ Visual spatial understanding is a key task at the intersection of computer visio
 - [Papers](#Papers)
   - [Single Image](#Single-image)
   - [Monocular Video](#Monocular-video)
+  - [Multi-View Images](#Multi-View Images)
   - [Others](#Others)
 
 
