@@ -56,16 +56,16 @@ Visual spatial understanding is a key task at the intersection of computer visio
 
 ## Timeline
 
-![](.\assets\timeline.png)
+![](./assets/timeline.png)
 
 
 
 ## Table of Contents
 
 - [Papers](#Papers)
-  - [Single Image](##Single Image)
-  - [Monocular Video](##Monocular Video)
-  - [Multi-View Images](##Multi-View Images)
+  - [Single Image](##Single-Image)
+  - [Monocular Video](##Monocular-Video)
+  - [Multi-View Images](##Multi-View-Images)
   - [Others](##Others)
 
 # Papers
