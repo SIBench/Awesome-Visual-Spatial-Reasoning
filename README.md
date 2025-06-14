@@ -23,8 +23,8 @@ Hao Ju, [Songsong Yu](https://song2yu.github.io/), Lianjie Jia, Rundi Cui, [Zaib
 - [ ] Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
 - [x] 25.6.16 - The "Awesome Visual Spatial Reasoning" project is now live!
 
-- [x] 25.6.12 - The project has conducted research and collected 100 relevant works.
-- [x] 25.6.10 - We launches a review project on visual spatial reasoning.
+- [x] 👏🕮💻25.6.12 - The project has conducted research and collected 100 relevant works.
+- [x] 🙋‍♀️🙋‍♂️🙋25.6.10 - We launches a review project on visual spatial reasoning.
 
 
 
@@ -48,19 +48,19 @@ Hao Ju, [Songsong Yu](https://song2yu.github.io/), Lianjie Jia, Rundi Cui, [Zaib
 
 The research community is increasingly focused on the **visual spatial reasoning** (VSR) abilities of Vision-Language Models (VLMs). Yet, the field **lacks** a **clear overview of its evolution** and a **standardized benchmark for evaluation**. Current assessment methods are disparate and **lack a common toolkit**. This project aims to fill that void. We are developing a unified, comprehensive, and diverse evaluation toolkit, along with an accompanying survey paper. We are actively seeking collaboration and discussion with fellow experts to advance this initiative. 
 
-## Task Explanation
+# Task Explanation
 
 Visual spatial understanding is a key task at the intersection of computer vision and cognitive science. It aims to **enable intelligent agents** (such as robots and AI systems) to **parse spatial relationships** in the environment **through visual inputs** (images, videos, etc.), forming an abstract cognition of the physical world. In Embodied Intelligence, it serves as the foundation for agents to achieve the "perception-decision-action" loop—only by understanding attributes like object positions, distances, sizes, and orientations in space can intelligent agents navigate environments, manipulate objects, or interact with humans.
 
 
 
-## Timeline
+# Timeline
 
 ![Visual Spatial Intelligence-A Survey](./assets/Visual%20Spatial%20Intelligence-A%20Survey-1749795674636-2.svg)
 
 
 
-## Table of Contents
+# Table of Contents
 
 - [Papers](#Papers)
   - [Single Image](#Single-Image)
@@ -254,7 +254,13 @@ Visual spatial understanding is a key task at the intersection of computer visio
 
 # 🌍 Visitor Statistics
 
-[![Visitor Map](https://clustrmaps.com/map_v2.png?d=qwnP2zUR1Jr_dpMlFJj47-CNhM7vXZ1nnbcTbZy1Bw4)](https://clustrmaps.com/site/1btRk)
+<center>
+  <a href="https://clustrmaps.com/site/1btRk" target="_blank">
+    <img src="https://clustrmaps.com/map_v2.png?d=qwnP2zUR1Jr_dpMlFJj47-CNhM7vXZ1nnbcTbZy1Bw4" 
+         alt="Visitor Map" 
+         width="500"> <!-- 调整宽度为600像素 -->
+  </a>
+</center>
 
 
 
