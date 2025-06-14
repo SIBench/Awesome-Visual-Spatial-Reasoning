@@ -5,8 +5,8 @@ from zipfile import ZipFile
 from pathlib import Path
 
 # ---------- 1. 解压 Excel ----------
-xlsx_path = "../tmp1.xlsx"
-unzip_dir = "../unzipped_excel"
+xlsx_path = "../tmp1.xlsx"           # 原始 .xlsx 文件
+unzip_dir = "../unzipped_excel"      # 临时解压目录
 if os.path.exists(unzip_dir):
     shutil.rmtree(unzip_dir)
 with ZipFile(xlsx_path, "r") as zip_ref:
@@ -19,8 +19,8 @@ if os.path.exists(output_img_dir):
     shutil.rmtree(output_img_dir)
 os.makedirs(output_img_dir, exist_ok=True)
 
-# 生成 8 位随机码（字母+数字+_-）
 def rand_code(k: int = 8):
+    """生成 k 位随机字符串（字母+数字+_-）"""
     chars = string.ascii_letters + string.digits + "_-"
     return "".join(random.choices(chars, k=k))
 
@@ -29,14 +29,17 @@ media_images = sorted(
     key=lambda p: int(re.search(r"image(\d+)", p.stem).group(1))
 )
 
-idx2filename = {}                                         # <idx> -> 随机文件名
+idx2filename = {}                       # <行索引> -> 随机文件名
 for idx, img_path in enumerate(media_images):
     new_name = f"{rand_code()}.png"
     shutil.copy(img_path, f"{output_img_dir}/{new_name}")
-    idx2filename[idx] = new_name                          # 保存映射
+    idx2filename[idx] = new_name
 
 # ---------- 3. 读取 Excel 表格 ----------
-df = pd.read_excel(xlsx_path)
+df = (
+    pd.read_excel(xlsx_path)            # 读 Excel
+      .fillna("--")                     # 所有 NaN → "--"
+)
 df.columns = [col.strip() for col in df.columns]
 
 # ---------- 4. 工具函数 ----------
@@ -57,6 +60,7 @@ def extract_date_with_fallback(link, time_value):
     return "--"
 
 def date_to_sort_key(date_str):
+    """把 'yy-mm' 转成可排序整数，非标准日期返回 inf"""
     return (
         lambda y, m: y * 12 + m
     )(*map(int, date_str.split("-"))) if re.match(r"\d{2}-\d{2}", date_str) else float("inf")
@@ -73,27 +77,26 @@ def format_impact(link):
 # ---------- 5. 生成 Markdown ----------
 table_entries = []
 for idx, row in df.iterrows():
-    g = lambda k: str(row.get(k, "")).strip() or "--"
+    g = lambda k: str(row.get(k, "--")).strip() or "--"
 
     paper_link  = g("Link-paper-page")
     title_text  = g("Title")
     title       = f"[{title_text}]({paper_link})" if paper_link.startswith("http") else title_text
     venue       = g("Conference").upper()
-    date        = extract_date_with_fallback(paper_link, row.get("Time", ""))
+    date        = extract_date_with_fallback(paper_link, row.get("Time", "--"))
     code_link   = g("Code-link")
     code        = format_link(code_link)
     impact      = format_impact(code_link)
     benchmark   = g("Benchmark")
 
-    # 🔑 这里！用随机文件名
+    # 引用随机文件名
     img_file = idx2filename.get(idx)
     img_md   = f"![](excel_images/{img_file})" if img_file else "--"
 
     row_data = [title, venue, date, code, impact, benchmark, img_md]
     table_entries.append((date_to_sort_key(date), row_data))
 
-
-# 排序
+# 排序（最新在前）
 table_entries.sort(key=lambda x: x[0], reverse=True)
 
 # 拼 Markdown
@@ -103,6 +106,10 @@ md += "| " + " | ".join(["---"] * len(headers)) + " |\n"
 for _, row in table_entries:
     md += "| " + " | ".join(row) + " |\n"
 
-if os.path.exists("../typora_ready_table.md"):
-    os.remove("../typora_ready_table.md")
-Path("../typora_ready_table.md").write_text(md, encoding="utf-8")
+# ---------- 6. 写入文件 ----------
+md_path = "../typora_ready_table.md"
+if os.path.exists(md_path):
+    os.remove(md_path)
+Path(md_path).write_text(md, encoding="utf-8")
+
+print("✅ Markdown 表格已生成:", md_path)
