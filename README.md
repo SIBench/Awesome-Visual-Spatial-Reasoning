@@ -1569,7 +1569,7 @@ VLMs for the Metaverse</a></td>
 </tbody>
 </table>
 
-# Acknowledge
+# Acknowledgements
 
 - [Awesome-Spatial-Reasoning](https://github.com/yyyybq/Awesome-Spatial-Reasoning)
 
@@ -1577,13 +1577,14 @@ VLMs for the Metaverse</a></td>
 
 # 🌍 Visitor Statistics
 
-<center>
+<p align="center">
   <a href="https://clustrmaps.com/site/1btRk" target="_blank">
-    <img src="https://clustrmaps.com/map_v2.png?d=qwnP2zUR1Jr_dpMlFJj47-CNhM7vXZ1nnbcTbZy1Bw4" 
-         alt="Visitor Map" 
-         width="500"> <!-- 调整宽度为600像素 -->
+    <img src="https://clustrmaps.com/map_v2.png?d=qwnP2zUR1Jr_dpMlFJj47-CNhM7vXZ1nnbcTbZy1Bw4"
+         alt="Visitor Map"
+         width="500">
   </a>
-</center>
+</p>
+
 
 
 
