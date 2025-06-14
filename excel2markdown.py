@@ -83,9 +83,20 @@ def format_impact(link):
         return f'<img src="https://img.shields.io/github/stars/{repo}.svg?style=social&label=Star" alt="Star count" />'
     return "--"
 
+def wrap_benchmark(text: str, max_items: int = 2) -> str:
+    """将 Benchmark 列用 <br> 包装换行；每行至多 max_items 个子项"""
+    if text == "--":
+        return text
+    parts = [p.strip() for p in text.split(",")]
+    lines = []
+    for i in range(0, len(parts), max_items):
+        lines.append(", ".join(parts[i:i+max_items]))
+    return "<br>".join(lines)
+
 # ---------- 5. 生成 HTML 表格 ----------
 headers    = ["Title", "Venue", "Date", "Code", "Impact", "Benchmark", "Illustration"]
-col_widths = ["25%", "10%", "8%", "10%", "10%", "17%", "20%"]
+# 列宽严格遵守需求：25%,10%,8%,10%,10%,7%,30%
+col_widths = ["25%", "10%", "8%", "10%", "10%", "7%", "30%"]
 
 table_rows = []
 for idx, row in df.iterrows():
@@ -103,7 +114,7 @@ for idx, row in df.iterrows():
     code_link = g("Code-link")
     code      = format_code_link(code_link)
     impact    = format_impact(code_link)
-    benchmark = g("Benchmark")
+    benchmark = wrap_benchmark(g("Benchmark"))
 
     img_file = idx2filename.get(idx)
     img_tag  = f'<img src="excel_images/{img_file}" alt="img" />' if img_file else "--"
@@ -130,7 +141,7 @@ for _, row in row_sorted:
 html += "</tbody>\n</table>\n"
 
 # ---------- 6. 写入文件 ----------
-md_path = "../typora_ready_table.md"   # 仍然写 .md，以便在 Typora 打开
+md_path = "../typora_ready_table.md"   # 输出 HTML 的 .md 文件
 if os.path.exists(md_path):
     os.remove(md_path)
 Path(md_path).write_text(html, encoding="utf-8")
