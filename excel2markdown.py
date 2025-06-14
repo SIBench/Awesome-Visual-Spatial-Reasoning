@@ -93,7 +93,7 @@ for idx, row in df.iterrows():
     table_entries.append((date_to_sort_key(date), row_data))
 
 # 排序 & 生成表格 markdown
-table_entries.sort(key=lambda x: x[0])
+table_entries.sort(key=lambda x: x[0], reverse=True)
 headers = ["Title", "Venue", "Date", "Code", "Impact", "Benchmark", "Illustration"]
 markdown = "| " + " | ".join(headers) + " |\n"
 markdown += "| " + " | ".join(["---"] * len(headers)) + " |\n"
