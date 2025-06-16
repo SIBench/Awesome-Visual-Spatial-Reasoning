@@ -1599,7 +1599,6 @@ VLMs for the Metaverse</a></td>
 
 
 # ⭐ Star History
-
-## Star History
-
-<iframe style="width:100%;height:auto;min-width:600px;min-height:400px;" src="https://www.star-history.com/embed?secret=YWFhYWE=#prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&Date" frameBorder="0"></iframe>
+<div align="center">
+  <img src="https://starchart.cc/prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning.svg" alt="Star Chart">
+</div>
