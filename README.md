@@ -1591,9 +1591,8 @@ VLMs for the Metaverse</a></td>
     <img src="https://clustrmaps.com/map_v2.png?d=ttWSFIONVkO6LyFMtAy5TPO-FY2eA7gpMuFq_zgR6_A&cl=ffffff" />
   </a>
 </div>
-
+# 🌟Star History
 
 <div align="center">
-  Add commentMore actions  
   <img src="https://starchart.cc/prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning.svg" alt="Star Chart">
 </div>
