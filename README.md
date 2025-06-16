@@ -62,7 +62,7 @@ Visual spatial understanding is a key task at the intersection of computer visio
 
 # Table of Contents
 
-To facilitate the community's quick understanding of visual-spatial reasoning, we first categorized it by input modalities into Single image, Monocular Video, and Multi-View Images. We also surveyed other input modalities such as point clouds, as well as specific applications like embodied robotics. These are temporarily grouped under "Others," and we will conduct a more detailed sorting in the future.
+To facilitate the community's quick understanding of visual-spatial reasoning, we first categorized it by input modalities into **Single image**, **Monocular Video**, and **Multi-View Images**. We also surveyed other input modalities such as point clouds, as well as specific applications like embodied robotics. These are temporarily grouped under "**Others**," and we will conduct a more detailed sorting in the future.
 
 - [Papers](#Papers)
   - [Single Image](#Single-Image)
