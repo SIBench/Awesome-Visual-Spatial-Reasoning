@@ -1586,17 +1586,22 @@ VLMs for the Metaverse</a></td>
 
 # 🌍 Visitor Statistics
 
-<p align="center">
-  <a href="https://clustrmaps.com/site/1btRk" target="_blank">
-    <img src="https://clustrmaps.com/map_v2.png?d=qwnP2zUR1Jr_dpMlFJj47-CNhM7vXZ1nnbcTbZy1Bw4"
-         alt="Visitor Map"
-         width="500">
+<div align="center">
+  <a href="https://clustrmaps.com/site/1bnq4" title="Visit tracker">
+    <img src="https://clustrmaps.com/map_v2.png?d=ttWSFIONVkO6LyFMtAy5TPO-FY2eA7gpMuFq_zgR6_A&cl=ffffff" />
   </a>
-</p>
+</div>
+
+
+
 
 
 
 
 # ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&type=Date)](https://www.star-history.com/#prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&Date)
+<div align="center">
+  <a href="https://www.star-history.com/#prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&Date">
+    <img src="https://api.star-history.com/svg?repos=prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&type=Date" alt="Star History Chart"/>
+  </a>
+</div>
