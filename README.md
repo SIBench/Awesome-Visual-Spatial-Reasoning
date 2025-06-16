@@ -1,4 +1,4 @@
-# Awesome Visual Spatial Reasoning
+Awesome Visual Spatial Reasoning
 
 Contributors: 
 
@@ -1593,15 +1593,7 @@ VLMs for the Metaverse</a></td>
 </div>
 
 
-
-
-
-
-# ⭐ Star History
-
-
-
-## Star History
-
-<iframe style="width:100%;height:auto;min-width:600px;min-height:400px;" src="https://www.star-history.com/embed?secret=Z2hwX1lCN1o1b3dJSVJ2VTl0Q1p3SmphcGFPTHBuTUVzUDNGcnpDbQ==#prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&Date" frameBorder="0"></iframe>
-
+<div align="center">
+  Add commentMore actions  
+  <img src="https://starchart.cc/prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning.svg" alt="Star Chart">
+</div>
