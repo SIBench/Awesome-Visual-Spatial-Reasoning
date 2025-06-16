@@ -92,7 +92,7 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
   <th>Venue</th>
   <th>Date</th>
   <th>Code</th>
-  <th>Impact</th>
+  <th>Stars</th>
   <th>Benchmark</th>
   <th>Illustration</th>
 </tr>
@@ -629,7 +629,7 @@ VLMs for the Metaverse</a></td>
     <td>24-06</td>
     <td><a href="https://github.com/wentaoyuan/RoboPoint">link</a></td>
     <td><img src="https://img.shields.io/github/stars/wentaoyuan/RoboPoint.svg?style=social&label=Star" alt="Star count" /></td>
-    <td>Robo, WHERE2PLACE</td>
+    <td>RoboPoint</td>
     <td><img src="excel_images/s2uNbyig.png" alt="img" /></td>
   </tr>
   <tr>
@@ -692,7 +692,7 @@ VLMs for the Metaverse</a></td>
     <td>24-03</td>
     <td><a href="https://github.com/AlvinWen428/spatial-relation-benchmark">link</a></td>
     <td><img src="https://img.shields.io/github/stars/AlvinWen428/spatial-relation-benchmark.svg?style=social&label=Star" alt="Star count" /></td>
-    <td>srp</td>
+    <td>SRP</td>
     <td><img src="excel_images/Y_Fd7Vcn.png" alt="img" /></td>
   </tr>
   <tr>
@@ -762,6 +762,7 @@ VLMs for the Metaverse</a></td>
 </table>
 
 
+
 ## Monocular-Video
 
 <table>
@@ -780,7 +781,7 @@ VLMs for the Metaverse</a></td>
   <th>Venue</th>
   <th>Date</th>
   <th>Code</th>
-  <th>Impact</th>
+  <th>Stars</th>
   <th>Benchmark</th>
   <th>Illustration</th>
 </tr>
@@ -1015,6 +1016,7 @@ VLMs for the Metaverse</a></td>
 </table>
 
 
+
 ## Multi-View Images
 
 <table>
@@ -1033,7 +1035,7 @@ VLMs for the Metaverse</a></td>
   <th>Venue</th>
   <th>Date</th>
   <th>Code</th>
-  <th>Impact</th>
+  <th>Stars</th>
   <th>Benchmark</th>
   <th>Illustration</th>
 </tr>
@@ -1125,6 +1127,7 @@ VLMs for the Metaverse</a></td>
 
 
 
+
 ## Others
 
 <table>
@@ -1143,7 +1146,7 @@ VLMs for the Metaverse</a></td>
   <th>Venue</th>
   <th>Date</th>
   <th>Code</th>
-  <th>Impact</th>
+  <th>Stars</th>
   <th>Benchmark</th>
   <th>Illustration</th>
 </tr>
@@ -1488,7 +1491,7 @@ VLMs for the Metaverse</a></td>
     <td>24-06</td>
     <td><a href="https://github.com/UKPLab/acl2024-sparc-and-sparp">link</a></td>
     <td><img src="https://img.shields.io/github/stars/UKPLab/acl2024-sparc-and-sparp.svg?style=social&label=Star" alt="Star count" /></td>
-    <td>sparp</td>
+    <td>SpaRP</td>
     <td><img src="excel_images/UEhJ-qFU.png" alt="img" /></td>
   </tr>
   <tr>
@@ -1542,7 +1545,7 @@ VLMs for the Metaverse</a></td>
     <td>24-02</td>
     <td>--</td>
     <td>--</td>
-    <td>euclidea</td>
+    <td>Euclidea</td>
     <td><img src="excel_images/bnb8PV7y.png" alt="img" /></td>
   </tr>
   <tr>
