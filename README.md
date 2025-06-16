@@ -1600,8 +1600,4 @@ VLMs for the Metaverse</a></td>
 
 # ⭐ Star History
 
-<div align="center">
-  <a href="https://www.star-history.com/#prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&Date">
-    <img src="https://api.star-history.com/svg?repos=prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&type=Date" alt="Star History Chart"/>
-  </a>
-</div>
+[![Star History Chart](https://api.star-history.com/svg?repos=prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&type=Date)](https://www.star-history.com/#prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning&Date)
