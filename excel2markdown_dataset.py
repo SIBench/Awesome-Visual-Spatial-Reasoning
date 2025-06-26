@@ -6,8 +6,8 @@ from pathlib import Path
 from typing import Union
 
 # ---------- 1. 解压 Excel ----------
-xlsx_path = "../tmp4.xlsx"           # 原始 .xlsx 文件
-unzip_dir = "../unzipped_excel"      # 临时解压目录
+xlsx_path = "../dataset.xlsx"
+unzip_dir = "../unzipped_excel"
 if os.path.exists(unzip_dir):
     shutil.rmtree(unzip_dir)
 with ZipFile(xlsx_path, "r") as zip_ref:
@@ -21,7 +21,6 @@ if os.path.exists(output_img_dir):
 os.makedirs(output_img_dir, exist_ok=True)
 
 def rand_code(k: int = 8):
-    """生成 k 位随机字符串（字母+数字+_-）"""
     chars = string.ascii_letters + string.digits + "_-"
     return "".join(random.choices(chars, k=k))
 
@@ -30,102 +29,114 @@ media_images = sorted(
     key=lambda p: int(re.search(r"image(\d+)", p.stem).group(1))
 )
 
-idx2filename = {}                       # <行索引> -> 随机文件名
+idx2filename = {}
 for idx, img_path in enumerate(media_images):
     new_name = f"{rand_code()}.png"
     shutil.copy(img_path, f"{output_img_dir}/{new_name}")
     idx2filename[idx] = new_name
 
 # ---------- 3. 读取 Excel 表格 ----------
-df = (
-    pd.read_excel(xlsx_path)            # 读 Excel
-      .fillna("--")                     # 所有 NaN → "--"
-)
+df = pd.read_excel(xlsx_path).fillna("--")
 df.columns = [col.strip() for col in df.columns]
 
 # ---------- 4. 工具函数 ----------
-
 def parse_time_value(time_value: Union[str, float, int]) -> str:
-    """将 Time 列内容解析成 'yy-mm'；支持以下形式：
-    - 2025-06  /  2025.6  / 202506
-    - 25-06    /  25.6    / 2506
-    解析失败返回 '--'."""
     s = str(time_value).strip()
     if not s or s == "--":
         return "--"
-
-    # 1) 4 位年份，以 20xx 开头
     m = re.search(r"20(\d{2})[.\-_/]?(\d{1,2})?", s)
     if m:
         yy = m.group(1)
         mm = m.group(2) or "1"
         return f"{yy}-{mm.zfill(2)}"
-
-    # 2) 2 位年份（假设 2000 年以后），如 25-06 或 2506
     m = re.search(r"(?<!\d)(\d{2})[.\-_/]?(\d{1,2})", s)
     if m:
         yy = m.group(1)
         mm = m.group(2)
         return f"{yy}-{mm.zfill(2)}"
-
     return "--"
 
-def extract_date_with_fallback(link: str, time_value: Union[str, float, int]) -> str:
-    """1. 若 link 是 arXiv，则从 link 中提取 yy-mm；否则解析 Time 列"""
-    if isinstance(link, str) and "arxiv.org" in link:
-        m = re.search(r"arxiv\.org\/.*?\/(\d{4})", link)
-        if m:
-            yymm = m.group(1)               # e.g. '2307'
-            return f"{yymm[:2]}-{yymm[2:]}" # '23-07'
+def extract_date_with_fallback(paper_link: str, time_value: Union[str, float, int]) -> str:
+    """优先从 arXiv 提取日期，否则从 Time 解析（支持两位/四位年份，默认 11 月）"""
+    if isinstance(paper_link, str):
+        links = re.split(r"[,\s]+", paper_link)
+        for link in links:
+            if "arxiv.org" in link:
+                m = re.search(r"arxiv\.org\/.*?\/(\d{4})", link)
+                if m:
+                    yymm = m.group(1)
+                    return f"{yymm[:2]}-{yymm[2:]}"
+    
+    s = str(time_value).strip()
+    
+    # 支持 2024、24 → 默认 11 月
+    if re.fullmatch(r"\d{4}", s) and s.startswith("20"):
+        return f"{s[2:]}-11"
+    if re.fullmatch(r"\d{2}", s):
+        return f"{s}-11"
+
     return parse_time_value(time_value)
 
+
 def date_to_sort_key(date_str: str):
-    """把 'yy-mm' 转成可排序整数，非标准日期返回 inf"""
     if re.match(r"\d{2}-\d{2}", date_str):
         y, m = map(int, date_str.split("-"))
         return y * 12 + m
     return float("inf")
 
-def format_code_link(link):
-    return f'<a href="{link}">link</a>' if isinstance(link, str) and link.startswith("http") else "--"
-
-def format_impact(link):
-    if isinstance(link, str) and "github.com" in link:
-        repo = urlparse(link).path.strip("/")
-        return f'<img src="https://img.shields.io/github/stars/{repo}.svg?style=social&label=Star" alt="Star count" />'
-    return "--"
-
-def wrap_benchmark(text: str, max_items: int = 2) -> str:
-    """Benchmark 列：每行至多 max_items 项，用 <br> 分行"""
-    if text == "--":
-        return text
-    parts = [p.strip() for p in text.split(",") if p.strip()]
-    lines = [", ".join(parts[i:i+max_items]) for i in range(0, len(parts), max_items)]
-    return "<br>".join(lines)
+def format_citation(val: str) -> str:
+    try:
+        num = int(float(val))
+        return str(num) if num >= 0 else "--"
+    except:
+        return "--"
 
 # ---------- 5. 生成 HTML 表格 ----------
-headers    = ["Title", "Venue", "Date", "Code", "Impact", "Benchmark", "Illustration"]
-col_widths = ["25%", "10%", "8%", "10%", "10%", "7%", "30%"]  # 固定列宽
+headers = ["Title", "Venue", "Date", "Download-Link", "Citation", "Input Type", "Illustration"]
+col_widths = ["25%", "10%", "8%", "15%", "8%", "10%", "24%"]
 
 table_rows = []
 for idx, row in df.iterrows():
     g = lambda k: str(row.get(k, "--")).strip() or "--"
+    
+    # # ------- 5. 调试段开始 -------
+    # target_title = "OpenEQA"        # 关键字，也可以用 idx==149 等
 
-    paper_link  = g("Link-paper-page")
+    # if target_title.lower() in g("Title").lower():
+    #     print("="*60)
+    #     print(f"[DEBUG] idx: {idx}")
+    #     print(f"Title            : {g('Title')}")
+    #     print(f"Link‑paper‑page  : {g('Link-paper-page')}")
+    #     print(f"Time (raw)       : {g('Time')}")
+        
+    #     # 先计算 date，后面正式行也要用
+    #     time_val = g("Time")
+    #     date_dbg = extract_date_with_fallback(g("Link-paper-page"), time_val)
+        
+    #     print(f"Date (computed)  : {date_dbg}")
+    #     print("="*60)
+    # # ------- 5. 调试段结束 -------
+
+
     title_text  = g("Title")
-    title = f'<a href="{paper_link}">{title_text}</a>' if isinstance(paper_link, str) and paper_link.startswith("http") else title_text
+    paper_link  = g("Link-paper-page")
+    title       = f'<a href="{paper_link}">{title_text}</a>' if paper_link.startswith("http") else title_text
 
-    venue     = g("Conference").upper()
-    date      = extract_date_with_fallback(paper_link, row.get("Time", "--"))
-    code_link = g("Code-link")
-    code      = format_code_link(code_link)
-    impact    = format_impact(code_link)
-    benchmark = wrap_benchmark(g("Benchmark"))
+    venue       = g("Conference").upper()
+
+    time_val    = g("Time")                      # ✅ 显式使用 g()，避免缺值
+    date        = extract_date_with_fallback(paper_link, time_val)
+
+    data_link   = g("Data-Link")
+    download_link = f'<a href="{data_link}">link</a>' if data_link.startswith("http") else "--"
+
+    citation    = format_citation(g("Cites"))
+    input_type  = g("Input Type")
 
     img_file = idx2filename.get(idx)
     img_tag  = f'<img src="excel_images/{img_file}" alt="img" />' if img_file else "--"
 
-    row_data = [title, venue, date, code, impact, benchmark, img_tag]
+    row_data = [title, venue, date, download_link, citation, input_type, img_tag]
     table_rows.append((date_to_sort_key(date), row_data))
 
 # ---------- 6. 排序并拼接 HTML ----------
@@ -139,7 +150,7 @@ for _, row in row_sorted:
 html += "</tbody>\n</table>\n"
 
 # ---------- 7. 写入文件 ----------
-md_path = "../typora_ready_table.md"   # 输出 HTML 的 .md 文件
+md_path = "../typora_ready_table.md"
 Path(md_path).write_text(html, encoding="utf-8")
 
 print("✅ HTML 格式的 Markdown 表格已生成:", md_path)
