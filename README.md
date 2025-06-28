@@ -21,6 +21,7 @@ Hao Ju, [Songsong Yu](https://song2yu.github.io/), [Lianjie Jia](https://github.
 - [ ] Open-source evaluation toolkit.
 - [ ] Open-source evaluation data for visual spatial reasoning tasks.
 - [ ] Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
+- [x] ✍️🦾💼25.6.28 - Collected the "Datasets" section.
 - [x] 🏃🏃‍♀️🏃‍♂️25.6.16 - The "Awesome Visual Spatial Reasoning" project is now live!
 
 - [x] 👏🕮💻25.6.12 - The project has conducted research and collected 100 relevant works.
@@ -1016,7 +1017,6 @@ VLMs for the Metaverse</a></td>
 </table>
 
 
-
 ## Multi-View Images
 
 <table>
@@ -1041,7 +1041,16 @@ VLMs for the Metaverse</a></td>
 </tr>
 </thead>
 <tbody>
-  <tr>
+  	<tr>
+    <td><a href="https://arxiv.org/pdf/2506.18385">InternSpatial: A Comprehensive Dataset for Spatial Reasoning in Vision-Language Models</a></td>
+    <td>ARXIV</td>
+    <td>25-06</td>
+    <td>--</td>
+    <td>--</td>
+    <td>InternSpatial</td>
+    <td><img src="excel_images/_mz-0QYf.png" alt="img" /></td>
+  </tr>
+    <tr>
     <td><a href="https://arxiv.org/pdf/2505.17015">Multi-SpatialMLLM: Multi-Frame Spatial Understanding with MultiModal Large Language Models</a></td>
     <td>ARXIV</td>
     <td>25-05</td>
@@ -1124,6 +1133,7 @@ VLMs for the Metaverse</a></td>
   </tr>
 </tbody>
 </table>
+
 
 
 
@@ -1577,6 +1587,511 @@ VLMs for the Metaverse</a></td>
   </tr>
 </tbody>
 </table>
+# Datasets
+<table>
+<colgroup>
+  <col style="width: 25%">
+  <col style="width: 10%">
+  <col style="width: 8%">
+  <col style="width: 15%">
+  <col style="width: 8%">
+  <col style="width: 10%">
+  <col style="width: 24%">
+</colgroup>
+<thead>
+<tr>
+  <th>Title</th>
+  <th>Venue</th>
+  <th>Date</th>
+  <th>Download-Link</th>
+  <th>Citation</th>
+  <th>Input Type</th>
+  <th>Illustration</th>
+</tr>
+</thead>
+<tbody>
+  <tr>
+    <td><a href="https://openreview.net/pdf?id=84pDoCD4lH">Do Vision-Language Models Represent Space and How. Evaluating Spatial Frame of Reference under Ambiguities</a></td>
+    <td>ICLR</td>
+    <td>25-11</td>
+    <td><a href="https://huggingface.co/datasets/sled-umich/COMFORT/tree/main">link</a></td>
+    <td>0</td>
+    <td>Image</td>
+    <td><img src="excel_images/dMM6N0W5.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2506.03135">OmniSpatial: Towards Comprehensive Spatial Reasoning Benchmark for Vision Language Models</a></td>
+    <td>ARXIV</td>
+    <td>25-06</td>
+    <td><a href="https://huggingface.co/datasets/qizekun/OmniSpatial/tree/main">link</a></td>
+    <td>0</td>
+    <td>Image</td>
+    <td><img src="excel_images/g8NiY-qr.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2505.17012">SpatialScore Towards Unified Evaluation for Multimodal Spatial Understanding</a></td>
+    <td>ARXIV</td>
+    <td>25-05</td>
+    <td><a href="https://huggingface.co/datasets/haoningwu/SpatialScore">link</a></td>
+    <td>0</td>
+    <td>Image</td>
+    <td><img src="excel_images/lhn2_c3x.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2505.19015">Can Multimodal Large Language Models Understand Spatial Relations</a></td>
+    <td>ARXIV</td>
+    <td>25-05</td>
+    <td><a href="https://huggingface.co/datasets/liuziyan/SpatialMQA">link</a></td>
+    <td>--</td>
+    <td>Image</td>
+    <td><img src="excel_images/fxTYRNlg.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2505.11907">Are Multimodal Large Language Models Ready for Omnidirectional Spatial Reasoning?</a></td>
+    <td>ARXIV</td>
+    <td>25-05</td>
+    <td><a href="https://huggingface.co/datasets/UUUserna/OSR-Bench">link</a></td>
+    <td>0</td>
+    <td>Image</td>
+    <td><img src="excel_images/Hlr9kzXY.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2505.05456">SITE: towards Spatial Intelligence Thorough Evaluation</a></td>
+    <td>ARXIV</td>
+    <td>25-05</td>
+    <td><a href="https://huggingface.co/datasets/franky-veteran/SITE-Bench">link</a></td>
+    <td>0</td>
+    <td>Image/Multi-view Image/Video</td>
+    <td><img src="excel_images/_LqO-k3V.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2505.20279">VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction</a></td>
+    <td>ARXIV</td>
+    <td>25-05</td>
+    <td><a href="https://huggingface.co/datasets/Journey9ni/vstibench">link</a></td>
+    <td>0</td>
+    <td>Video</td>
+    <td><img src="excel_images/RuLIQBSm.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2505.23764">MMSI-Bench: A Benchmark for Multi-ImagecSpatial Intelligence</a></td>
+    <td>ARXIV</td>
+    <td>25-05</td>
+    <td><a href="https://huggingface.co/datasets/RunsenXu/MMSI-Bench">link</a></td>
+    <td>1</td>
+    <td>multi-view</td>
+    <td><img src="excel_images/OZKztnHG.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2505.21500">ViewSpatial-Bench:Evaluating Multi-perspective Spatial Localization in Vision-Language Models</a></td>
+    <td>ARXIV</td>
+    <td>25-05</td>
+    <td><a href="https://huggingface.co/datasets/lidingm/ViewSpatial-Bench">link</a></td>
+    <td>--</td>
+    <td>multi-view</td>
+    <td><img src="excel_images/eCim7Uwu.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2504.00883">Improved Visual-Spatial Reasoning via R1-Zero-Like Training</a></td>
+    <td>ARXIV</td>
+    <td>25-04</td>
+    <td><a href="https://huggingface.co/datasets/OPPOer/VSI-100k">link</a></td>
+    <td>9</td>
+    <td>--</td>
+    <td><img src="excel_images/opOZUSyP.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2504.15376">Towards Understanding Camera Motions in Any Video</a></td>
+    <td>ARXIV</td>
+    <td>25-04</td>
+    <td><a href="https://huggingface.co/datasets/syCen/CameraBench">link</a></td>
+    <td>1</td>
+    <td>Video</td>
+    <td><img src="excel_images/O83Du9Do.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2504.15280">Seeing from Another Perspective: Evaluating Multi-View Understanding in MLLMs</a></td>
+    <td>ARXIV</td>
+    <td>25-04</td>
+    <td><a href="https://huggingface.co/datasets/ch-chenyu/All-Angles-Bench">link</a></td>
+    <td>3</td>
+    <td>multi-view</td>
+    <td><img src="excel_images/Cg5i_q-x.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2503.19707?">Mind the Gap: Benchmarking Spatial Reasoning in Vision-Language Models</a></td>
+    <td>ARXIV</td>
+    <td>25-03</td>
+    <td><a href="https://huggingface.co/datasets/stogian/srbench">link</a></td>
+    <td>5</td>
+    <td>Image</td>
+    <td><img src="excel_images/ADVkXqu3.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2503.11094">Open3DVQA: ABenchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space</a></td>
+    <td>OPEN3DVQA</td>
+    <td>25-03</td>
+    <td><a href="https://drive.google.com/drive/folders/1CKSavijr67U8jKMg_kpYNKKs9Nk_bmg1?usp=sharing">link</a></td>
+    <td>4</td>
+    <td>Image</td>
+    <td><img src="excel_images/j2tWpOzV.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2503.19990">LEGO-Puzzles: How Good Are MLLMs at Multi-Step Spatial Reasoning?</a></td>
+    <td>ARXIV</td>
+    <td>25-03</td>
+    <td><a href="https://huggingface.co/datasets/KexianTang/LEGO-Puzzles">link</a></td>
+    <td>8</td>
+    <td>Multi-view</td>
+    <td><img src="excel_images/mdUL2p0S.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2503.23765">STI-Bench: Are MLLMsReadyfor Precise Spatial-Temporal World Understanding?</a></td>
+    <td>ARXIV</td>
+    <td>25-03</td>
+    <td>--</td>
+    <td>7</td>
+    <td>Video</td>
+    <td><img src="excel_images/6aGr0Crg.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2503.12542?">ST-Think: How Multimodal Large Language Models Reason About 4D Worlds from Ego-Centric Videos</a></td>
+    <td>ARXIV</td>
+    <td>25-03</td>
+    <td><a href="https://huggingface.co/datasets/openinterx/Ego-ST-bench">link</a></td>
+    <td>5</td>
+    <td>Video</td>
+    <td><img src="excel_images/cmi2LbEh.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2503.22976?">From Flatland to Space: Teaching Vision-Language Models to Perceive and Reason in 3D</a></td>
+    <td>ARXIV</td>
+    <td>25-03</td>
+    <td><a href="https://huggingface.co/datasets/jasonzhango/SPAR-Bench">link</a></td>
+    <td>2</td>
+    <td>Image</td>
+    <td><img src="excel_images/acv2sMW7.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2502.07183">Space-Aware Instruction Tuning: Dataset and Benchmark for Guide Dog Robots Assisting the Visually Impaired</a></td>
+    <td>ARXIV</td>
+    <td>25-02</td>
+    <td><a href="https://docs.google.com/forms/d/e/1FAIpQLScBmoVoj0d-omBOVCHGjhRislXP0TYzRqaUJOmJcqN6ylQcxQ/viewform">link</a></td>
+    <td>1</td>
+    <td>Image</td>
+    <td><img src="excel_images/PTkGmI15.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2502.06787">VADAR: Visual Agentic AI for Spatial Reasoning with a Dynamic API</a></td>
+    <td>CVPR</td>
+    <td>25-02</td>
+    <td><a href="https://huggingface.co/datasets/dmarsili/Omni3D-Bench">link</a></td>
+    <td>5</td>
+    <td>image</td>
+    <td><img src="excel_images/PTe2wL1E.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2501.16411">PHYSBENCH: BENCHMARKING AND ENHANCING VISION-LANGUAGE MODELS FOR PHYSICAL WORLD UNDERSTANDING</a></td>
+    <td>ARXIV</td>
+    <td>25-01</td>
+    <td><a href="https://huggingface.co/datasets/USC-GVL/PhysBench">link</a></td>
+    <td>22</td>
+    <td>Image/Video</td>
+    <td><img src="excel_images/rVLANkzs.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2501.09024">Social-LLaVA: Enhancing Robot Navigation through Human-Language Reasoning in Social Spaces</a></td>
+    <td>ARXIV</td>
+    <td>25-01</td>
+    <td><a href="https://huggingface.co/datasets/amir-pyh/SNEI-v0-free-form-325">link</a></td>
+    <td>2</td>
+    <td>Image</td>
+    <td><img src="excel_images/tYtgNWTo.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2501.15830">SpatialVLA: Exploring Spatial Representations for Visual-Language-Action Model</a></td>
+    <td>ARXIV</td>
+    <td>25-01</td>
+    <td><a href="https://github.com/SpatialVLA/SpatialVLA?tab=readme-ov-file">link</a></td>
+    <td>--</td>
+    <td>Video</td>
+    <td><img src="excel_images/M1u8eEkp.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2412.11974">Emma-X: An Embodied Multimodal Action Model with Grounded Chain of Thought and Look-ahead Spatial Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>24-12</td>
+    <td><a href="https://huggingface.co/declare-lab/Emma-X/tree/main">link</a></td>
+    <td>--</td>
+    <td>Video</td>
+    <td><img src="excel_images/uK1ALtMG.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2412.06322">LLaVA-SpaceSGG: Visual Instruct Tuning for Open-vocabulary Scene Graph Generation with Enhanced Spatial Relations</a></td>
+    <td>ARXIV</td>
+    <td>24-12</td>
+    <td><a href="https://huggingface.co/datasets/Endlinc/SpaceSGG-Val">link</a></td>
+    <td>2</td>
+    <td>image</td>
+    <td><img src="excel_images/iF4ygXnb.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2412.07825">3DSRBench: A Comprehensive 3D Spatial Reasoning Benchmark</a></td>
+    <td>ARXIV</td>
+    <td>24-12</td>
+    <td><a href="https://huggingface.co/datasets/ccvl/3DSRBench">link</a></td>
+    <td>12</td>
+    <td>Image</td>
+    <td><img src="excel_images/HQn-vXEm.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2412.12693">SPHERE: Unveiling Spatial Blind Spots in Vision-Language Models Through Hierarchical Evaluation</a></td>
+    <td>ACL</td>
+    <td>24-12</td>
+    <td><a href="https://huggingface.co/datasets/wei2912/SPHERE-VLM">link</a></td>
+    <td>3</td>
+    <td>Image</td>
+    <td><img src="excel_images/0lhZyChh.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2412.14171">Thinking in Space: How Multimodal Large Language Models See, Remember, and Recall Spaces</a></td>
+    <td>ARXIV</td>
+    <td>24-12</td>
+    <td><a href="https://huggingface.co/datasets/nyu-visionx/VSI-Bench">link</a></td>
+    <td>86</td>
+    <td>Video</td>
+    <td><img src="excel_images/fcQJhwEt.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2411.15714">ROOT: VLM-based System for Indoor Scene Understanding and Beyond</a></td>
+    <td>ARXIV</td>
+    <td>24-11</td>
+    <td>--</td>
+    <td>2</td>
+    <td>image</td>
+    <td><img src="excel_images/I-qtoWS6.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2411.06048">An Empirical Analysis on Spatial Reasoning Capabilities of
+Large Multimodal Models</a></td>
+    <td>EMNLP 2024</td>
+    <td>24-11</td>
+    <td><a href="https://github.com/FatemehShiri/Spatial-MM">link</a></td>
+    <td>9</td>
+    <td>Image</td>
+    <td><img src="excel_images/eWmzupK8.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2411.19325">GEOBench-VLM: Benchmarking Vision-Language Models for Geospatial Tasks</a></td>
+    <td>ARXIV</td>
+    <td>24-11</td>
+    <td><a href="https://github.com/The-AI-Alliance/GEO-Bench-VLM">link</a></td>
+    <td>7</td>
+    <td>Image</td>
+    <td><img src="excel_images/XLUydYIU.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Majumdar_OpenEQA_Embodied_Question_Answering_in_the_Era_of_Foundation_Models_CVPR_2024_paper.pdf">OpenEQA: Embodied Question Answering in the Era of Foundation Models</a></td>
+    <td>CVPR</td>
+    <td>24-11</td>
+    <td><a href="https://github.com/facebookresearch/open-eqa/tree/main/data">link</a></td>
+    <td>149</td>
+    <td>Video</td>
+    <td><img src="excel_images/ima3AMa4.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2410.06468?">DOES SPATIAL COGNITION EMERGE IN FRONTIER MODELS?</a></td>
+    <td>ICLR</td>
+    <td>24-10</td>
+    <td><a href="https://github.com/apple/ml-space-benchmark">link</a></td>
+    <td>19</td>
+    <td>Video</td>
+    <td><img src="excel_images/eHMAtaJP.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2409.09788">Reasoning Paths with Reference Objects Elicit Quantitative Spatial Reasoning in Large Vision-Language Models</a></td>
+    <td>ARXIV</td>
+    <td>24-09</td>
+    <td><a href="https://huggingface.co/datasets/andrewliao11/Q-Spatial-Bench">link</a></td>
+    <td>15</td>
+    <td>Image</td>
+    <td><img src="excel_images/BI-QJVqK.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2408.11748">Understanding Depth and Height Perception of Large Visual-Language Models</a></td>
+    <td>CVPRW</td>
+    <td>24-08</td>
+    <td><a href="https://drive.google.com/drive/folders/13WqSuUNV007oQp-u4t0FA51ZOI7BqAaG">link</a></td>
+    <td>0</td>
+    <td>2D/3D image</td>
+    <td><img src="excel_images/eCqv5XLg.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2407.01863">VSP: Assessing the dual challenges of perception and reasoning in spatial planning tasks for VLMs</a></td>
+    <td>ARXIV</td>
+    <td>24-07</td>
+    <td><a href="https://github.com/UCSB-NLP-Chang/Visual-Spatial-Planning">link</a></td>
+    <td>4</td>
+    <td>Image</td>
+    <td><img src="excel_images/uvxI8qwE.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2406.04566">SpaRC and SpaRP: Spatial Reasoning Characterization and Path Generation for Understanding Spatial Reasoning Capability of Large Language Models</a></td>
+    <td>ACL</td>
+    <td>24-06</td>
+    <td><a href="https://huggingface.co/datasets/UKPLab/sparp">link</a></td>
+    <td>4</td>
+    <td>text</td>
+    <td><img src="excel_images/b854QbdP.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2406.13642">SpatialBot: Precise Spatial Understanding with Vision Language Models</a></td>
+    <td>ICRA</td>
+    <td>24-06</td>
+    <td><a href="https://huggingface.co/datasets/RussRobin/SpatialQA">link</a></td>
+    <td>43</td>
+    <td>Image</td>
+    <td><img src="excel_images/f4xGRR29.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2406.01584">SpatialRGPT: Grounded Spatial Reasoning in Vision-Language Models</a></td>
+    <td>ARXIV</td>
+    <td>24-06</td>
+    <td><a href="https://huggingface.co/datasets/a8cheng/SpatialRGPT-Bench">link</a></td>
+    <td>104</td>
+    <td>Image, point cloud</td>
+    <td><img src="excel_images/vjLeTN6q.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2406.14852">Is A Picture Worth A Thousand Words? Delving Into Spatial Reasoning for Vision Language Models</a></td>
+    <td>NEURIPS</td>
+    <td>24-06</td>
+    <td><a href="https://huggingface.co/datasets/MilaWang/SpatialEval">link</a></td>
+    <td>61</td>
+    <td>text only/image only/image-text</td>
+    <td><img src="excel_images/_AY7q3f3.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2406.05756">EmbSpatial-Bench: Benchmarking Spatial Understanding for Embodied Tasks with Large Vision-Language Models</a></td>
+    <td>ACL 2024 SHORT</td>
+    <td>24-06</td>
+    <td><a href="https://huggingface.co/datasets/Phineas476/EmbSpatial-Bench">link</a></td>
+    <td>22</td>
+    <td>Image</td>
+    <td><img src="excel_images/DCOWsPKa.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2406.00622">COMPOSITIONAL 4D DYNAMIC SCENES UNDERSTANDING WITH PHYSICS PRIORS FOR VIDEO QUESTION ANSWERING</a></td>
+    <td>ICLR2025</td>
+    <td>24-06</td>
+    <td><a href="https://huggingface.co/datasets/RyanWW/DynSuperCLEVR">link</a></td>
+    <td>5</td>
+    <td>Video</td>
+    <td><img src="excel_images/YTPW-pAa.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2405.15064">Reframing Spatial Reasoning Evaluation in Language Models:
+A Real-World Simulation Benchmark for Qualitative Reasoning</a></td>
+    <td>IJCAI 2024</td>
+    <td>24-05</td>
+    <td><a href="https://huggingface.co/datasets/Fangjun/RoomSpace">link</a></td>
+    <td>9</td>
+    <td>Multi-view</td>
+    <td><img src="excel_images/bp_2KaBY.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2404.03622">Mind's Eye of LLMs: Visualization-of-Thought Elicits Spatial Reasoning in Large Language Models</a></td>
+    <td>NEURIPS</td>
+    <td>24-04</td>
+    <td><a href="https://github.com/microsoft/visualization-of-thought/raw/main/vot-dataset-visual-tasks.zip">link</a></td>
+    <td>33</td>
+    <td>image</td>
+    <td><img src="excel_images/gcOnKwaw.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2404.12390">BLINK: Multimodal Large Language Models Can See but Not Perceive</a></td>
+    <td>ECCV</td>
+    <td>24-04</td>
+    <td><a href="https://huggingface.co/datasets/BLINK-Benchmark/BLINK">link</a></td>
+    <td>180</td>
+    <td>Image/Multi-view Image</td>
+    <td><img src="excel_images/Vuacqg9Q.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2403.16999">Visual CoT: Advancing Multi-Modal Language Models with a Comprehensive Dataset and Benchmark for Chain-of-Thought Reasoning</a></td>
+    <td>NEURIPS</td>
+    <td>24-03</td>
+    <td><a href="https://huggingface.co/datasets/deepcs233/Visual-CoT">link</a></td>
+    <td>74</td>
+    <td>image</td>
+    <td><img src="excel_images/gqbsrNRF.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2403.00729">Can Transformers Capture Spatial Relations between Objects?</a></td>
+    <td>ICLR</td>
+    <td>24-03</td>
+    <td><a href="https://github.com/AlvinWen428/spatial-relation-benchmark">link</a></td>
+    <td>6</td>
+    <td>Image</td>
+    <td><img src="excel_images/gqvUhRUc.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2401.00988">Holistic Autonomous Driving Understanding by Bird's-Eye-View Injected Multi-Modal Large Models</a></td>
+    <td>CVPR</td>
+    <td>24-01</td>
+    <td><a href="https://drive.google.com/file/d/1ybwvgnPFRVwmEAJudWwnGQ8wLitzQ82O/view">link</a></td>
+    <td>--</td>
+    <td>Video</td>
+    <td><img src="excel_images/eP_b855Z.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2401.17862">Proximity QA: Unleashing the Power of Multi-Modal Large Language Models for Spatial Proximity Analysis</a></td>
+    <td>ARXIV</td>
+    <td>24-01</td>
+    <td><a href="https://huggingface.co/Electronics/ProximityQA/tree/main、https://github.com/NorthSummer/ProximityQA">link</a></td>
+    <td>2</td>
+    <td>Image</td>
+    <td><img src="excel_images/d_0u6y88.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2310.17914">3D-Aware Visual Question Answering about Parts, Poses and Occlusions</a></td>
+    <td>NIPS</td>
+    <td>23-10</td>
+    <td><a href="https://github.com/XingruiWang/superclevr-3D-question">link</a></td>
+    <td>14</td>
+    <td>Image</td>
+    <td><img src="excel_images/9R7HwGe6.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2210.07474">Sqa3d: Situated question answering in 3d scenes</a></td>
+    <td>ICLR</td>
+    <td>22-10</td>
+    <td><a href="https://zenodo.org/records/7792397#.ZCkprfFBx3g">link</a></td>
+    <td>161</td>
+    <td>point cloud</td>
+    <td><img src="excel_images/0y2byLoS.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2112.10482">ScanQA: 3D Question Answering for Spatial Scene Understanding</a></td>
+    <td>CVPR</td>
+    <td>21-12</td>
+    <td><a href="https://github.com/ATR-DBI/ScanQA/blob/main/docs/dataset.md">link</a></td>
+    <td>234</td>
+    <td>point cloud</td>
+    <td><img src="excel_images/LnLntLiF.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2003.14034">SPARE3D: A Dataset for SPAtial REasoning on Three-View Line Drawings</a></td>
+    <td>CVPR2020</td>
+    <td>20-03</td>
+    <td><a href="https://drive.google.com/drive/folders/1Mi2KZyKAlUOGYRQTDz3E5nhiXY5GhUB2">link</a></td>
+    <td>23</td>
+    <td>multi-view</td>
+    <td><img src="excel_images/ezULEOrm.png" alt="img" /></td>
+  </tr>
+</tbody>
+</table>
+
 
 # Acknowledgements
 
