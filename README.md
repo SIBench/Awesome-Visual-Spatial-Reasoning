@@ -1588,9 +1588,8 @@ VLMs for the Metaverse</a></td>
   </tr>
 </tbody>
 </table>
+
 # Datasets
-
-
 
 <table>
 <colgroup>
