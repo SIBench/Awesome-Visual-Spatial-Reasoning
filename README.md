@@ -764,7 +764,6 @@ VLMs for the Metaverse</a></td>
 </table>
 
 
-
 ## Monocular-Video
 
 <table>
@@ -789,6 +788,15 @@ VLMs for the Metaverse</a></td>
 </tr>
 </thead>
 <tbody>
+  <tr>
+    <td><a href="https://vlm4d.github.io/file/VLM4D.pdf">VLM4D: Towards Spatiotemporal Awareness in Vision Language Models</a></td>
+    <td>ICCV</td>
+    <td>25-08</td>
+    <td><a href="https://vlm4d.github.io/">link</a></td>
+    <td>--</td>
+    <td>VLM4D</td>
+    <td><img src="excel_images/mvts2sIf.png" alt="img" /></td>
+  </tr>
   <tr>
     <td><a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Majumdar_OpenEQA_Embodied_Question_Answering_in_the_Era_of_Foundation_Models_CVPR_2024_paper.pdf">OpenEQA: Embodied Question Answering in the Era of Foundation Models</a></td>
     <td>CVPR</td>
@@ -1016,6 +1024,7 @@ VLMs for the Metaverse</a></td>
   </tr>
 </tbody>
 </table>
+
 
 
 ## Multi-View Images
