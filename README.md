@@ -71,8 +71,7 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
   - [Multi-View Images](#Multi-View-Images)
   - [Others](#Others)
 - [Datasets](#Datasets)
-- [Evaluation Results](#Evaluation-Results)
-
+- [Evaluation Results](#evaluation-results)
 
 # Papers
 
