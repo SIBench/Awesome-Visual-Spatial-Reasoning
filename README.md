@@ -1026,7 +1026,6 @@ VLMs for the Metaverse</a></td>
 </table>
 
 
-
 ## Multi-View Images
 
 <table>
@@ -2103,6 +2102,7 @@ A Real-World Simulation Benchmark for Qualitative Reasoning</a></td>
   </tr>
 </tbody>
 </table>
+
 # Evaluation Results
 
 ![35dcc14e9002bd163fb45488839e01ec](./assets/35dcc14e9002bd163fb45488839e01ec.png)
