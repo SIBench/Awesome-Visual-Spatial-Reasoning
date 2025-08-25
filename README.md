@@ -20,7 +20,7 @@ Contributors:
 - [ ] Preprint a survey article on visual spatial reasoning tasks.
 - [ ] Open-source evaluation toolkit.
 - [ ] Open-source evaluation data for visual spatial reasoning tasks.
-- [ ] Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
+- [x] 🙋🙋‍♀️🙋‍♂️Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
 - [x] ✍️🦾💼25.6.28 - Collected the "Datasets" section.
 - [x] 🏃🏃‍♀️🏃‍♂️25.6.16 - The "Awesome Visual Spatial Reasoning" project is now live!
 
@@ -71,6 +71,7 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
   - [Multi-View Images](#Multi-View-Images)
   - [Others](#Others)
 - [Datasets](#Datasets)
+- [Evaluation Results](#Evaluation-Results)
 
 
 # Papers
@@ -2103,7 +2104,9 @@ A Real-World Simulation Benchmark for Qualitative Reasoning</a></td>
   </tr>
 </tbody>
 </table>
+# Evaluation Results
 
+![35dcc14e9002bd163fb45488839e01ec](./assets/35dcc14e9002bd163fb45488839e01ec.png)
 
 # Acknowledgements
 
