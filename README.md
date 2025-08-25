@@ -59,19 +59,21 @@ Visual spatial understanding is a key task at the intersection of computer visio
 
 ![Visual Spatial Intelligence-A Survey](./assets/Visual%20Spatial%20Intelligence-A%20Survey-1749795674636-2.svg)
 
+# Evaluation Results
 
+![35dcc14e9002bd163fb45488839e01ec](./assets/35dcc14e9002bd163fb45488839e01ec.png)
 
 # Table of Contents
 
 To facilitate the community's quick understanding of visual-spatial reasoning, we first categorized it by input modalities into **Single image**, **Monocular Video**, and **Multi-View Images**. We also surveyed other input modalities such as point clouds, as well as specific applications like embodied robotics. These are temporarily grouped under "**Others**," and we will conduct a more detailed sorting in the future.
 
+- [Evaluation Results](#evaluation-results)
 - [Papers](#Papers)
   - [Single Image](#Single-Image)
   - [Monocular Video](#Monocular-Video)
   - [Multi-View Images](#Multi-View-Images)
   - [Others](#Others)
 - [Datasets](#Datasets)
-- [Evaluation Results](#evaluation-results)
 
 # Papers
 
@@ -2103,9 +2105,6 @@ A Real-World Simulation Benchmark for Qualitative Reasoning</a></td>
 </tbody>
 </table>
 
-# Evaluation Results
-
-![35dcc14e9002bd163fb45488839e01ec](./assets/35dcc14e9002bd163fb45488839e01ec.png)
 
 # Acknowledgements
 
