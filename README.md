@@ -3,9 +3,19 @@
 Contributors: 
 
 <div align="center">
-[Songsong Yu](https://song2yu.github.io/), [Hao Ju](https://haodot.github.io/), [Lianjie Jia](https://github.com/JiaLianjie), [Zhang Fuxi](https://github.com/Dustzx), [Rundi Cui](https://github.com/Cuirundi), [Yuhan Wu](https://github.com/YuhanWu27), [Binghao Ran](https://github.com/RBinghao), [Zhang Zaibin](https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en)
-<br>
-[Zhipeng Zhang](https://zhipengzhang.cn/), [Lin Song](https://github.com/StevenGrove), [Yuxin Chen](https://github.com/Uason-Chen)<sup>🌟</sup>, [Yanwei Li](https://yanwei-li.com/)
+  <a href="https://song2yu.github.io/">Songsong Yu</a>,
+  <a href="https://haodot.github.io/">Hao Ju</a>,
+  <a href="https://github.com/JiaLianjie">Lianjie Jia</a>,
+  <a href="https://github.com/Dustzx">Zhang Fuxi</a>,
+  <a href="https://github.com/Cuirundi">Rundi Cui</a>,
+  <a href="https://github.com/YuhanWu27">Yuhan Wu</a>,
+  <a href="https://github.com/RBinghao">Binghao Ran</a>,
+  <a href="https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en">Zhang Zaibin</a>
+  <br>
+  <a href="https://zhipengzhang.cn/">Zhipeng Zhang</a>,
+  <a href="https://github.com/StevenGrove">Lin Song</a>,
+  <a href="https://github.com/Uason-Chen">Yuxin Chen</a><sup>🌟</sup>,
+  <a href="https://yanwei-li.com/">Yanwei Li</a>
 </div>
 
 
