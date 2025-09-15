@@ -8,7 +8,7 @@ Contributors:
   <a href="https://github.com/Dustzx">Fuxi Zhang</a>,
   <a href="https://spyflying.github.io/">Shaofei Huang</a>,
   <a href="https://github.com/Cuirundi">Rundi Cui</a>,
-  <a href="https://github.com/YuhanWu27">Yuhan Wu</a>
+  <a href="https://github.com/YuhanWu27">Yuhan Wu</a>,
   <a href="https://github.com/RBinghao">Binghao Ran</a>,
   <a href="https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en">Zhang Zaibin</a>,
   <br>
