@@ -34,12 +34,12 @@ Contributors:
 
 <h6 align="center"> Evaluation of SOTA Models on 23 Visual Spatial Reasoning Tasks.</h6>
 
-![settings](./assets/settings.png)
+```bash
+- git clone -b toolkit https://github.com/prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning.git
+- Refer to the README.md for more details
+```
 
-<h6 align="center"> The test data includes 23 task settings, three input types, and three problem forms.</h6>
 
-- `git clone -b toolkit https://github.com/prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning.git`
-- Refer to the `README.md` for more details
 
 # Contributing
 
