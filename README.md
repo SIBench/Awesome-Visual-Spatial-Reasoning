@@ -18,16 +18,28 @@ Contributors:
 # News and Updates
 
 - [ ] Preprint a survey article on visual spatial reasoning tasks.
-- [ ] Open-source evaluation toolkit.
 - [ ] Open-source evaluation data for visual spatial reasoning tasks.
 - [ ] Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
+- [x] 🤩🥳🤗25.9.15 - Open-source evaluation toolkit.
 - [x] ✍️🦾💼25.6.28 - Collected the "Datasets" section.
 - [x] 🏃🏃‍♀️🏃‍♂️25.6.16 - The "Awesome Visual Spatial Reasoning" project is now live!
-
 - [x] 👏🕮💻25.6.12 - The project has conducted research and collected 100 relevant works.
 - [x] 🙋‍♀️🙋‍♂️🙋25.6.10 - We launches a review project on visual spatial reasoning.
 
 
+
+# Open-source evaluation toolkit
+
+![radar2.0](./assets/radar2.0.png)
+
+<h6 align="center"> Evaluation of SOTA Models on 23 Visual Spatial Reasoning Tasks.</h6>
+
+![settings](./assets/settings.png)
+
+<h6 align="center"> The test data includes 23 task settings, three input types, and three problem forms.</h6>
+
+- `git clone -b toolkit https://github.com/prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning.git`
+- Refer to the `README.md` for more details
 
 # Contributing
 
