@@ -5,11 +5,12 @@ Contributors:
   <a href="https://song2yu.github.io/">Songsong Yu</a>,
   <a href="https://haodot.github.io/">Hao Ju</a>,
   <a href="https://github.com/JiaLianjie">Lianjie Jia</a>,
-  <a href="https://github.com/Dustzx">Zhang Fuxi</a>,
+  <a href="https://github.com/Dustzx">Fuxi Zhang</a>,
+  <a href="https://spyflying.github.io/">Shaofei Huang</a>,
   <a href="https://github.com/Cuirundi">Rundi Cui</a>,
-  <a href="https://github.com/YuhanWu27">Yuhan Wu</a>,
+  <a href="https://github.com/YuhanWu27">Yuhan Wu</a>
   <a href="https://github.com/RBinghao">Binghao Ran</a>,
-  <a href="https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en">Zhang Zaibin</a>
+  <a href="https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en">Zhang Zaibin</a>,
   <br>
   <a href="https://zhipengzhang.cn/">Zhipeng Zhang</a>,
   <a href="https://github.com/StevenGrove">Lin Song</a>,
