@@ -32,8 +32,8 @@ Contributors:
 
 - [ ] Preprint a survey article on visual spatial reasoning tasks.
 - [ ] Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
-- [x] 🙌👏👐25.9.15 - Open-source evaluation data for visual spatial reasoning tasks.
-- [x] 🤩🥳🤗25.9.15 - Open-source evaluation toolkit.
+- [x] 🙌👏👐25.9.15 - [Open-source evaluation data](https://huggingface.co/datasets/Two-hot/SIBench) for visual spatial reasoning tasks.
+- [x] 🤩🥳🤗25.9.15 - [Open-source evaluation toolkit](https://github.com/song2yu/SIBench_eval).
 - [x] ✍️🦾💼25.6.28 - Collected the "Datasets" section.
 - [x] 🏃🏃‍♀️🏃‍♂️25.6.16 - The "Awesome Visual Spatial Reasoning" project is now live!
 - [x] 👏🕮💻25.6.12 - The project has conducted research and collected 100 relevant works.
@@ -47,14 +47,12 @@ Contributors:
 
 <h6 align="center"> Evaluation of SOTA Models on 23 Visual Spatial Reasoning Tasks.</h6>
 
-[**Code Usage**](https://github.com/prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning/tree/toolkit):
+[**Code Usage**](https://github.com/song2yu/SIBench_eval):
 
 ```bash
-- git clone -b toolkit https://github.com/prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning.git
+- git clone https://github.com/song2yu/SIBench_eval.git
 - Refer to the README.md for more details
 ```
-
-
 
 # Contributing
 
@@ -67,8 +65,6 @@ Contributors:
 > You can also open an issue if you have anything to add or comment.
 >
 > Please feel free to contact us (SongsongYu203@163.com).
-
-
 
 
 
