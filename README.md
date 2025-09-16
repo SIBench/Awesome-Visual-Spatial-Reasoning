@@ -31,8 +31,8 @@ Contributors:
 # News and Updates
 
 - [ ] Preprint a survey article on visual spatial reasoning tasks.
-- [ ] Open-source evaluation data for visual spatial reasoning tasks.
 - [ ] Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
+- [x] 🙌👏👐25.9.15 - Open-source evaluation data for visual spatial reasoning tasks.
 - [x] 🤩🥳🤗25.9.15 - Open-source evaluation toolkit.
 - [x] ✍️🦾💼25.6.28 - Collected the "Datasets" section.
 - [x] 🏃🏃‍♀️🏃‍♂️25.6.16 - The "Awesome Visual Spatial Reasoning" project is now live!
