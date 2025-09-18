@@ -56,7 +56,7 @@ Contributors:
 
 # Contributing
 
-> We welcome contributions to this repository! If you'd like to contribute, please follow these steps:
+> We welcome contributions to this repository! If you would like to contribute, please follow these steps:
 >
 > - Fork the repository.
 > - Create a new branch with your changes.
