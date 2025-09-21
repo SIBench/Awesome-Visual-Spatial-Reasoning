@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title>项目名称 | VisuSpatial-Bench</title>
     <!-- 引入Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,173 +35,214 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header Section -->
-    <header class="py-16 md:py-24 text-center bg-white">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-                VisuSpatial-Bench
-            </h1>
-            <p class="mt-4 text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-                一个关于视觉空间推理的综合性基准和方法综述
-            </p>
-            <div class="mt-8 text-lg font-medium text-gray-700">
-                <!-- 作者信息 -->
-                <span>作者一</span>,
-                <span>作者二</span>,
-                <span>作者三</span>
-            </div>
-            <div class="mt-2 text-md text-gray-500">
-                <span>机构一</span>,
-                <span>机构二</span>
-            </div>
-            <!-- 主要链接 -->
-            <div class="mt-10 flex flex-wrap justify-center items-center gap-4">
-                <a href="#" class="btn">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    论文 (Paper)
-                </a>
-                <a href="#" class="btn-secondary">
-                    <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
-                    代码 (Code)
-                </a>
-                <a href="#" class="btn-secondary">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                    数据集 (Benchmark)
-                </a>
-                <a href="#leaderboard" class="btn-secondary">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    排行榜 (Leaderboard)
-                </a>
-            </div>
+    <!-- Landing Page Section (入口页面) -->
+    <div id="landing-page" class="fixed top-0 left-0 w-full h-full bg-gray-50 flex items-center justify-center z-50 transition-opacity duration-1000 ease-in-out cursor-pointer">
+        <div id="entry-gate" class="text-center p-8">
+            <!-- 您可以替换成自己的项目Logo或核心示意图 -->
+            <img src="https://placehold.co/200x200/3B82F6/FFFFFF?text=VSR-Bench" class="w-32 h-32 md:w-48 md:h-48 mx-auto rounded-full shadow-2xl mb-8 transform hover:scale-110 transition-transform duration-300" alt="项目Logo">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900">VisuSpatial-Bench</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 animate-pulse">点击任意位置进入</p>
         </div>
-    </header>
+    </div>
 
-    <main class="container mx-auto px-6 py-16">
-        <!-- 摘要/介绍 -->
-        <section id="abstract">
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">摘要 (Abstract)</h2>
-                <p class="text-gray-600 leading-relaxed">
-                    在此处写下您项目的简短摘要。例如：视觉空间推理是实现通用人工智能的关键能力。然而，现有的研究缺乏一个统一的评测基准和对先前工作的系统性梳理。为了解决这个问题，我们首先对视觉空间推理领域的方法和任务设定进行了全面的回顾和综述。在此基础上，我们提出了一个名为VisuSpatial-Bench的全新综合性基准。该基准包含多种精心设计的任务，旨在全面评估模型在物体识别、空间关系理解、视角变换和路径规划等方面的能力。我们在此基准上评估了多种现有先进模型，并提供了深入的分析。我们希望我们的工作能够推动社区在视觉空间推理领域的发展。
+    <!-- Main Content (initially hidden) -->
+    <div id="main-content" style="visibility: hidden; opacity: 0;" class="transition-opacity duration-1000 ease-in-out">
+        <!-- Header Section -->
+        <header class="py-16 md:py-24 text-center bg-white">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                    VisuSpatial-Bench
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+                    一个关于视觉空间推理的综合性基准和方法综述
                 </p>
-            </div>
-        </section>
-
-        <!-- 核心示意图 -->
-        <section id="teaser" class="mt-20">
-             <div class="max-w-6xl mx-auto">
-                <img src="https://placehold.co/1200x600/E2E8F0/4A5568?text=项目核心思想示意图+(Teaser+Image)" alt="项目核心示意图" class="rounded-xl shadow-lg w-full">
-                <p class="text-center mt-4 text-gray-500">图1: VisuSpatial-Bench 概述。它包含了从基础到高级的多种空间推理任务。</p>
-            </div>
-        </section>
-
-        <!-- Benchmark 任务介绍 -->
-        <section id="tasks" class="mt-20">
-            <h2 class="section-title">Benchmark 任务</h2>
-            <p class="section-subtitle">
-                我们的基准测试包含 N 个精心设计的任务，旨在从多个维度全面评估模型的视觉空间推理能力。
-            </p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <!-- 任务 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <img src="https://placehold.co/600x400/FEEBC8/9C4221?text=任务一：物体定位" alt="任务一示意图" class="rounded-md mb-4 w-full">
-                    <h3 class="text-xl font-bold mb-2">1. 物体相对定位</h3>
-                    <p class="text-gray-600">给定一张图片，判断特定物体相对于另一物体的位置关系（如：左边、上方、内部）。</p>
+                <div class="mt-8 text-lg font-medium text-gray-700">
+                    <!-- 作者信息 -->
+                    <span>作者一</span>,
+                    <span>作者二</span>,
+                    <span>作者三</span>
                 </div>
-                <!-- 任务 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <img src="https://placehold.co/600x400/C6F6D5/2F855A?text=任务二：视角变换" alt="任务二示意图" class="rounded-md mb-4 w-full">
-                    <h3 class="text-xl font-bold mb-2">2. 视角变换推理</h3>
-                    <p class="text-gray-600">根据一个视角的图像，预测或选择从另一个新视角观察到的正确图像。</p>
+                <div class="mt-2 text-md text-gray-500">
+                    <span>机构一</span>,
+                    <span>机构二</span>
                 </div>
-                <!-- 任务 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <img src="https://placehold.co/600x400/BEE3F8/2A4365?text=任务三：空间路径规划" alt="任务三示意图" class="rounded-md mb-4 w-full">
-                    <h3 class="text-xl font-bold mb-2">3. 空间路径规划</h3>
-                    <p class="text-gray-600">在包含障碍物的环境中，为智能体规划出从起点到终点的最短或最优路径。</p>
-                </div>
-                 <!-- 更多任务可以按此格式添加 -->
-            </div>
-        </section>
-        
-        <!-- 排行榜 -->
-        <section id="leaderboard" class="mt-20">
-            <h2 class="section-title">排行榜 (Leaderboard)</h2>
-            <p class="section-subtitle">
-                我们在 VisuSpatial-Bench 上评估了多种基线模型。欢迎提交您的模型结果！
-            </p>
-            <div class="max-w-7xl mx-auto bg-white p-6 rounded-xl shadow-lg overflow-x-auto">
-                <table class="w-full text-left table-auto">
-                    <thead>
-                        <tr class="border-b-2 border-gray-200 bg-gray-100 text-gray-600">
-                            <th class="p-4 font-semibold">排名</th>
-                            <th class="p-4 font-semibold">模型</th>
-                            <th class="p-4 font-semibold">综合得分 (Overall) ↑</th>
-                            <th class="p-4 font-semibold">任务一得分 ↑</th>
-                            <th class="p-4 font-semibold">任务二得分 ↑</th>
-                            <th class="p-4 font-semibold">任务三得分 ↑</th>
-                            <th class="p-4 font-semibold">论文/代码</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-gray-700">
-                        <tr class="border-b border-gray-200 hover:bg-gray-50">
-                            <td class="p-4 font-bold text-blue-600">1</td>
-                            <td class="p-4 font-medium">我们的模型 (Ours)</td>
-                            <td class="p-4 font-semibold">85.2</td>
-                            <td class="p-4">92.1</td>
-                            <td class="p-4">80.5</td>
-                            <td class="p-4">83.0</td>
-                            <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
-                        </tr>
-                        <tr class="border-b border-gray-200 hover:bg-gray-50">
-                            <td class="p-4 font-bold text-gray-700">2</td>
-                            <td class="p-4 font-medium">GPT-4V</td>
-                            <td class="p-4 font-semibold">82.5</td>
-                            <td class="p-4">90.5</td>
-                            <td class="p-4">78.0</td>
-                            <td class="p-4">79.0</td>
-                            <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
-                        </tr>
-                        <tr class="border-b border-gray-200 hover:bg-gray-50">
-                            <td class="p-4 font-bold text-gray-700">3</td>
-                            <td class="p-4 font-medium">LLaVA-1.5</td>
-                            <td class="p-4 font-semibold">75.8</td>
-                            <td class="p-4">85.3</td>
-                            <td class="p-4">70.1</td>
-                            <td class="p-4">72.0</td>
-                            <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- 引用 -->
-        <section id="citation" class="mt-20">
-            <h2 class="section-title">如何引用</h2>
-            <p class="section-subtitle">
-                如果您觉得我们的工作对您的研究有帮助，请考虑引用我们的论文。
-            </p>
-            <div class="max-w-4xl mx-auto">
-                <div class="bibtex">
-@article{YourName2025VisuSpatial,
-    title   = {VisuSpatial-Bench: A Comprehensive Benchmark and Survey for Visual Spatial Reasoning},
-    author  = {作者一 and 作者二 and 作者三},
-    journal = {arXiv preprint arXiv:25XX.XXXXX},
-    year    = {2025}
-}
+                <!-- 主要链接 -->
+                <div class="mt-10 flex flex-wrap justify-center items-center gap-4">
+                    <a href="#" class="btn">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        论文 (Paper)
+                    </a>
+                    <a href="#" class="btn-secondary">
+                        <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                        代码 (Code)
+                    </a>
+                    <a href="#" class="btn-secondary">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        数据集 (Benchmark)
+                    </a>
+                    <a href="#leaderboard" class="btn-secondary">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 S0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        排行榜 (Leaderboard)
+                    </a>
                 </div>
             </div>
-        </section>
-    </main>
+        </header>
 
-    <!-- Footer -->
-    <footer class="bg-white mt-16">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
-            <p>&copy; 2025 作者和机构. 版权所有.</p>
-            <p class="mt-2 text-sm">页面模板由 Gemini 生成。</p>
-        </div>
-    </footer>
+        <main class="container mx-auto px-6 py-16">
+            <!-- 摘要/介绍 -->
+            <section id="abstract">
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">摘要 (Abstract)</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        在此处写下您项目的简短摘要。例如：视觉空间推理是实现通用人工智能的关键能力。然而，现有的研究缺乏一个统一的评测基准和对先前工作的系统性梳理。为了解决这个问题，我们首先对视觉空间推理领域的方法和任务设定进行了全面的回顾和综述。在此基础上，我们提出了一个名为VisuSpatial-Bench的全新综合性基准。该基准包含多种精心设计的任务，旨在全面评估模型在物体识别、空间关系理解、视角变换和路径规划等方面的能力。我们在此基准上评估了多种现有先进模型，并提供了深入的分析。我们希望我们的工作能够推动社区在视觉空间推理领域的发展。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 核心示意图 -->
+            <section id="teaser" class="mt-20">
+                 <div class="max-w-6xl mx-auto">
+                    <img src="https://placehold.co/1200x600/E2E8F0/4A5568?text=项目核心思想示意图+(Teaser+Image)" alt="项目核心示意图" class="rounded-xl shadow-lg w-full">
+                    <p class="text-center mt-4 text-gray-500">图1: VisuSpatial-Bench 概述。它包含了从基础到高级的多种空间推理任务。</p>
+                </div>
+            </section>
+
+            <!-- Benchmark 任务介绍 -->
+            <section id="tasks" class="mt-20">
+                <h2 class="section-title">Benchmark 任务</h2>
+                <p class="section-subtitle">
+                    我们的基准测试包含 N 个精心设计的任务，旨在从多个维度全面评估模型的视觉空间推理能力。
+                </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <!-- 任务 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <img src="https://placehold.co/600x400/FEEBC8/9C4221?text=任务一：物体定位" alt="任务一示意图" class="rounded-md mb-4 w-full">
+                        <h3 class="text-xl font-bold mb-2">1. 物体相对定位</h3>
+                        <p class="text-gray-600">给定一张图片，判断特定物体相对于另一物体的位置关系（如：左边、上方、内部）。</p>
+                    </div>
+                    <!-- 任务 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <img src="https://placehold.co/600x400/C6F6D5/2F855A?text=任务二：视角变换" alt="任务二示意图" class="rounded-md mb-4 w-full">
+                        <h3 class="text-xl font-bold mb-2">2. 视角变换推理</h3>
+                        <p class="text-gray-600">根据一个视角的图像，预测或选择从另一个新视角观察到的正确图像。</p>
+                    </div>
+                    <!-- 任务 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <img src="https://placehold.co/600x400/BEE3F8/2A4365?text=任务三：空间路径规划" alt="任务三示意图" class="rounded-md mb-4 w-full">
+                        <h3 class="text-xl font-bold mb-2">3. 空间路径规划</h3>
+                        <p class="text-gray-600">在包含障碍物的环境中，为智能体规划出从起点到终点的最短或最优路径。</p>
+                    </div>
+                     <!-- 更多任务可以按此格式添加 -->
+                </div>
+            </section>
+            
+            <!-- 排行榜 -->
+            <section id="leaderboard" class="mt-20">
+                <h2 class="section-title">排行榜 (Leaderboard)</h2>
+                <p class="section-subtitle">
+                    我们在 VisuSpatial-Bench 上评估了多种基线模型。欢迎提交您的模型结果！
+                </p>
+                <div class="max-w-7xl mx-auto bg-white p-6 rounded-xl shadow-lg overflow-x-auto">
+                    <table class="w-full text-left table-auto">
+                        <thead>
+                            <tr class="border-b-2 border-gray-200 bg-gray-100 text-gray-600">
+                                <th class="p-4 font-semibold">排名</th>
+                                <th class="p-4 font-semibold">模型</th>
+                                <th class="p-4 font-semibold">综合得分 (Overall) ↑</th>
+                                <th class="p-4 font-semibold">任务一得分 ↑</th>
+                                <th class="p-4 font-semibold">任务二得分 ↑</th>
+                                <th class="p-4 font-semibold">任务三得分 ↑</th>
+                                <th class="p-4 font-semibold">论文/代码</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-blue-600">1</td>
+                                <td class="p-4 font-medium">我们的模型 (Ours)</td>
+                                <td class="p-4 font-semibold">85.2</td>
+                                <td class="p-4">92.1</td>
+                                <td class="p-4">80.5</td>
+                                <td class="p-4">83.0</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">2</td>
+                                <td class="p-4 font-medium">GPT-4V</td>
+                                <td class="p-4 font-semibold">82.5</td>
+                                <td class="p-4">90.5</td>
+                                <td class="p-4">78.0</td>
+                                <td class="p-4">79.0</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">3</td>
+                                <td class="p-4 font-medium">LLaVA-1.5</td>
+                                <td class="p-4 font-semibold">75.8</td>
+                                <td class="p-4">85.3</td>
+                                <td class="p-4">70.1</td>
+                                <td class="p-4">72.0</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 引用 -->
+            <section id="citation" class="mt-20">
+                <h2 class="section-title">如何引用</h2>
+                <p class="section-subtitle">
+                    如果您觉得我们的工作对您的研究有帮助，请考虑引用我们的论文。
+                </p>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bibtex">
+    @article{YourName2025VisuSpatial,
+        title   = {VisuSpatial-Bench: A Comprehensive Benchmark and Survey for Visual Spatial Reasoning},
+        author  = {作者一 and 作者二 and 作者三},
+        journal = {arXiv preprint arXiv:25XX.XXXXX},
+        year    = {2025}
+    }
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white mt-16">
+            <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+                <p>&copy; 2025 作者和机构. 版权所有.</p>
+                <p class="mt-2 text-sm">页面模板由 Gemini 生成。</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const landingPage = document.getElementById('landing-page');
+            const mainContent = document.getElementById('main-content');
+
+            // 页面加载时，禁止滚动
+            document.body.style.overflow = 'hidden';
+
+            landingPage.addEventListener('click', () => {
+                // 开始淡出封面页
+                landingPage.style.opacity = '0';
+
+                // 淡出动画结束后，彻底隐藏封面页并显示主内容
+                setTimeout(() => {
+                    landingPage.style.display = 'none';
+                    
+                    // 使主内容可见并开始淡入
+                    mainContent.style.visibility = 'visible';
+                    mainContent.style.opacity = '1';
+
+                    // 恢复页面滚动
+                    document.body.style.overflow = 'auto'; 
+                }, 1000); // 这个时间需要和CSS中的 transition-duration 保持一致
+            });
+        });
+    </script>
 
 </body>
 </html>
+
