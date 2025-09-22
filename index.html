@@ -31,6 +31,49 @@
         .bibtex {
             @apply p-4 bg-gray-100 text-gray-800 rounded-lg whitespace-pre-wrap font-mono text-sm overflow-x-auto;
         }
+        /* --- 从这里开始添加 --- */
+        #landing-page::before {
+            content: '';
+            position: absolute;
+            top: 40;
+            left: 40;
+            width: 80%;
+            height: 80%;
+            background-image: url('assets/background.png');
+            background-size: cover; /* 平铺并覆盖整个区域 */
+            background-position: center;
+            opacity: 0.1; /* 设置透明度为80% */
+            z-index: -1; /* 将背景置于内容下方 */
+        }
+        /* --- 添加到这里结束 --- */
+
+    /* --- 从这里开始添加 (用于滚动动画) --- */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px); /* 元素开始时在下方30px的位置 */
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate.is-visible {
+            opacity: 1;
+            transform: translateY(0); /* 动画结束时回到原位 */
+        }
+        /* --- 添加到这里结束 --- */    
+    /* --- 从这里开始添加 (用于Header背景图) --- */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/eyes.png'); /* 替换成您的图片名 */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1; /* 设置透明度为10% */
+            z-index: 0; /* 将背景置于内容下方 */
+        }
+        /* --- 添加到这里结束 --- */
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -39,50 +82,85 @@
     <div id="landing-page" class="fixed top-0 left-0 w-full h-full bg-gray-50 flex items-center justify-center z-50 transition-opacity duration-1000 ease-in-out cursor-pointer">
         <div id="entry-gate" class="text-center p-8">
             <!-- 您可以替换成自己的项目Logo或核心示意图 -->
-            <img src="https://placehold.co/200x200/3B82F6/FFFFFF?text=VSR-Bench" class="w-32 h-32 md:w-48 md:h-48 mx-auto rounded-full shadow-2xl mb-8 transform hover:scale-110 transition-transform duration-300" alt="项目Logo">
-            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900">VisuSpatial-Bench</h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-600 animate-pulse">点击任意位置进入</p>
-        </div>
+            <img src="assets/logo.png" class="w-80 h-80 md:w-60 md:h-60 mx-auto rounded-full shadow-2xl mb-8 transform hover:scale-110 transition-transform duration-300" alt="项目Logo">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900">How Far are VLMs from Visual Spatial Intelligence?</h1>
+            <p class="mt-6 text-xl md:text-2.5xl font-light text-gray-1000 tracking-wider animate-pulse">Click anywhere to enter.</p>        </div>
     </div>
 
     <!-- Main Content (initially hidden) -->
     <div id="main-content" style="visibility: hidden; opacity: 0;" class="transition-opacity duration-1000 ease-in-out">
         <!-- Header Section -->
-        <header class="py-16 md:py-24 text-center bg-white">
+        <header class="relative py-16 md:py-24 text-center">
             <div class="container mx-auto px-6">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-                    VisuSpatial-Bench
+                    SIBench
                 </h1>
-                <p class="mt-4 text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-                    一个关于视觉空间推理的综合性基准和方法综述
+                <p class="mt-4 text-xl md:text-2xl font-semibold text-gray-800 max-w-3xl mx-auto leading-snug">
+                    How Far are VLMs from Visual Spatial Intelligence? A Benchmark-Driven Perspective
                 </p>
-                <div class="mt-8 text-lg font-medium text-gray-700">
+                <div class="mt-3 text-lg font-medium text-gray-700">
                     <!-- 作者信息 -->
-                    <span>作者一</span>,
-                    <span>作者二</span>,
-                    <span>作者三</span>
+                    <a href="https://song2yu.github.io/" target="_blank" class="text-blue-600 hover:underline"><span>Songsong Yu<sup>1,2*</sup></span></a>,
+                    <a href="https://github.com/Uason-Chen" target="_blank" class="text-blue-600 hover:underline"><span></span>Yuxin Chen</span></a><sup>🌟2*</sup>,
+                    <a href="https://haodot.github.io/" target="_blank" class="text-blue-600 hover:underline"><span>Hao Ju</span></a><sup>3*</sup>,
+                    <a href="https://github.com/JiaLianjie" target="_blank" class="text-blue-600 hover:underline"><span>Lianjie Jia</span></a><sup>4*</sup>,
+                    <a href="https://github.com/Dustzx" target="_blank" class="text-blue-600 hover:underline"><span>Fuxi Zhang</span></a><sup>4</sup>,
+                    <a href="https://spyflying.github.io/" target="_blank" class="text-blue-600 hover:underline"><span>Shaofei Huang</span></a><sup>3</sup>,
+                    <a href="https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en" target="_blank" class="text-blue-600 hover:underline"><span></span>Zaibin Zhang</span></a><sup>4</sup>,
+                    <a href="https://github.com/Cuirundi" target="_blank" class="text-blue-600 hover:underline"><span>Rundi Cui</span></a><sup>4</sup>,
+                    <a href="https://github.com/YuhanWu27" target="_blank" class="text-blue-600 hover:underline"><span></span>Yuhan Wu</span></a><sup>4</sup>,
+                    <a href="https://github.com/RBinghao" target="_blank" class="text-blue-600 hover:underline"><span></span>Binghao Ran</span></a><sup>4</sup>,
+                    <br>
+                    <a href="https://www.zdzheng.xyz/" target="_blank" class="text-blue-600 hover:underline"><span></span>Zhedong Zheng</span></a><sup>3</sup>,
+                    <a href="https://zhipengzhang.cn/" target="_blank" class="text-blue-600 hover:underline"><span></span>Zhipeng Zhang<sup>1</sup></span></a>,
+                    <a href="https://scholar.google.com/citations?user=j1XFhSoAAAAJ&hl=en&oi=ao" target="_blank" class="text-blue-600 hover:underline"><span></span>Yifan Wang</span></a><sup>4</sup>,
+                    <a href="https://github.com/StevenGrove" target="_blank" class="text-blue-600 hover:underline"><span></span>Lin Song</span></a><sup>2</sup>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=EfTwkXMolscC&view_op=list_works&sortby=pubdate" target="_blank" class="text-blue-600 hover:underline"><span></span>Lijun Wang</span></a><sup>4</sup>,
+                    <a href="https://yanwei-li.com/" target="_blank" class="text-blue-600 hover:underline"><span></span>Yanwei Li</span></a><sup>✉️5</sup>,
+                    <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ&hl=en&oi=ao" target="_blank" class="text-blue-600 hover:underline"><span></span>Ying Shan</span></a><sup>2</sup>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=D3nE0agAAAAJ" target="_blank" class="text-blue-600 hover:underline"><span></span>Huchuan Lu</span></a><sup>4</sup>,
+
+                    
+
                 </div>
                 <div class="mt-2 text-md text-gray-500">
-                    <span>机构一</span>,
-                    <span>机构二</span>
+                <span><sup>1</sup>SJTU</span>,
+                <span><sup>2</sup>ARC Lab, Tencent PCG</span>,
+                <span><sup>3</sup>UM</span>,
+                <span><sup>4</sup>DLUT</span>,
+                <span><sup>5</sup>CUHK</span>
                 </div>
+                <!-- <br> -->
+                <!-- <div class="flex justify-center items-center gap-x-10 md:gap-x-5">
+                    <img src="https://www.tencent.net.cn/wp-content/uploads/2023/02/logo-vertical-white-1.png" class="h-14 w-auto" alt="Tencent Logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/zh/d/d5/SJTU_emblem.svg" class="h-14 w-auto" alt="SJTU Logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/University_of_Macau_logo.svg" class="h-14 w-auto" alt="UMacau Logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/zh/7/76/Dalian_University_of_Technology_logo.svg" class="h-14 w-auto" alt="DUT Logo">
+                </div> -->
+                * Equal Contributions
+                🌟 Project Lead
+                ✉️ Corresponding Author
                 <!-- 主要链接 -->
                 <div class="mt-10 flex flex-wrap justify-center items-center gap-4">
                     <a href="#" class="btn">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                        论文 (Paper)
+                        <svg class="w-10 h-10 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        Paper
                     </a>
-                    <a href="#" class="btn-secondary">
-                        <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
-                        代码 (Code)
+                    <a href="https://github.com/song2yu/SIBench_eval" class="btn-secondary">
+                        <svg class="w-10 h-10 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                        Code
                     </a>
-                    <a href="#" class="btn-secondary">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                        数据集 (Benchmark)
+                    <a href="https://huggingface.co/datasets/Two-hot/SIBench" class="btn-secondary">
+                        <svg class="w-10 h-10 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Benchmark
+                    </a>
+                    <a href="https://github.com/prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning" class="btn-secondary">
+                        <svg class="w-10 h-10 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                        Project
                     </a>
                     <a href="#leaderboard" class="btn-secondary">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 S0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                        排行榜 (Leaderboard)
+                        <svg class="w-10 h-10 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        Leaderboard
                     </a>
                 </div>
             </div>
@@ -90,97 +168,277 @@
 
         <main class="container mx-auto px-6 py-16">
             <!-- 摘要/介绍 -->
-            <section id="abstract">
-                <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">摘要 (Abstract)</h2>
-                    <p class="text-gray-600 leading-relaxed">
-                        在此处写下您项目的简短摘要。例如：视觉空间推理是实现通用人工智能的关键能力。然而，现有的研究缺乏一个统一的评测基准和对先前工作的系统性梳理。为了解决这个问题，我们首先对视觉空间推理领域的方法和任务设定进行了全面的回顾和综述。在此基础上，我们提出了一个名为VisuSpatial-Bench的全新综合性基准。该基准包含多种精心设计的任务，旨在全面评估模型在物体识别、空间关系理解、视角变换和路径规划等方面的能力。我们在此基准上评估了多种现有先进模型，并提供了深入的分析。我们希望我们的工作能够推动社区在视觉空间推理领域的发展。
+            <section id="abstract" class="scroll-animate">
+                <div class="max-w-6xl mx-auto bg-white p-8 rounded-xl shadow-md">
+                    <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-4">💡 Abstract</h2>
+                    <p class="text-gray-600 leading-relaxed text-justify">
+                        Visual Spatial Reasoning (VSR) is a core human cognitive ability and a critical requirement for advancing embodied intelligence and autonomous systems. Despite recent progress in Vision-Language Models (VLMs), achieving human-level VSR remains highly challenging due to the complexity of representing and reasoning over three-dimensional space. In this paper, we present a systematic investigation of VSR for VLMs, encompassing a review of existing methodologies across input modalities, architectures, training strategies, and reasoning mechanisms. We further present a taxonomy that classifies VSR tasks into three levels, with Basic Perception, Spatial Understanding, and Spatial Planning, and curate SIBench, a comprehensive benchmark encompassing nearly 20 open-source datasets across 23 task settings. Experiments with state-of-the-art VLMs reveal a pronounced gap between perception and reasoning, as models show competence in basic perceptual tasks but consistently underperform in higher-order reasoning, particularly in numerical estimation, multi-view reasoning, temporal dynamics, and spatial imagination. These findings underscore the substantial challenges that remain in achieving spatial intelligence, while providing both a systematic roadmap and a unified benchmark to drive future research in the field.
                     </p>
                 </div>
             </section>
 
             <!-- 核心示意图 -->
-            <section id="teaser" class="mt-20">
-                 <div class="max-w-6xl mx-auto">
-                    <img src="https://placehold.co/1200x600/E2E8F0/4A5568?text=项目核心思想示意图+(Teaser+Image)" alt="项目核心示意图" class="rounded-xl shadow-lg w-full">
-                    <p class="text-center mt-4 text-gray-500">图1: VisuSpatial-Bench 概述。它包含了从基础到高级的多种空间推理任务。</p>
+            <section id="teaser" class="mt-20 scroll-animate">
+                <div class="max-w-6xl mx-auto">
+                    <img src="assets/teaser.png" alt="项目核心示意图" class="rounded-xl shadow-lg w-full">
+                    <p class="text-left mt-4 text-gray-500">Fig1: Performance of SOTA Models on 23 Visual Spatial Reasoning Tasks} (left). The evaluation reveals that the models have significant room for improvement, especially in tasks requiring precise numerical estimation, perspective taking, temporal information processing, and, particularly, spatial imagination. Comparison of Visual Spatial Reasoning and General VQA (Upper-right). While general VQA tasks primarily focus on extracting semantic information from images, VSR necessitates a deeper capacity to model and reason about spatial relationships. Data Formats and Task Settings for Visual Spatial Reasoning (Bottom-right). The evaluation includes 3 input formats and 23 task settings, covering three levels: Basic Perception, Spatial Understanding, and Planning.</p>
                 </div>
             </section>
 
-            <!-- Benchmark 任务介绍 -->
-            <section id="tasks" class="mt-20">
-                <h2 class="section-title">Benchmark 任务</h2>
-                <p class="section-subtitle">
-                    我们的基准测试包含 N 个精心设计的任务，旨在从多个维度全面评估模型的视觉空间推理能力。
+
+            <!-- Task Settings -->
+            <section id="tasks" class="mt-20 scroll-animate">
+                <h2 class="text-3xl font-extrabold text-center text-gray-1000 mb-4">📐 Task Settings</h2>                <p class="section-subtitle">
+                    We categorize visual spatial reasoning into three tasks based on the levels of reasoning: basic perception, spatial understanding, and planning. Basic perception involves the attributes of a single or a single type of target, spatial understanding deals with the relationships between multiple targets, while planning requires providing reasonable solutions based on current spatial constraints.
                 </p>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    <!-- 任务 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                        <img src="https://placehold.co/600x400/FEEBC8/9C4221?text=任务一：物体定位" alt="任务一示意图" class="rounded-md mb-4 w-full">
-                        <h3 class="text-xl font-bold mb-2">1. 物体相对定位</h3>
-                        <p class="text-gray-600">给定一张图片，判断特定物体相对于另一物体的位置关系（如：左边、上方、内部）。</p>
-                    </div>
-                    <!-- 任务 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                        <img src="https://placehold.co/600x400/C6F6D5/2F855A?text=任务二：视角变换" alt="任务二示意图" class="rounded-md mb-4 w-full">
-                        <h3 class="text-xl font-bold mb-2">2. 视角变换推理</h3>
-                        <p class="text-gray-600">根据一个视角的图像，预测或选择从另一个新视角观察到的正确图像。</p>
-                    </div>
-                    <!-- 任务 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                        <img src="https://placehold.co/600x400/BEE3F8/2A4365?text=任务三：空间路径规划" alt="任务三示意图" class="rounded-md mb-4 w-full">
-                        <h3 class="text-xl font-bold mb-2">3. 空间路径规划</h3>
-                        <p class="text-gray-600">在包含障碍物的环境中，为智能体规划出从起点到终点的最短或最优路径。</p>
-                    </div>
-                     <!-- 更多任务可以按此格式添加 -->
+                <br>
+                <br>
+                <div class="max-w-3xl mx-auto scroll-animate">
+                    <img src="assets/reasoning_level.png" alt="reasoning levels" class="rounded-xl shadow-lg w-full">
+                    <p class="text-center mt-4 text-gray-500">Fig2: Taxonomy of visual spatial reasoning according to cognitive levels.</p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="max-w-5xl mx-auto scroll-animate">
+                    <img src="assets/basic perception1.1.png" alt="perception" class="rounded-xl shadow-lg w-full">
+                    <p class="text-center mt-4 text-gray-500">Fig3: Basic perception tasks are divided into static attributes and state attributes based on whether the properties are easily changeable.</p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="max-w-5xl mx-auto scroll-animate">
+                    <img src="assets/understanding1.0.png" alt="understanding" class="rounded-xl shadow-lg w-full">
+                    <p class="text-center mt-4 text-gray-500">Fig4: Categorization of Spatial Understanding Tasks. Spatial understanding tasks are divided into static and dynamic understanding. Dynamic understanding tasks are characterized by viewpoint shifts or a temporal component.</p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="max-w-5xl mx-auto scroll-animate">
+                    <img src="assets/Planning1.0.png" alt="planning" class="rounded-xl shadow-lg w-full">
+                    <p class="text-center mt-4 text-gray-500">Fig5: Categorization of Spatial Planning Tasks.</p>
+                </div>
+            </section>
+
+
+            <!-- Benchmark 任务介绍 -->
+            <section id="tasks" class="mt-20 scroll-animate">
+                <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-4">🧩 SIBench</h2>                <p class="section-subtitle">
+                    Existing evaluation benchmarks are relatively scattered and often only include a few task settings. To facilitate evaluation, we have collected around 20 benchmarks, covering 23 task settings across 3 cognitive levels, providing a comprehensive evaluation method.
+                </p>
+                <br>
+                <br>
+                <div class="max-w-5xl mx-auto scroll-animate">
+                    <img src="assets/cognitive_levels.png" alt="data card" class="rounded-xl shadow-lg w-full">
+                    <p class="text-center mt-4 text-gray-500">Fig6: Statistical data of SIBench. SIBench comprises VSR tasks across three cognitive levels, with a total of 8.8K data samples and 23 task settings. SIBench includes three input formats: single image, multiple views, and video, as well as three output forms: multiple choice, true/false judgment, and numerical question answering.</p>
                 </div>
             </section>
             
             <!-- 排行榜 -->
-            <section id="leaderboard" class="mt-20">
-                <h2 class="section-title">排行榜 (Leaderboard)</h2>
+            <section id="leaderboard" class="mt-20 scroll-animate">
+                <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-4">🏆🏆🏆 Leaderboard SIBench</h2>                <p class="section-subtitle">
+                <br>
+                <br>
                 <p class="section-subtitle">
-                    我们在 VisuSpatial-Bench 上评估了多种基线模型。欢迎提交您的模型结果！
+                    We evaluate several models on SIBench and SIBench-mini. Contributions are welcome — feel free to submit your results or contact us at sduyusong@gmail.com.
                 </p>
                 <div class="max-w-7xl mx-auto bg-white p-6 rounded-xl shadow-lg overflow-x-auto">
                     <table class="w-full text-left table-auto">
+
                         <thead>
                             <tr class="border-b-2 border-gray-200 bg-gray-100 text-gray-600">
-                                <th class="p-4 font-semibold">排名</th>
-                                <th class="p-4 font-semibold">模型</th>
-                                <th class="p-4 font-semibold">综合得分 (Overall) ↑</th>
-                                <th class="p-4 font-semibold">任务一得分 ↑</th>
-                                <th class="p-4 font-semibold">任务二得分 ↑</th>
-                                <th class="p-4 font-semibold">任务三得分 ↑</th>
-                                <th class="p-4 font-semibold">论文/代码</th>
+                                <th class="p-4 font-semibold">Rank</th>
+                                <th class="p-4 font-semibold">Models</th>
+                                <th class="p-4 font-semibold">Overall ↑</th>
+                                <th class="p-4 font-semibold">Basic Perception ↑</th>
+                                <th class="p-4 font-semibold">Spatial Understanding ↑</th>
+                                <th class="p-4 font-semibold">Planning ↑</th>
+                                <th class="p-4 font-semibold">Link</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             <tr class="border-b border-gray-200 hover:bg-gray-50">
                                 <td class="p-4 font-bold text-blue-600">1</td>
-                                <td class="p-4 font-medium">我们的模型 (Ours)</td>
-                                <td class="p-4 font-semibold">85.2</td>
-                                <td class="p-4">92.1</td>
-                                <td class="p-4">80.5</td>
-                                <td class="p-4">83.0</td>
+                                <td class="p-4 font-medium">Gemini-2.5-Pro</td>
+                                <td class="p-4 font-semibold">0.5883</td>
+                                <td class="p-4">0.6425</td>
+                                <td class="p-4">0.5559</td>
+                                <td class="p-4">0.8017</td>
                                 <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
                             </tr>
                             <tr class="border-b border-gray-200 hover:bg-gray-50">
                                 <td class="p-4 font-bold text-gray-700">2</td>
-                                <td class="p-4 font-medium">GPT-4V</td>
-                                <td class="p-4 font-semibold">82.5</td>
-                                <td class="p-4">90.5</td>
-                                <td class="p-4">78.0</td>
-                                <td class="p-4">79.0</td>
+                                <td class="p-4 font-medium">InternVL-3.5-38B</td>
+                                <td class="p-4 font-semibold">0.5252</td>
+                                <td class="p-4">0.5726</td>
+                                <td class="p-4">0.5134</td>
+                                <td class="p-4">0.4815</td>
                                 <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
                             </tr>
                             <tr class="border-b border-gray-200 hover:bg-gray-50">
                                 <td class="p-4 font-bold text-gray-700">3</td>
-                                <td class="p-4 font-medium">LLaVA-1.5</td>
-                                <td class="p-4 font-semibold">75.8</td>
-                                <td class="p-4">85.3</td>
-                                <td class="p-4">70.1</td>
-                                <td class="p-4">72.0</td>
+                                <td class="p-4 font-medium">InternVL-3-78B</td>
+                                <td class="p-4 font-semibold">0.5197</td>
+                                <td class="p-4">0.5947</td>
+                                <td class="p-4">0.5001</td>
+                                <td class="p-4">0.4640</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">4</td>
+                                <td class="p-4 font-medium">Qwen2.5-VL-72B</td>
+                                <td class="p-4 font-semibold">0.5114</td>
+                                <td class="p-4">0.5634</td>
+                                <td class="p-4">0.5019</td>
+                                <td class="p-4">0.4161</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">5</td>
+                                <td class="p-4 font-medium">LLaVA-OneVision-72B</td>
+                                <td class="p-4 font-semibold">0.5103</td>
+                                <td class="p-4">0.6061</td>
+                                <td class="p-4">0.4889</td>
+                                <td class="p-4">0.3878</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">6</td>
+                                <td class="p-4 font-medium">InternVL-2.5-78B-MPO</td>
+                                <td class="p-4 font-semibold">0.4983</td>
+                                <td class="p-4">0.5991</td>
+                                <td class="p-4">0.4635</td>
+                                <td class="p-4">0.5425</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">7</td>
+                                <td class="p-4 font-medium">LLaVA-OneVision-7B</td>
+                                <td class="p-4 font-semibold">0.4844</td>
+                                <td class="p-4">0.5821</td>
+                                <td class="p-4">0.4644</td>
+                                <td class="p-4">0.3355</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">8</td>
+                                <td class="p-4 font-medium">Gemini-2.5-Flash</td>
+                                <td class="p-4 font-semibold">0.4389</td>
+                                <td class="p-4">0.5422</td>
+                                <td class="p-4">0.3942</td>
+                                <td class="p-4">0.6100</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">9</td>
+                                <td class="p-4 font-medium">GPT-4o-mini</td>
+                                <td class="p-4 font-semibold">0.4278</td>
+                                <td class="p-4">0.5505</td>
+                                <td class="p-4">0.3981</td>
+                                <td class="p-4">0.3050</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">10</td>
+                                <td class="p-4 font-medium">Qwen2.5-VL-7B</td>
+                                <td class="p-4 font-semibold">0.4172</td>
+                                <td class="p-4">0.5196</td>
+                                <td class="p-4">0.3946</td>
+                                <td class="p-4">0.2832</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <!-- 排行榜 -->
+            <section id="leaderboard" class="mt-20 scroll-animate">
+                <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-4">🎯🎯🎯 Leaderboard SIBench-mini</h2>                <p class="section-subtitle">
+                <br>
+                <br>
+                <p class="section-subtitle">
+                </p>
+                <div class="max-w-7xl mx-auto bg-white p-6 rounded-xl shadow-lg overflow-x-auto">
+                    <table class="w-full text-left table-auto">
+
+                        <thead>
+                            <tr class="border-b-2 border-gray-200 bg-gray-100 text-gray-600">
+                                <th class="p-4 font-semibold">Rank</th>
+                                <th class="p-4 font-semibold">Models</th>
+                                <th class="p-4 font-semibold">Overall ↑</th>
+                                <th class="p-4 font-semibold">Basic Perception ↑</th>
+                                <th class="p-4 font-semibold">Spatial Understanding ↑</th>
+                                <th class="p-4 font-semibold">Planning ↑</th>
+                                <th class="p-4 font-semibold">Link</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-blue-600">1</td>
+                                <td class="p-4 font-medium">GPT-5</td>
+                                <td class="p-4 font-semibold">0.6906</td>
+                                <td class="p-4">0.7248</td>
+                                <td class="p-4">0.6487</td>
+                                <td class="p-4">0.775</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">2</td>
+                                <td class="p-4 font-medium">Gemini-2.5-Pro</td>
+                                <td class="p-4 font-semibold">0.6295</td>
+                                <td class="p-4">0.7317</td>
+                                <td class="p-4">0.5827</td>
+                                <td class="p-4">0.675</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">3</td>
+                                <td class="p-4 font-medium">Doubao-Seed-1.6-Vision</td>
+                                <td class="p-4 font-semibold">0.6216</td>
+                                <td class="p-4">0.6963</td>
+                                <td class="p-4">0.5922</td>
+                                <td class="p-4">0.65</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">4</td>
+                                <td class="p-4 font-medium">GLM4.5-V-106B-A12B</td>
+                                <td class="p-4 font-semibold">0.5822</td>
+                                <td class="p-4">0.6936</td>
+                                <td class="p-4">0.5404</td>
+                                <td class="p-4">0.5125</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">5</td>
+                                <td class="p-4 font-medium">InternVL-3.5-38B</td>
+                                <td class="p-4 font-semibold">0.5355</td>
+                                <td class="p-4">0.6113</td>
+                                <td class="p-4">0.5089</td>
+                                <td class="p-4">0.4878</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">6</td>
+                                <td class="p-4 font-medium">Qwen2.5-VL-72B</td>
+                                <td class="p-4 font-semibold">0.5006</td>
+                                <td class="p-4">0.6356</td>
+                                <td class="p-4">0.4526</td>
+                                <td class="p-4">0.3780</td>
+                                <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-bold text-gray-700">7</td>
+                                <td class="p-4 font-medium">LLaVA-OneVision-72B</td>
+                                <td class="p-4 font-semibold">0.4987</td>
+                                <td class="p-4">0.5951</td>
+                                <td class="p-4">0.4633</td>
+                                <td class="p-4">0.4268</td>
                                 <td class="p-4"><a href="#" class="text-blue-500 hover:underline">Link</a></td>
                             </tr>
                         </tbody>
@@ -188,30 +446,172 @@
                 </div>
             </section>
 
+
             <!-- 引用 -->
-            <section id="citation" class="mt-20">
-                <h2 class="section-title">如何引用</h2>
+            <section id="citation" class="mt-20 scroll-animate">
+                <h2 class="text-4xl font-extrabold text-center  text-gray-800 mb-4">📖 How to cite</h2>                <p class="section-subtitle">
+
                 <p class="section-subtitle">
-                    如果您觉得我们的工作对您的研究有帮助，请考虑引用我们的论文。
+                    If you find this work useful for your research, we kindly encourage you to cite our paper.
                 </p>
-                <div class="max-w-4xl mx-auto">
+                <br>
+
+                <div class="max-w-4xl mx-auto bg-white">
                     <div class="bibtex">
-    @article{YourName2025VisuSpatial,
-        title   = {VisuSpatial-Bench: A Comprehensive Benchmark and Survey for Visual Spatial Reasoning},
-        author  = {作者一 and 作者二 and 作者三},
-        journal = {arXiv preprint arXiv:25XX.XXXXX},
-        year    = {2025}
-    }
+                        @article{sibench2025,
+                            <br>title   = {How Far are VLMs from Visual Spatial Intelligence? A Benchmark-Driven Perspective},
+                            <br>author  = {Songsongyu, Yuxin Chen, Hao Ju, Lianjie Jia, Shaofei Huang, Zaibin Zhang, Rundi Cui, Yuhan Wu, Binghao Ran, Zhedong Zheng, Zhipeng Zhang, Yifan Wang, Lin Song, Lijun Wang, Yanwei Li, Ying Shan, Huchuan Lu},
+                            <br>journal = {arXiv preprint},
+                            <br>year    = {2025}
+                        }
                     </div>
                 </div>
             </section>
+
+            <!-- 致谢 -->
+            <section id="citation" class="mt-20 scroll-animate">
+                <h2 class="text-4xl font-extrabold text-center bg-gray-100 text-gray-800 mb-4">🤗 Acknowledgement</h2>                <p class="section-subtitle">
+                    <p class="section-subtitle">
+                    🦄🦄🦄 This project is built upon <a href="https://github.com/open-compass/VLMEvalKit" class="text-blue-500 hover:underline">VLMEvalKit</a>. We sincerely appreciate its outstanding contribution to the open-source community, and we are working on integrating SIBench into VLMEvalKit.
+                    <br>
+                    <br>
+                    🤗🤗🤗 The data used in this project are derived from open-source test datasets. We have carefully selected and processed them, and we sincerely appreciate the contributions of these open-source efforts. The following lists the data sources we have cited, to which we extend our heartfelt gratitude.
+
+                </p>
+                <br>
+                <br>
+                <div class="max-w-4xl mx-auto scroll-animate">
+                    <div class="bibtex bg-white">
+                        @article{OmniSpatial,
+                        title={OmniSpatial: Towards Comprehensive Spatial Reasoning Benchmark for Vision Language Models},
+                        author={Jia, Mengdi and Qi, Zekun and Zhang, Shaochen and Zhang, Wenyao and Yu, Xinqiang and He, Jiawei and Wang, He and Yi, Li},
+                        journal={arXiv preprint arXiv:2506.03135},
+                        year={2025}
+                        }
+                        <br>
+                        <br>
+                        @article{SPHERE,
+                        title={Sphere: Unveiling spatial blind spots in vision-language models through hierarchical evaluation},
+                        author={Zhang, Wenyu and Ng, Wei En and Ma, Lixin and Wang, Yuwen and Zhao, Junqi and Koenecke, Allison and Li, Boyang and Wang, Lu},
+                        journal={arXiv preprint arXiv:2412.12693},
+                        year={2024}
+                        }<br>
+                        <br>
+                        @article{spatialeval,
+                        title={Is a picture worth a thousand words? delving into spatial reasoning for vision language models},
+                        author={Wang, Jiayu and Ming, Yifei and Shi, Zhenmei and Vineet, Vibhav and Wang, Xin and Li, Sharon and Joshi, Neel},
+                        journal={Advances in Neural Information Processing Systems},
+                        volume={37},
+                        pages={75392--75421},
+                        year={2024}
+                        }<br>
+                        <br>
+                        @article{3dsrbench,
+                        title={3dsrbench: A comprehensive 3d spatial reasoning benchmark},
+                        author={Ma, Wufei and Chen, Haoyu and Zhang, Guofeng and Chou, Yu-Cheng and de Melo, Celso M and Yuille, Alan},
+                        journal={arXiv preprint arXiv:2412.07825},
+                        year={2024}
+                        }<br>
+                        <br>
+                        @article{3dsrbench,
+                        title={3dsrbench: A comprehensive 3d spatial reasoning benchmark},
+                        author={Ma, Wufei and Chen, Haoyu and Zhang, Guofeng and Chou, Yu-Cheng and de Melo, Celso M and Yuille, Alan},
+                        journal={arXiv preprint arXiv:2412.07825},
+                        year={2024}
+                        }<br>
+                        <br>
+                        @inproceedings{Super-CLEVR-3D,
+                        title={Super-clevr: A virtual benchmark to diagnose domain robustness in visual reasoning},
+                        author={Li, Zhuowan and Wang, Xingrui and Stengel-Eskin, Elias and Kortylewski, Adam and Ma, Wufei and Van Durme, Benjamin and Yuille, Alan L},
+                        booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+                        pages={14963--14973},
+                        year={2023}
+                        }<br>
+                        <br>
+                        @article{Spatial-MM,
+                        title={An empirical analysis on spatial reasoning capabilities of large multimodal models},
+                        author={Shiri, Fatemeh and Guo, Xiao-Yu and Far, Mona Golestan and Yu, Xin and Haffari, Gholamreza and Li, Yuan-Fang},
+                        journal={arXiv preprint arXiv:2411.06048},
+                        year={2024}
+                        }<br>
+                        <br>
+                        @article{SpatialMQA,
+                        title={Can Multimodal Large Language Models Understand Spatial Relations?},
+                        author={Liu, Jingping and Liu, Ziyan and Cen, Zhedong and Zhou, Yan and Zou, Yinan and Zhang, Weiyan and Jiang, Haiyun and Ruan, Tong},
+                        journal={arXiv preprint arXiv:2505.19015},
+                        year={2025}
+                        }<br>
+                        <br>
+                        @inproceedings{Omni3D-Bench,
+                        title={Visual agentic ai for spatial reasoning with a dynamic api},
+                        author={Marsili, Damiano and Agrawal, Rohun and Yue, Yisong and Gkioxari, Georgia},
+                        booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+                        pages={19446--19455},
+                        year={2025}
+                        }<br>
+                        <br>
+                        @inproceedings{BLINK,
+                        title={Blink: Multimodal large language models can see but not perceive},
+                        author={Fu, Xingyu and Hu, Yushi and Li, Bangzheng and Feng, Yu and Wang, Haoyu and Lin, Xudong and Roth, Dan and Smith, Noah A and Ma, Wei-Chiu and Krishna, Ranjay},
+                        booktitle={European Conference on Computer Vision},
+                        pages={148--166},
+                        year={2024},
+                        organization={Springer}
+                        }<br>
+                        <br>
+                        @article{MMSI-Bench,
+                        title={MMSI-Bench: A Benchmark for Multi-Image Spatial Intelligence},
+                        author={Yang, Sihan and Xu, Runsen and Xie, Yiman and Yang, Sizhe and Li, Mo and Lin, Jingli and Zhu, Chenming and Chen, Xiaochen and Duan, Haodong and Yue, Xiangyu and others},
+                        journal={arXiv preprint arXiv:2505.23764},
+                        year={2025}
+                        }<br>
+                        <br>
+                        @article{SPAR-Bench,
+                        title={From flatland to space: Teaching vision-language models to perceive and reason in 3d},
+                        author={Zhang, Jiahui and Chen, Yurui and Zhou, Yanpeng and Xu, Yueming and Huang, Ze and Mei, Jilin and Chen, Junhui and Yuan, Yu-Jie and Cai, Xinyue and Huang, Guowei and others},
+                        journal={arXiv preprint arXiv:2503.22976},
+                        year={2025}
+                        }<br>
+                        <br>
+                        @article{STI-Bench,
+                        title={Sti-bench: Are mllms ready for precise spatial-temporal world understanding?},
+                        author={Li, Yun and Zhang, Yiming and Lin, Tao and Liu, XiangRui and Cai, Wenxiao and Liu, Zheng and Zhao, Bo},
+                        journal={arXiv preprint arXiv:2503.23765},
+                        year={2025}
+                        }<br>
+                        <br>
+                        @inproceedings{VSI-Bench,
+                        title={Thinking in space: How multimodal large language models see, remember, and recall spaces},
+                        author={Yang, Jihan and Yang, Shusheng and Gupta, Anjali W and Han, Rilyn and Fei-Fei, Li and Xie, Saining},
+                        booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+                        pages={10632--10643},
+                        year={2025}
+                        }<br>
+                        <br>
+                        @article{SITE,
+                        title={SITE: towards Spatial Intelligence Thorough Evaluation},
+                        author={Wang, Wenqi and Tan, Reuben and Zhu, Pengyue and Yang, Jianwei and Yang, Zhengyuan and Wang, Lijuan and Kolobov, Andrey and Gao, Jianfeng and Gong, Boqing},
+                        journal={arXiv preprint arXiv:2505.05456},
+                        year={2025}
+                        }<br>
+                        <br>
+                        @article{VSTiBench,
+                        title={VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction},
+                        author={Fan, Zhiwen and Zhang, Jian and Li, Renjie and Zhang, Junge and Chen, Runjin and Hu, Hezhen and Wang, Kevin and Qu, Huaizhi and Wang, Dilin and Yan, Zhicheng and others},
+                        journal={arXiv preprint arXiv:2505.20279},
+                        year={2025}
+                        }
+                    </div>
+                </div>
+            </section>
+
+
         </main>
 
         <!-- Footer -->
         <footer class="bg-white mt-16">
             <div class="container mx-auto px-6 py-8 text-center text-gray-500">
-                <p>&copy; 2025 作者和机构. 版权所有.</p>
-                <p class="mt-2 text-sm">页面模板由 Gemini 生成。</p>
+                <p>&copy; © 2025 The Authors and their Affiliations. All rights reserved.</p>
             </div>
         </footer>
     </div>
@@ -221,28 +621,54 @@
             const landingPage = document.getElementById('landing-page');
             const mainContent = document.getElementById('main-content');
 
-            // 页面加载时，禁止滚动
+            // 
             document.body.style.overflow = 'hidden';
 
             landingPage.addEventListener('click', () => {
-                // 开始淡出封面页
+                // 
                 landingPage.style.opacity = '0';
 
-                // 淡出动画结束后，彻底隐藏封面页并显示主内容
+                // 
                 setTimeout(() => {
                     landingPage.style.display = 'none';
                     
-                    // 使主内容可见并开始淡入
+                    // 
                     mainContent.style.visibility = 'visible';
                     mainContent.style.opacity = '1';
 
-                    // 恢复页面滚动
+                    // 
                     document.body.style.overflow = 'auto'; 
-                }, 1000); // 这个时间需要和CSS中的 transition-duration 保持一致
+                }, 1000); // 
             });
         });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const landingPage = document.getElementById('landing-page');
+            const mainContent = document.getElementById('main-content');
+
+            // 
+            landingPage.addEventListener('click', () => {
+                // ...
+            });
+
+            /*
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // 
+                    }
+                });
+            }, {
+                threshold: 0.1 // 
+            });
+
+            const animatedElements = document.querySelectorAll('.scroll-animate');
+            animatedElements.forEach(el => observer.observe(el));
+         
+        });
+
     </script>
 
 </body>
 </html>
-
