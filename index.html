@@ -618,56 +618,45 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // --- Part 1: Logic for the entry page ---
             const landingPage = document.getElementById('landing-page');
             const mainContent = document.getElementById('main-content');
 
-            // 
+            // Lock scrolling when the landing page is visible
             document.body.style.overflow = 'hidden';
 
             landingPage.addEventListener('click', () => {
-                // 
+                // Fade out the landing page
                 landingPage.style.opacity = '0';
 
-                // 
+                // After the fade-out is complete...
                 setTimeout(() => {
                     landingPage.style.display = 'none';
                     
-                    // 
+                    // Make the main content visible and fade it in
                     mainContent.style.visibility = 'visible';
                     mainContent.style.opacity = '1';
 
-                    // 
+                    // Restore page scrolling
                     document.body.style.overflow = 'auto'; 
-                }, 1000); // 
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const landingPage = document.getElementById('landing-page');
-            const mainContent = document.getElementById('main-content');
-
-            // 
-            landingPage.addEventListener('click', () => {
-                // ...
+                }, 1000); // This duration must match the CSS transition
             });
 
-            /*
+            // --- Part 2: Logic for scroll animations ---
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); // 
+                        observer.unobserve(entry.target); // Play animation only once
                     }
                 });
             }, {
-                threshold: 0.1 // 
+                threshold: 0.1 // Trigger when 10% of the element is visible
             });
 
             const animatedElements = document.querySelectorAll('.scroll-animate');
             animatedElements.forEach(el => observer.observe(el));
-         
         });
-
     </script>
 
 </body>
