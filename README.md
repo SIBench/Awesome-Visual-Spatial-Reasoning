@@ -2,20 +2,32 @@
 
 Contributors: 
 <div align="center">
-  <a href="https://song2yu.github.io/">Songsong Yu</a>,
-  <a href="https://haodot.github.io/">Hao Ju</a>,
-  <a href="https://github.com/JiaLianjie">Lianjie Jia</a>,
-  <a href="https://github.com/Dustzx">Fuxi Zhang</a>,
-  <a href="https://spyflying.github.io/">Shaofei Huang</a>,
-  <a href="https://github.com/Cuirundi">Rundi Cui</a>,
-  <a href="https://github.com/YuhanWu27">Yuhan Wu</a>,
-  <a href="https://github.com/RBinghao">Binghao Ran</a>,
-  <a href="https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en">Zhang Zaibin</a>,
+  <a href="https://song2yu.github.io/">Songsong Yu</a><sup>*1,2</sup>,
+  <a href="https://github.com/Uason-Chen">Yuxin Chen</a><sup>🌟*2</sup>,
+  <a href="https://haodot.github.io/">Hao Ju</a><sup>3</sup>,
+  <a href="https://github.com/JiaLianjie">Lianjie Jia</a><sup>*4</sup>,
+  <a href="https://github.com/Dustzx">Fuxi Zhang</a><sup>4</sup>,
+  <a href="https://spyflying.github.io/">Shaofei Huang</a><sup>3</sup>,
   <br>
-  <a href="https://zhipengzhang.cn/">Zhipeng Zhang</a>,
-  <a href="https://github.com/StevenGrove">Lin Song</a>,
-  <a href="https://github.com/Uason-Chen">Yuxin Chen</a><sup>🌟</sup>,
-  <a href="https://yanwei-li.com/">Yanwei Li</a>
+  <a href="https://github.com/YuhanWu27">Yuhan Wu</a><sup>4</sup>,
+  <a href="https://github.com/Cuirundi">Rundi Cui</a><sup>4</sup>,
+  <a href="https://github.com/RBinghao">Binghao Ran</a><sup>4</sup>,
+  <a href="https://scholar.google.com/citations?user=3SAk3GQAAAAJ&hl=en">Zhang Zaibin</a><sup>4</sup>,
+  <a href="https://www.zdzheng.xyz/" target="_blank" >Zhedong Zheng</a><sup>3</sup>,
+  <a href="https://zhipengzhang.cn/">Zhipeng Zhang</a><sup>1</sup>,
+  <br>
+  <a href="https://scholar.google.com/citations?user=j1XFhSoAAAAJ&hl=en&oi=ao" >Yifan Wang</a><sup>4</sup>,
+  <a href="https://github.com/StevenGrove">Lin Song</a><sup>2</sup>,
+  <a href="https://scholar.google.com/citations?hl=en&user=EfTwkXMolscC&view_op=list_works&sortby=pubdate" >Lijun Wang</a><sup>4</sup>,
+  <a href="https://yanwei-li.com/">Yanwei Li</a><sup>5</sup>,
+  <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ&hl=en&oi=ao" >Ying Shan</a><sup>2</sup>,
+  <a href="https://scholar.google.com/citations?hl=en&user=D3nE0agAAAAJ" >Huchuan Lu</a><sup>4</sup>,
+  <br><br>
+  <sup>1</sup>SJTU,
+  <sup>2</sup>ARC Lab, Tencent PCG,
+  <sup>3</sup>UM,
+  <sup>4</sup>DLUT,
+  <sup>5</sup>CUHK
 </div>
 <br>
 
@@ -24,14 +36,16 @@ Contributors:
   <img src="https://upload.wikimedia.org/wikipedia/zh/d/d5/SJTU_emblem.svg" width="80">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/University_of_Macau_logo.svg" width="80">
   <img src="https://upload.wikimedia.org/wikipedia/zh/7/76/Dalian_University_of_Technology_logo.svg" width="80">
+  <img src="https://upload.wikimedia.org/wikipedia/zh/0/09/CUHK_Coat_of_Arms.png" width="80">  
+
 </p>
 
 🌟 Project Lead
 
 # News and Updates
 
-- [ ] Preprint a survey article on visual spatial reasoning tasks.
-- [ ] Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
+- [x] 📜📜📜25.9.23 - Preprint a survey article on visual spatial reasoning tasks.
+- [x] 🎯🎯🎯25.9.23 - Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
 - [x] 🙌👏👐25.9.15 - [Open-source evaluation data](https://huggingface.co/datasets/Two-hot/SIBench) for visual spatial reasoning tasks.
 - [x] 🤩🥳🤗25.9.15 - [Open-source evaluation toolkit](https://github.com/song2yu/SIBench_eval).
 - [x] ✍️🦾💼25.6.28 - Collected the "Datasets" section.
