@@ -16,10 +16,10 @@ Contributors:
   <a href="https://www.zdzheng.xyz/" target="_blank" >Zhedong Zheng</a><sup>3</sup>,
   <a href="https://zhipengzhang.cn/">Zhipeng Zhang</a><sup>1</sup>,
   <br>
-  <a href="https://scholar.google.com/citations?user=j1XFhSoAAAAJ&hl=en&oi=ao" >Yifan Wang</a><sup>✉️4</sup>,
+  <a href="https://scholar.google.com/citations?user=j1XFhSoAAAAJ&hl=en&oi=ao" >Yifan Wang</a><sup>4</sup>,
   <a href="https://github.com/StevenGrove">Lin Song</a><sup>2</sup>,
   <a href="https://scholar.google.com/citations?hl=en&user=EfTwkXMolscC&view_op=list_works&sortby=pubdate" >Lijun Wang</a><sup>4</sup>,
-  <a href="https://yanwei-li.com/">Yanwei Li</a><sup>5</sup>,
+  <a href="https://yanwei-li.com/">Yanwei Li</a><sup>✉️5</sup>,
   <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ&hl=en&oi=ao" >Ying Shan</a><sup>2</sup>,
   <a href="https://scholar.google.com/citations?hl=en&user=D3nE0agAAAAJ" >Huchuan Lu</a><sup>4</sup>,
   <br><br>
