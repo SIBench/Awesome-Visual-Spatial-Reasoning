@@ -57,14 +57,14 @@ Contributors:
 
 # Open-source evaluation toolkit
 
-![radar2.0](./assets/radar2.0.png)
+![radar2.6](./assets/radar2.6_calibri.png)
 
 <h6 align="center"> Evaluation of SOTA Models on 23 Visual Spatial Reasoning Tasks.</h6>
 
 [**Code Usage**](https://github.com/song2yu/SIBench_eval):
 
 ```bash
-- git clone https://github.com/song2yu/SIBench_eval.git
+- git clone https://github.com/song2yu/SIBench-VSR.git
 - Refer to the README.md for more details
 ```
 
