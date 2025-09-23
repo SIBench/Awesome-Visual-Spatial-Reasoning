@@ -4,7 +4,7 @@ Contributors:
 <div align="center">
   <a href="https://song2yu.github.io/">Songsong Yu</a><sup>*1,2</sup>,
   <a href="https://github.com/Uason-Chen">Yuxin Chen</a><sup>🌟*2</sup>,
-  <a href="https://haodot.github.io/">Hao Ju</a><sup>3</sup>,
+  <a href="https://haodot.github.io/">Hao Ju</a><sup>*3</sup>,
   <a href="https://github.com/JiaLianjie">Lianjie Jia</a><sup>*4</sup>,
   <a href="https://github.com/Dustzx">Fuxi Zhang</a><sup>4</sup>,
   <a href="https://spyflying.github.io/">Shaofei Huang</a><sup>3</sup>,
@@ -16,7 +16,7 @@ Contributors:
   <a href="https://www.zdzheng.xyz/" target="_blank" >Zhedong Zheng</a><sup>3</sup>,
   <a href="https://zhipengzhang.cn/">Zhipeng Zhang</a><sup>1</sup>,
   <br>
-  <a href="https://scholar.google.com/citations?user=j1XFhSoAAAAJ&hl=en&oi=ao" >Yifan Wang</a><sup>4</sup>,
+  <a href="https://scholar.google.com/citations?user=j1XFhSoAAAAJ&hl=en&oi=ao" >Yifan Wang</a><sup>✉️4</sup>,
   <a href="https://github.com/StevenGrove">Lin Song</a><sup>2</sup>,
   <a href="https://scholar.google.com/citations?hl=en&user=EfTwkXMolscC&view_op=list_works&sortby=pubdate" >Lijun Wang</a><sup>4</sup>,
   <a href="https://yanwei-li.com/">Yanwei Li</a><sup>5</sup>,
@@ -28,9 +28,16 @@ Contributors:
   <sup>3</sup>UM,
   <sup>4</sup>DLUT,
   <sup>5</sup>CUHK
+
+  \* Equal Contributions
+  🌟 Project Lead
+  ✉️ Corresponding Author
+  
 </div>
 <br>
 
+
+  
 <p align="center">
   <img src="https://www.tencent.net.cn/wp-content/uploads/2023/02/logo-vertical-white-1.png" width="105">
   <img src="https://upload.wikimedia.org/wikipedia/zh/d/d5/SJTU_emblem.svg" width="80">
