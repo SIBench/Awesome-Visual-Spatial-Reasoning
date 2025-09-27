@@ -35,12 +35,12 @@
 <p align="center">
 🤗 <a href="https://huggingface.co/datasets/Two-hot/SIBench"> Dataset </a>&nbsp&nbsp | &nbsp&nbsp🌐 <a href="https://sibench.github.io/Awesome-Visual-Spatial-Reasoning/"> Leaderboard</a>&nbsp&nbsp | &nbsp&nbsp📊 <a href="https://github.com/SIBench/Awesome-Visual-Spatial-Reasoning"> Survey </a>&nbsp&nbsp | &nbsp&nbsp🎯 <a href="https://github.com/song2yu/SIBench-VSR"> Code </a>&nbsp&nbsp | &nbsp&nbsp📄 <a href="https://arxiv.org/abs/2509.18905">arXiv</a>
 </p>
-  
+
 </div>
 <br>
 
 
-  
+
 <p align="center">
   <img src="https://www.tencent.net.cn/wp-content/uploads/2023/02/logo-vertical-white-1.png" width="105">
   <img src="https://upload.wikimedia.org/wikipedia/zh/d/d5/SJTU_emblem.svg" width="80">
@@ -844,6 +844,15 @@ VLMs for the Metaverse</a></td>
 </tr>
 </thead>
 <tbody>
+  <tr>
+    <td><a href="https://vlm4d.github.io/file/VLM4D.pdf">VisualTrans: A Benchmark for Real-World Visual Transformation Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>25-08</td>
+    <td><a href="https://github.com/WangYipu2002/VisualTrans">link</a></td>
+    <td>--</td>
+    <td>VisualTrans</td>
+    <td><img src="excel_images/144007655.png" alt="img" /></td>
+  </tr>
   <tr>
     <td><a href="https://vlm4d.github.io/file/VLM4D.pdf">VLM4D: Towards Spatiotemporal Awareness in Vision Language Models</a></td>
     <td>ICCV</td>
