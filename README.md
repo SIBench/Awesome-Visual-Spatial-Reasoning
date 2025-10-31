@@ -27,7 +27,6 @@
   <sup>3</sup>UM,
   <sup>4</sup>DLUT,
   <sup>5</sup>CUHK
-
   \* Equal Contributions
   🌟 Project Lead
   ✉️ Corresponding Author
@@ -1236,6 +1235,15 @@ VLMs for the Metaverse</a></td>
 </tr>
 </thead>
 <tbody>
+  <tr>
+    <td><a href="https://arxiv.org/pdf/2510.25760">Multimodal Spatial Reasoning in the Large Model Era: A Survey and Benchmarks</a></td>
+    <td>ARXIV</td>
+    <td>25-10</td>
+    <td><a href="https://github.com/zhengxuJosh/Awesome-Multimodal-Spatial-Reasoning">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/zhengxuJosh/Awesome-Multimodal-Spatial-Reasoning.svg?style=social&label=Star" alt="Star count" /></td>
+    <td>--</td>
+    <td><img src="excel_images/20251031164914_7_79.png" alt="img" /></td>
+  </tr>
   <tr>
     <td><a href="https://arxiv.org/abs/2506.07966v1">SpaCE-10: A Comprehensive Benchmark for Multimodal Large Language Models in Compositional Spatial Intelligence</a></td>
     <td>ARXIV</td>
