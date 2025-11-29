@@ -27,7 +27,7 @@
   <sup>3</sup>UM,
   <sup>4</sup>DLUT,
   <sup>5</sup>CUHK
-  \* Equal Contributions
+  * Equal Contributions
   🌟 Project Lead
   ✉️ Corresponding Author
 
