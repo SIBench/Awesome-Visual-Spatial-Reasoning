@@ -844,7 +844,25 @@ VLMs for the Metaverse</a></td>
 </thead>
 <tbody>
   <tr>
-    <td><a href="https://vlm4d.github.io/file/VLM4D.pdf">VisualTrans: A Benchmark for Real-World Visual Transformation Reasoning</a></td>
+    <td><a href="https://arxiv.org/pdf/2511.04670">Cambrian-S: Towards Spatial Supersensing in Video</a></td>
+    <td>ARXIV</td>
+    <td>25-11</td>
+    <td><a href="https://github.com/cambrian-mllm/cambrian-s">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/cambrian-mllm/cambrian-s.svg?style=social&label=Star" alt="Star count" /></td>
+    <td>VSI-SUPER</td>
+    <td><img src="excel_images/201237431.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2511.20644">Vision-Language Memory for Spatial Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>25-11</td>
+    <td><a href="https://sairlab.org/vlm2/">link</a></td>
+    <td>--</td>
+    <td>--</td>
+    <td><img src="excel_images/195927754.png" alt="img" /></td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2508.04043">VisualTrans: A Benchmark for Real-World Visual Transformation Reasoning</a></td>
     <td>ARXIV</td>
     <td>25-08</td>
     <td><a href="https://github.com/WangYipu2002/VisualTrans">link</a></td>
@@ -1090,6 +1108,8 @@ VLMs for the Metaverse</a></td>
 </table>
 
 
+
+
 ## Multi-View Images
 
 <table>
@@ -1236,12 +1256,21 @@ VLMs for the Metaverse</a></td>
 </thead>
 <tbody>
   <tr>
+    <td><a href="https://arxiv.org/pdf/2511.05491">Visual Spatial Tuning</a></td>
+    <td>ARXIV</td>
+    <td>25-11</td>
+    <td><a href="https://github.com/Yangr116/VST">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/Yangr116/VST.svg?style=social&label=Star" alt="Star count" /></td>
+    <td>--</td>
+    <td><img src="excel_images/200323241.png" alt="img" /></td>
+  </tr>
+  <tr>
     <td><a href="https://arxiv.org/pdf/2510.25760">Multimodal Spatial Reasoning in the Large Model Era: A Survey and Benchmarks</a></td>
     <td>ARXIV</td>
     <td>25-10</td>
     <td><a href="https://github.com/zhengxuJosh/Awesome-Multimodal-Spatial-Reasoning">link</a></td>
     <td><img src="https://img.shields.io/github/stars/zhengxuJosh/Awesome-Multimodal-Spatial-Reasoning.svg?style=social&label=Star" alt="Star count" /></td>
-    <td>--</td>
+    <td>VST</td>
     <td><img src="excel_images/20251031164914_7_79.png" alt="img" /></td>
   </tr>
   <tr>
