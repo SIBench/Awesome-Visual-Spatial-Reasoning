@@ -1255,7 +1255,17 @@ VLMs for the Metaverse</a></td>
 </tr>
 </thead>
 <tbody>
-  <tr>
+  	<tr>
+    <td><a href="https://arxiv.org/pdf/2512.02487">Masking Matters: Unlocking the Spatial Reasoning Capabilities of LLMs
+for 3D Scene-Language Understanding</a></td>
+    <td>ARXIV</td>
+    <td>25-11</td>
+    <td>--</td>
+    <td>--</td>
+    <td>--</td>
+    <td><img src="excel_images/212410278.png" alt="img" /></td>
+  </tr>
+    <tr>
     <td><a href="https://arxiv.org/pdf/2511.05491">Visual Spatial Tuning</a></td>
     <td>ARXIV</td>
     <td>25-11</td>
