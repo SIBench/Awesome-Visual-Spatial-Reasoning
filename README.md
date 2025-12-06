@@ -156,6 +156,16 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
 </thead>
 <tbody>
   <tr>
+    <td><a href="https://arxiv.org/pdf/2511.17308">SpatialGeo: Boosting Spatial Reasoning in
+Multimodal LLMs via Geometry-Semantics Fusion</a></td>
+    <td>ARXIV</td>
+    <td>25-11</td>
+    <td><a href="https://github.com/Ricky-PLUS/SpatialGeo">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/Ricky-PLUS/SpatialGeo.svg?style=social&label=Star" alt="Star count" /></td>
+    <td>--</td>
+    <td><img src="excel_images/20251206181759283.png" alt="img" /></td>
+  </tr>
+  <tr>
     <td><a href="https://openreview.net/pdf?id=Ku4lylDpjq">R2D3:ImpartingSpatial Reasoning by Reconstructing 3D Scenes from 2D Images</a></td>
     <td>ARXIV</td>
     <td>--</td>
@@ -817,6 +827,7 @@ VLMs for the Metaverse</a></td>
   </tr>
 </tbody>
 </table>
+
 
 
 ## Monocular-Video
