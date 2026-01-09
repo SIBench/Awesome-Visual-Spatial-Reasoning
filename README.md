@@ -155,6 +155,24 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
 </tr>
 </thead>
 <tbody>
+    <tr>
+    <td><a href="https://arxiv.org/pdf/2512.07733">SpatialDreamer: Incentivizing Spatial Reasoning via Active Mental Imagery</a></td>
+    <td>ARXIV</td>
+    <td>25-12</td>
+    <td><a href="https://github.com/mengcaopku/SpatialDreamer">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/mengcaopku/SpatialDreamer.svg?style=social&label=Star" alt="Star count"/></td>
+    <td>--</td>
+    <td><img src="excel_images/2026-01-09_210340_756.jpg" alt="img" /></td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/pdf/2512.04069">SpaceTools: Tool-Augmented Spatial Reasoning via Double Interactive RL</a></td>
+    <td>ARXIV</td>
+    <td>25-12</td>
+    <td><a href="https://github.com/spacetools/SpaceTools">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/spacetools/SpaceTools.svg?style=social&label=Star" alt="Star count"/></td>
+    <td>--</td>
+    <td><img src="excel_images/2026-01-09_205950_834.jpg" alt="img" /></td>
+  </tr>
   <tr>
     <td><a href="https://arxiv.org/pdf/2511.17308">SpatialGeo: Boosting Spatial Reasoning in
 Multimodal LLMs via Geometry-Semantics Fusion</a></td>
@@ -830,6 +848,7 @@ VLMs for the Metaverse</a></td>
 
 
 
+
 ## Monocular-Video
 
 <table>
@@ -1145,6 +1164,16 @@ VLMs for the Metaverse</a></td>
 </tr>
 </thead>
 <tbody>
+    <tr>
+    <td><a href="https://arxiv.org/pdf/2511.21688">G^2VLM: Geometry Grounded Vision Language Model with Unified 3D
+Reconstruction and Spatial Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>25-11</td>
+    <td><a href="https://github.com/InternRobotics/G2VLM">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/InternRobotics/G2VLM.svg?style=social&label=Star" alt="Star count"></td>
+    <td>--</td>
+    <td><img src="excel_images/2026-01-09_205328_741.jpg" alt="img" /></td>
+  </tr>
   	<tr>
     <td><a href="https://arxiv.org/pdf/2506.18385">InternSpatial: A Comprehensive Dataset for Spatial Reasoning in Vision-Language Models</a></td>
     <td>ARXIV</td>
@@ -1237,6 +1266,7 @@ VLMs for the Metaverse</a></td>
   </tr>
 </tbody>
 </table>
+
 
 
 
@@ -1744,7 +1774,95 @@ for 3D Scene-Language Understanding</a></td>
 </tr>
 </thead>
 <tbody>
+    <tr>
+    <td><a href="https://arxiv.org/pdf/2601.03590">Can LLMs See Without Pixels? Benchmarking Spatial Intelligence from
+Textual Descriptions</a></td>
+    <td>ARXIV</td>
+    <td>26-01</td>
+    <td><a href="">NA</a></td>
+    <td>0</td>
+    <td>Image</td>
+    <td><img src="excel_images/2026-01-09_204651_325.jpg" alt="img" /></td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/pdf/2601.03590">Can LLMs See Without Pixels? Benchmarking Spatial Intelligence from
+Textual Descriptions</a></td>
+    <td>ARXIV</td>
+    <td>26-01</td>
+    <td><a href="https://spatial4d-bench.github.io/spatial4d/">NA</a></td>
+    <td>0</td>
+    <td>Image</td>
+    <td><img src="excel_images/2026-01-09_204830_116.jpg" alt="img" /></td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/pdf/2512.16237">Scaling Spatial Reasoning in MLLMs through Programmatic Data Synthesis</a></td>
+    <td>ARXIV</td>
+    <td>25-12</td>
+    <td><a href="https://github.com/AI9Stars/SPRITE/blob/main/%E6%95%AC%E8%AF%B7%E6%9C%9F%E5%BE%85">link</a></td>
+    <td>0</td>
+    <td>Video,Image</td>
+    <td><img src="excel_images/2026-01-09_204425_847.png" alt="img" /></td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/pdf/2512.10863">MMSI-Video-Bench: A Holistic Benchmark for Video-Based Spatial Intelligence</a></td>
+    <td>ARXIV</td>
+    <td>25-12</td>
+    <td><a href="https://huggingface.co/datasets/rbler/MMSI-Video-Bench">link</a></td>
+    <td>0</td>
+    <td>Video</td>
+    <td><img src="excel_images/2026-01-09_204149_795.jpg" alt="img" /></td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/pdf/2511.01618">Actial: Activate Spatial Reasoning Ability of
+Multimodal Large Language Models</a></td>
+    <td>ARXIV</td>
+    <td>25-11</td>
+    <td><a href="">NA</a></td>
+    <td>1</td>
+    <td>image</td>
+    <td><img src="excel_images/2026-01-09_203842_782.jpg" alt="img" /></td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/pdf/2511.15065">Reasoning via Video: The First Evaluation of Video Models’ Reasoning Abilities
+through Maze-Solving Tasks</a></td>
+    <td>ARXIV</td>
+    <td>25-11</td>
+    <td><a href="https://huggingface.co/datasets/amagipeng/VR-Bench">link</a></td>
+    <td>0</td>
+    <td>Video</td>
+    <td><img src="excel_images/2026-01-09_203422_215.jpg" alt="img" /></td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/pdf/2511.02347">LTD-Bench: Evaluating Large Language Models by
+Letting Them Draw</a></td>
+    <td>ARXIV</td>
+    <td>25-11</td>
+    <td><a href="https://huggingface.co/datasets/walktaster/LTD_Bench">link</a></td>
+    <td>1</td>
+    <td>Image</td>
+    <td><img src="excel_images/2026-01-09_203213_296.jpg" alt="img" /></td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/pdf/2511.13269">Is your VLM Sky-Ready? A Comprehensive Spatial Intelligence
+Benchmark for UAV Navigation</a></td>
+    <td>ARXIV</td>
+    <td>25-11</td>
+    <td><a href="https://huggingface.co/datasets/sijieaaa/UAVScenes">link</a></td>
+    <td>0</td>
+    <td>Image</td>
+    <td><img src="excel_images/2026-01-09_202700_407.jpg" alt="img" /></td>
+  </tr>
   <tr>
+    <td><a href="https://arxiv.org/pdf/2511.21471">SpatialBench: Benchmarking Multimodal Large Language Models for Spatial
+Cognition</a></td>
+    <td>ARXIV</td>
+    <td>25-11</td>
+    <td><a href="https://huggingface.co/datasets/XPR2004/SpatialBench">link</a></td>
+    <td>1</td>
+    <td>Video</td>
+    <td><img src="excel_images/2026-01-09_202450_920.jpg" alt="img" /></td>
+  </tr>
+    <tr>
     <td><a href="https://openreview.net/pdf?id=84pDoCD4lH">Do Vision-Language Models Represent Space and How. Evaluating Spatial Frame of Reference under Ambiguities</a></td>
     <td>ICLR</td>
     <td>25-11</td>
@@ -2225,6 +2343,7 @@ A Real-World Simulation Benchmark for Qualitative Reasoning</a></td>
   </tr>
 </tbody>
 </table>
+
 
 
 # Acknowledgements
