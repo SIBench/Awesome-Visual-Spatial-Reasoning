@@ -51,6 +51,7 @@
 
 # News and Updates
 
+- [x] 🆕🔥✨26.3.23 - Added 9 new papers (2025.10 ~ 2026.03) covering benchmarks, training methods, and spatial reasoning frameworks.
 - [x] 📜📜📜25.9.23 - Preprint a survey article on visual spatial reasoning tasks.
 - [x] 🎯🎯🎯25.9.23 - Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
 - [x] 🙌👏👐25.9.15 - [Open-source evaluation data](https://huggingface.co/datasets/Two-hot/SIBench) for visual spatial reasoning tasks.
@@ -155,6 +156,61 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
 </tr>
 </thead>
 <tbody>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2603.00409">SSR: Pushing the Limit of Spatial Intelligence with Structured Scene Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>26-03</td>
+    <td>--</td>
+    <td>--</td>
+    <td>VSI-Bench</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2603.06985">Perception-Aware Multimodal Spatial Reasoning from Monocular Images</a></td>
+    <td>ARXIV</td>
+    <td>26-03</td>
+    <td>--</td>
+    <td>--</td>
+    <td>SURDS</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2602.20901">SpatiaLQA: A Benchmark for Evaluating Spatial Logical Reasoning in Vision-Language Models</a></td>
+    <td>CVPR</td>
+    <td>26-02</td>
+    <td><a href="https://github.com/xieyc99/SpatiaLQA">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/xieyc99/SpatiaLQA.svg?style=social&label=Star" alt="Star count" /></td>
+    <td>SpatiaLQA</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2602.03916">SpatiaLab: Can Vision-Language Models Perform Spatial Reasoning in the Wild?</a></td>
+    <td>ICLR</td>
+    <td>26-02</td>
+    <td>--</td>
+    <td>--</td>
+    <td>SpatiaLab</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2601.14339">CityCube: Benchmarking Cross-view Spatial Reasoning on Vision-Language Models in Urban Environments</a></td>
+    <td>ARXIV</td>
+    <td>26-01</td>
+    <td>--</td>
+    <td>--</td>
+    <td>CityCube</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2601.01984">Thinking with Blueprints: Assisting Vision-Language Models in Spatial Reasoning via Structured Object Representation</a></td>
+    <td>ARXIV</td>
+    <td>26-01</td>
+    <td>--</td>
+    <td>--</td>
+    <td>--</td>
+    <td>--</td>
+  </tr>
+
     <tr>
     <td><a href="https://arxiv.org/pdf/2512.07733">SpatialDreamer: Incentivizing Spatial Reasoning via Active Mental Imagery</a></td>
     <td>ARXIV</td>
@@ -873,6 +929,16 @@ VLMs for the Metaverse</a></td>
 </tr>
 </thead>
 <tbody>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2601.05172">CoV: Chain-of-View Prompting for Spatial Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>26-01</td>
+    <td>--</td>
+    <td>--</td>
+    <td>--</td>
+    <td>--</td>
+  </tr>
+
   <tr>
     <td><a href="https://arxiv.org/pdf/2511.04670">Cambrian-S: Towards Spatial Supersensing in Video</a></td>
     <td>ARXIV</td>
@@ -1165,6 +1231,16 @@ VLMs for the Metaverse</a></td>
 </thead>
 <tbody>
     <tr>
+    <td><a href="https://arxiv.org/abs/2603.18892">MultihopSpatial: Multi-hop Compositional Spatial Reasoning Benchmark for Vision-Language Models</a></td>
+    <td>ARXIV</td>
+    <td>26-03</td>
+    <td><a href="https://youngwanlee.github.io/multihopspatial">link</a></td>
+    <td>--</td>
+    <td>MultihopSpatial</td>
+    <td>--</td>
+  </tr>
+
+    <tr>
     <td><a href="https://arxiv.org/pdf/2511.21688">G^2VLM: Geometry Grounded Vision Language Model with Unified 3D
 Reconstruction and Spatial Reasoning</a></td>
     <td>ARXIV</td>
@@ -1296,6 +1372,25 @@ Reconstruction and Spatial Reasoning</a></td>
 </tr>
 </thead>
 <tbody>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2510.08531">SpatialLadder: Progressive Training for Spatial Reasoning in Vision-Language Models</a></td>
+    <td>ARXIV</td>
+    <td>25-10</td>
+    <td><a href="https://github.com/ZJU-REAL/SpatialLadder">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/ZJU-REAL/SpatialLadder.svg?style=social&label=Star" alt="Star count" /></td>
+    <td>SpatialLadder-26k</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2512.16561">N3D-VLM: Native 3D Grounding Enables Accurate Spatial Reasoning in Vision-Language Models</a></td>
+    <td>ARXIV</td>
+    <td>25-12</td>
+    <td><a href="https://n3d-vlm.github.io">link</a></td>
+    <td>--</td>
+    <td>--</td>
+    <td>--</td>
+  </tr>
+
   	<tr>
     <td><a href="https://arxiv.org/pdf/2512.02487">Masking Matters: Unlocking the Spatial Reasoning Capabilities of LLMs
 for 3D Scene-Language Understanding</a></td>
