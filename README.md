@@ -32,7 +32,7 @@
   ✉️ Corresponding Author
 
 <p align="center">
-🤗 <a href="https://huggingface.co/datasets/Two-hot/SIBench"> Dataset </a>&nbsp&nbsp | &nbsp&nbsp🌐 <a href="https://sibench.github.io/Awesome-Visual-Spatial-Reasoning/"> Leaderboard</a>&nbsp&nbsp | &nbsp&nbsp📊 <a href="https://github.com/SIBench/Awesome-Visual-Spatial-Reasoning"> Survey </a>&nbsp&nbsp | &nbsp&nbsp🎯 <a href="https://github.com/song2yu/SIBench-VSR"> Code </a>&nbsp&nbsp | &nbsp&nbsp📄 <a href="https://arxiv.org/abs/2509.18905">arXiv</a>
+🤗 <a href="https://huggingface.co/datasets/Two-hot/SIBench"> Dataset </a>&nbsp&nbsp | &nbsp&nbsp🌐 <a href="https://sibench.github.io/Awesome-Visual-Spatial-Reasoning/"> Leaderboard</a>&nbsp&nbsp | &nbsp&nbsp📊 <a href="https://github.com/SIBench/Awesome-Visual-Spatial-Reasoning"> Survey </a>&nbsp&nbsp | &nbsp&nbsp🎯 <a href="https://github.com/song2yu/SIBench-VSR"> Code </a>&nbsp&nbsp | &nbsp&nbsp📄 <a href="https://arxiv.org/abs/2509.18905">arXiv</a>&nbsp&nbsp | &nbsp&nbsp🗺️ <a href="https://sibench.github.io/Awesome-Visual-Spatial-Reasoning/survey.html"><strong>📖 Interactive Survey Page (中/EN)</strong></a>
 </p>
 
 </div>
@@ -51,6 +51,7 @@
 
 # News and Updates
 
+- [x] 🆕🔥✨26.3.29 - Added 7 new papers (2026.03.22~2026.03.29) and launched **[📖 Interactive Bilingual Survey Page](https://sibench.github.io/Awesome-Visual-Spatial-Reasoning/survey.html)** covering 110+ papers with ZH/EN toggle, timeline, trend analysis, and benchmark summary.
 - [x] 🆕🔥✨26.3.23 - Added 9 new papers (2025.10 ~ 2026.03) covering benchmarks, training methods, and spatial reasoning frameworks.
 - [x] 📜📜📜25.9.23 - Preprint a survey article on visual spatial reasoning tasks.
 - [x] 🎯🎯🎯25.9.23 - Release comprehensive evaluation results of mainstream models in visual spatial reasoning.
