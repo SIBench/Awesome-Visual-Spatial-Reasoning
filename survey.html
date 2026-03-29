@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Spatial Reasoning Survey | 视觉空间推理综述 (2020–2026)</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #23273a;
+      --border: #2e3350;
+      --accent: #6366f1;
+      --accent2: #22d3ee;
+      --accent3: #f59e0b;
+      --accent4: #10b981;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --tag-bench: #4f46e5;
+      --tag-method: #0891b2;
+      --tag-rl: #7c3aed;
+      --tag-3d: #059669;
+      --tag-video: #b45309;
+      --tag-survey: #be185d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 60%, #0c1a2e 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 52px 32px 40px;
+      text-align: center;
+      position: relative;
+    }
+    header .badge-row {
+      display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 18px;
+    }
+    header .badge {
+      background: rgba(99,102,241,0.15);
+      border: 1px solid rgba(99,102,241,0.4);
+      border-radius: 20px; padding: 4px 14px;
+      font-size: 0.78rem; color: #a5b4fc;
+    }
+    header h1 {
+      font-size: 2.1rem; font-weight: 800;
+      background: linear-gradient(90deg, #818cf8, #22d3ee, #34d399);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+    header .subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
+    header .meta {
+      display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 16px;
+    }
+    header .meta span {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 20px; padding: 4px 14px;
+      font-size: 0.82rem; color: var(--muted);
+    }
+    .author-line { color: var(--muted); font-size: 0.85rem; margin-bottom: 8px; }
+    .author-line a { color: #a5b4fc; text-decoration: none; }
+    .author-line a:hover { text-decoration: underline; }
+
+    /* ── Nav ── */
+    nav {
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      padding: 0 32px; display: flex; gap: 4px;
+      overflow-x: auto; position: sticky; top: 0; z-index: 100;
+    }
+    nav a {
+      color: var(--muted); text-decoration: none;
+      font-size: 0.88rem; padding: 14px 16px;
+      white-space: nowrap; border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    nav a:hover, nav a.active { color: var(--text); border-color: var(--accent); }
+
+    /* ── Layout ── */
+    .container { max-width: 1280px; margin: 0 auto; padding: 36px 24px; }
+    section { margin-bottom: 60px; }
+    .section-header {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 24px;
+      padding-bottom: 12px; border-bottom: 1px solid var(--border);
+    }
+    .section-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; flex-shrink: 0;
+    }
+    .section-header h2 { font-size: 1.35rem; font-weight: 700; }
+    .section-desc { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; line-height: 1.7; }
+
+    /* ── Overview grid ── */
+    .overview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 18px; }
+    .ov-card {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 14px; padding: 22px;
+    }
+    .ov-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+    .ov-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
+    .ov-card.img-card { border-color: #4f46e5; }
+    .ov-card.video-card { border-color: #0891b2; }
+    .ov-card.mv-card { border-color: #059669; }
+    .ov-card.other-card { border-color: #f59e0b; }
+
+    /* ── Timeline ── */
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .tl-year { display: flex; gap: 0; }
+    .tl-dot-col { display: flex; flex-direction: column; align-items: center; width: 80px; flex-shrink: 0; }
+    .tl-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); margin-top: 4px; flex-shrink: 0; }
+    .tl-line { width: 2px; flex: 1; background: var(--border); min-height: 30px; }
+    .tl-year-label { font-size: 0.9rem; font-weight: 700; color: var(--accent2); margin-top: 2px; text-align: center; }
+    .tl-content { flex: 1; padding: 0 0 28px 12px; }
+    .tl-content h4 { font-size: 0.92rem; font-weight: 600; margin-bottom: 6px; }
+    .tl-content p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+    .tl-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+
+    /* ── Tags ── */
+    .tag {
+      font-size: 0.72rem; font-weight: 600; padding: 2px 10px;
+      border-radius: 12px; color: #fff;
+    }
+    .tag.bench { background: var(--tag-bench); }
+    .tag.method { background: var(--tag-method); }
+    .tag.rl { background: var(--tag-rl); }
+    .tag.td { background: var(--tag-3d); }
+    .tag.video { background: var(--tag-video); }
+    .tag.survey { background: var(--tag-survey); }
+    .tag.new { background: #dc2626; }
+
+    /* ── Paper cards grid ── */
+    .papers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px,1fr)); gap: 16px; }
+    .paper-card {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px; transition: border-color 0.2s, transform 0.15s;
+      border-left: 3px solid var(--border);
+    }
+    .paper-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .paper-card.bench { border-left-color: var(--tag-bench); }
+    .paper-card.method { border-left-color: var(--tag-method); }
+    .paper-card.rl { border-left-color: var(--tag-rl); }
+    .paper-card.td { border-left-color: var(--tag-3d); }
+    .paper-card.video { border-left-color: var(--tag-video); }
+    .paper-card.highlight { border-left-color: var(--accent3); border-left-width: 3px; }
+    .paper-card .pc-date { font-size: 0.75rem; color: var(--muted); margin-bottom: 6px; }
+    .paper-card .pc-venue {
+      display: inline-block; font-size: 0.72rem; padding: 1px 8px;
+      border-radius: 8px; background: var(--surface); border: 1px solid var(--border);
+      color: var(--muted); margin-left: 6px;
+    }
+    .paper-card h4 { font-size: 0.88rem; font-weight: 600; line-height: 1.45; margin-bottom: 8px; }
+    .paper-card h4 a { color: var(--text); text-decoration: none; }
+    .paper-card h4 a:hover { color: var(--accent2); }
+    .paper-card .pc-summary { font-size: 0.81rem; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+    .paper-card .pc-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+    .paper-card .pc-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+    .paper-card .pc-link { color: var(--accent); font-size: 0.78rem; text-decoration: none; }
+    .paper-card .pc-link:hover { text-decoration: underline; }
+
+    /* ── Trend cards ── */
+    .trend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 18px; }
+    .trend-card {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 14px; padding: 22px;
+    }
+    .trend-card .tc-num {
+      font-size: 2rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    .trend-card h3 { font-size: 0.98rem; font-weight: 700; margin-bottom: 10px; }
+    .trend-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.65; }
+    .trend-card ul { margin-top: 8px; padding-left: 18px; }
+    .trend-card ul li { font-size: 0.82rem; color: var(--muted); margin-bottom: 4px; }
+
+    /* ── Benchmark table ── */
+    .bench-table-wrap { overflow-x: auto; }
+    .bench-table {
+      width: 100%; border-collapse: collapse; font-size: 0.83rem;
+    }
+    .bench-table th {
+      background: var(--surface2); color: var(--muted);
+      padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+    }
+    .bench-table td {
+      padding: 9px 14px; border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .bench-table tr:hover td { background: rgba(99,102,241,0.05); }
+    .bench-table a { color: var(--accent2); text-decoration: none; font-size: 0.78rem; }
+    .bench-table a:hover { text-decoration: underline; }
+
+    /* ── Hot list ── */
+    .hot-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 12px; }
+    .hot-item {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 16px;
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .hot-item .num {
+      font-size: 1.2rem; font-weight: 800; color: var(--accent3);
+      min-width: 28px; text-align: center;
+    }
+    .hot-item .info h5 { font-size: 0.85rem; font-weight: 600; margin-bottom: 3px; }
+    .hot-item .info p { font-size: 0.78rem; color: var(--muted); }
+    .hot-item .info a { color: var(--accent); text-decoration: none; font-size: 0.75rem; }
+
+    /* ── Stats bar ── */
+    .stats-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+    .stat-box {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 24px; text-align: center; flex: 1; min-width: 120px;
+    }
+    .stat-box .val { font-size: 1.8rem; font-weight: 800; color: var(--accent2); }
+    .stat-box .lbl { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface); border-top: 1px solid var(--border);
+      text-align: center; padding: 24px; color: var(--muted); font-size: 0.8rem;
+    }
+
+    /* ── Lang btn ── */
+    #lang-btn {
+      position: fixed; bottom: 28px; right: 28px; z-index: 9999;
+      background: linear-gradient(135deg, #6366f1, #22d3ee);
+      color: #fff; border: none; border-radius: 28px;
+      padding: 10px 22px; font-size: 0.88rem; font-weight: 700;
+      cursor: pointer; box-shadow: 0 4px 20px rgba(99,102,241,0.4);
+      transition: transform 0.15s, box-shadow 0.15s; letter-spacing: 0.03em;
+    }
+    #lang-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(99,102,241,0.55); }
+
+    /* ── Divider ── */
+    .subsection-title {
+      font-size: 0.82rem; font-weight: 700; color: var(--accent3);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin: 28px 0 14px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.4rem; }
+      .papers-grid { grid-template-columns: 1fr; }
+      .trend-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge-row">
+    <span class="badge">📄 100+ Papers</span>
+    <span class="badge">🗓 2020 – 2026</span>
+    <span class="badge">🌐 Bilingual ZH/EN</span>
+    <span class="badge">🔬 SIBench Survey</span>
+  </div>
+  <h1 data-zh="视觉空间推理综述" data-en="Visual Spatial Reasoning Survey">视觉空间推理综述</h1>
+  <p class="subtitle" data-zh="面向视觉语言模型的空间智能研究全景 · 2020–2026" data-en="A Comprehensive Survey of Spatial Intelligence for Vision-Language Models · 2020–2026">
+    面向视觉语言模型的空间智能研究全景 · 2020–2026
+  </p>
+  <p class="author-line">
+    <a href="https://song2yu.github.io/">Songsong Yu</a> et al. ·
+    <a href="https://github.com/SIBench/Awesome-Visual-Spatial-Reasoning">SIBench Project</a> ·
+    SJTU / ARC Tencent PCG / UM / DLUT / CUHK
+  </p>
+  <div class="meta">
+    <span data-zh="📅 更新日期：2026-03-29" data-en="📅 Updated: 2026-03-29">📅 更新日期：2026-03-29</span>
+    <span data-zh="📄 收录论文：110+" data-en="📄 Papers: 110+">📄 收录论文：110+</span>
+    <span data-zh="🔍 来源：ArXiv · CVPR · NeurIPS · ICLR" data-en="🔍 Sources: ArXiv · CVPR · NeurIPS · ICLR">🔍 来源：ArXiv · CVPR · NeurIPS · ICLR</span>
+    <span data-zh="🕐 覆盖：2020–2026.03" data-en="🕐 Coverage: 2020–2026.03">🕐 覆盖：2020–2026.03</span>
+  </div>
+</header>
+
+<nav>
+  <a href="#overview" data-zh="概述" data-en="Overview">概述</a>
+  <a href="#timeline" data-zh="发展时间线" data-en="Timeline">发展时间线</a>
+  <a href="#single" data-zh="单图推理" data-en="Single Image">单图推理</a>
+  <a href="#video" data-zh="视频推理" data-en="Video">视频推理</a>
+  <a href="#multiview" data-zh="多视角" data-en="Multi-View">多视角</a>
+  <a href="#benchmarks" data-zh="基准测试" data-en="Benchmarks">基准测试</a>
+  <a href="#trends" data-zh="趋势分析" data-en="Trends">趋势分析</a>
+  <a href="#hot" data-zh="近期热点" data-en="Recent Hot">近期热点</a>
+</nav>
+
+<div class="container">
+
+<!-- ===== OVERVIEW ===== -->
+<section id="overview">
+  <div class="section-header">
+    <div class="section-icon" style="background:#1e1b4b">🌐</div>
+    <h2 data-zh="领域概述" data-en="Field Overview">领域概述</h2>
+  </div>
+  <p class="section-desc" data-zh="视觉空间推理（Visual Spatial Reasoning, VSR）是视觉语言模型（VLM）研究中的核心挑战之一，要求模型从图像、视频或多视角输入中理解物体位置、距离、朝向、深度及空间关系。这一能力是具身智能、自动驾驶、机器人操控等应用的基础。2020年以来，该领域从早期的简单空间关系分类，演进为面向3D场景、视频时序、多视角一致性的深度推理挑战。" data-en="Visual Spatial Reasoning (VSR) is one of the core challenges in Vision-Language Model (VLM) research, requiring models to understand object positions, distances, orientations, depths, and spatial relationships from images, videos, or multi-view inputs. This capability is fundamental to embodied AI, autonomous driving, and robotic manipulation. Since 2020, the field has evolved from simple spatial relation classification to deep reasoning challenges targeting 3D scenes, video temporal understanding, and multi-view consistency.">
+    视觉空间推理（Visual Spatial Reasoning, VSR）是视觉语言模型（VLM）研究中的核心挑战之一，要求模型从图像、视频或多视角输入中理解物体位置、距离、朝向、深度及空间关系。这一能力是具身智能、自动驾驶、机器人操控等应用的基础。2020年以来，该领域从早期的简单空间关系分类，演进为面向3D场景、视频时序、多视角一致性的深度推理挑战。
+  </p>
+
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="val">110+</div>
+      <div class="lbl" data-zh="收录论文" data-en="Papers">收录论文</div>
+    </div>
+    <div class="stat-box">
+      <div class="val">40+</div>
+      <div class="lbl" data-zh="评测基准" data-en="Benchmarks">评测基准</div>
+    </div>
+    <div class="stat-box">
+      <div class="val">6</div>
+      <div class="lbl" data-zh="主要研究方向" data-en="Research Tracks">主要研究方向</div>
+    </div>
+    <div class="stat-box">
+      <div class="val">2026</div>
+      <div class="lbl" data-zh="最新更新" data-en="Latest Update">最新更新</div>
+    </div>
+  </div>
+
+  <div class="overview-grid">
+    <div class="ov-card img-card">
+      <h3 data-zh="🖼 单图空间推理" data-en="🖼 Single-Image Spatial Reasoning">🖼 单图空间推理</h3>
+      <p data-zh="从单张RGB图像中推断物体的空间关系、相对深度、方向和位置。是最基础的范式，近年重点转向深度量化估计、CoT推理和强化学习微调。代表：SpatialVLM, R1-Zero-VSI, MetaSpatial。" data-en="Inferring spatial relations, relative depth, orientation, and position from a single RGB image. The most fundamental paradigm, with recent focus shifting to quantitative depth estimation, CoT reasoning, and RL fine-tuning. Key works: SpatialVLM, R1-Zero-VSI, MetaSpatial.">
+        从单张RGB图像中推断物体的空间关系、相对深度、方向和位置。是最基础的范式，近年重点转向深度量化估计、CoT推理和强化学习微调。代表：SpatialVLM, R1-Zero-VSI, MetaSpatial。
+      </p>
+    </div>
+    <div class="ov-card video-card">
+      <h3 data-zh="🎬 视频时空推理" data-en="🎬 Video Spatio-Temporal Reasoning">🎬 视频时空推理</h3>
+      <p data-zh="在时序视频流中理解动态空间变化、物体运动轨迹和相机运动。需要同时处理空间和时间维度，代表：VSI-Bench, STI-Bench, SPAR-Bench, SpaceR。" data-en="Understanding dynamic spatial changes, object motion trajectories, and camera motion in temporal video streams. Requires simultaneously processing spatial and temporal dimensions. Key works: VSI-Bench, STI-Bench, SPAR-Bench, SpaceR.">
+        在时序视频流中理解动态空间变化、物体运动轨迹和相机运动。需要同时处理空间和时间维度，代表：VSI-Bench, STI-Bench, SPAR-Bench, SpaceR。
+      </p>
+    </div>
+    <div class="ov-card mv-card">
+      <h3 data-zh="📐 多视角3D理解" data-en="📐 Multi-View 3D Understanding">📐 多视角3D理解</h3>
+      <p data-zh="融合多视角图像重建3D场景结构，实现精准的度量估计和空间推理。代表方向包括NeRF/3DGS辅助推理、点云+LLM和多视角一致性基准。代表：HiSpatial, EmbodiedScan, SpatialBot。" data-en="Fusing multi-view images to reconstruct 3D scene structures for precise metric estimation and spatial reasoning. Representative directions include NeRF/3DGS-assisted reasoning, point cloud + LLM, and multi-view consistency benchmarks. Key works: HiSpatial, EmbodiedScan, SpatialBot.">
+        融合多视角图像重建3D场景结构，实现精准的度量估计和空间推理。代表方向包括NeRF/3DGS辅助推理、点云+LLM和多视角一致性基准。代表：HiSpatial, EmbodiedScan, SpatialBot。
+      </p>
+    </div>
+    <div class="ov-card other-card">
+      <h3 data-zh="🤖 具身与机器人应用" data-en="🤖 Embodied & Robotics Applications">🤖 具身与机器人应用</h3>
+      <p data-zh="将空间推理能力迁移到机器人操控、导航和具身问答任务。代表：RoboRefer, VeBrain, Embodied-R, Robot-R1。强调从感知到决策的空间推理闭环。" data-en="Transferring spatial reasoning capabilities to robotic manipulation, navigation, and embodied QA tasks. Key works: RoboRefer, VeBrain, Embodied-R, Robot-R1. Emphasizes the closed-loop from spatial perception to decision-making.">
+        将空间推理能力迁移到机器人操控、导航和具身问答任务。代表：RoboRefer, VeBrain, Embodied-R, Robot-R1。强调从感知到决策的空间推理闭环。
+      </p>
+    </div>
+    <div class="ov-card" style="border-color:#7c3aed">
+      <h3 data-zh="🧠 CoT与强化学习" data-en="🧠 CoT & Reinforcement Learning">🧠 CoT与强化学习</h3>
+      <p data-zh="2025年爆发式增长的方向：通过R1风格RL训练激活VLM的空间推理潜力，无需大规模标注数据。代表：R1-Zero-VSI, SpaceR, VideoChat-R1, SVQA-R1, MetaSpatial。" data-en="An explosively growing direction since 2025: activating VLMs' spatial reasoning potential through R1-style RL training without large-scale annotation data. Key works: R1-Zero-VSI, SpaceR, VideoChat-R1, SVQA-R1, MetaSpatial.">
+        2025年爆发式增长的方向：通过R1风格RL训练激活VLM的空间推理潜力，无需大规模标注数据。代表：R1-Zero-VSI, SpaceR, VideoChat-R1, SVQA-R1, MetaSpatial。
+      </p>
+    </div>
+    <div class="ov-card" style="border-color:#be185d">
+      <h3 data-zh="📊 评测与基准" data-en="📊 Evaluation & Benchmarks">📊 评测与基准</h3>
+      <p data-zh="系统性评测VLM空间推理能力的基准体系正在快速完善。从2D关系分类到3D度量估计，从静态图像到动态视频。核心基准：VSI-Bench, SIBench, STI-Bench, SITE, SPAR-Bench。" data-en="The benchmark ecosystem for systematically evaluating VLM spatial reasoning is rapidly maturing. From 2D relation classification to 3D metric estimation, from static images to dynamic videos. Core benchmarks: VSI-Bench, SIBench, STI-Bench, SITE, SPAR-Bench.">
+        系统性评测VLM空间推理能力的基准体系正在快速完善。从2D关系分类到3D度量估计，从静态图像到动态视频。核心基准：VSI-Bench, SIBench, STI-Bench, SITE, SPAR-Bench。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section id="timeline">
+  <div class="section-header">
+    <div class="section-icon" style="background:#1e3a5f">📅</div>
+    <h2 data-zh="发展时间线" data-en="Development Timeline">发展时间线</h2>
+  </div>
+  <p class="section-desc" data-zh="视觉空间推理领域从2020年的萌芽期，经历2023-2024年的快速发展，到2025-2026年以强化学习和R1范式为核心的爆发阶段。" data-en="The visual spatial reasoning field evolved from its nascent stage in 2020, through rapid development in 2023-2024, to the explosive phase centered on reinforcement learning and the R1 paradigm in 2025-2026.">
+    视觉空间推理领域从2020年的萌芽期，经历2023-2024年的快速发展，到2025-2026年以强化学习和R1范式为核心的爆发阶段。
+  </p>
+  <div class="timeline">
+
+    <div class="tl-year">
+      <div class="tl-dot-col">
+        <div class="tl-year-label">2020</div>
+        <div class="tl-dot"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div class="tl-content">
+        <h4 data-zh="萌芽期：几何空间推理基础" data-en="Nascent: Geometric Spatial Reasoning Foundations">萌芽期：几何空间推理基础</h4>
+        <p data-zh="以 SPARE3D（2020）为代表，探索从三视图工程图等结构化输入中进行空间推理。VLM尚未成熟，主要依赖符号推理和规则系统。" data-en="Represented by SPARE3D (2020), exploring spatial reasoning from structured inputs such as three-view engineering drawings. VLMs were not yet mature; primarily relied on symbolic reasoning and rule-based systems.">
+          以 SPARE3D（2020）为代表，探索从三视图工程图等结构化输入中进行空间推理。VLM尚未成熟，主要依赖符号推理和规则系统。
+        </p>
+        <div class="tl-tags"><span class="tag bench">Benchmark</span><span class="tag method">Symbolic</span></div>
+      </div>
+    </div>
+
+    <div class="tl-year">
+      <div class="tl-dot-col">
+        <div class="tl-year-label">2022</div>
+        <div class="tl-dot" style="background:#22d3ee"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div class="tl-content">
+        <h4 data-zh="早期VLM时代：空间常识学习" data-en="Early VLM Era: Spatial Commonsense Learning">早期VLM时代：空间常识学习</h4>
+        <p data-zh="ACL 2022 的 Spatial Commonsense 工作首次从视觉信号中挖掘空间常识知识。WACV 2023 改进视觉语言推理中的空间关系建模。以预训练+微调为主流范式。" data-en="The Spatial Commonsense work at ACL 2022 first mined spatial commonsense knowledge from visual signals. WACV 2023 improved spatial relation modeling in vision-language reasoning. Pre-training + fine-tuning was the dominant paradigm.">
+          ACL 2022 的 Spatial Commonsense 工作首次从视觉信号中挖掘空间常识知识。WACV 2023 改进视觉语言推理中的空间关系建模。以预训练+微调为主流范式。
+        </p>
+        <div class="tl-tags"><span class="tag method">VLM</span><span class="tag bench">Commonsense</span></div>
+      </div>
+    </div>
+
+    <div class="tl-year">
+      <div class="tl-dot-col">
+        <div class="tl-year-label">2023</div>
+        <div class="tl-dot" style="background:#f59e0b"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div class="tl-content">
+        <h4 data-zh="大模型赋能：LLM遇见3D场景" data-en="LLM Empowerment: LLMs Meet 3D Scenes">大模型赋能：LLM遇见3D场景</h4>
+        <p data-zh="NeurIPS 2023 的 3D-Aware VQA 工作将3D感知引入VQA。CVPR 2024 的 SpatialVLM 首次系统赋予VLM定量空间推理能力，生成大规模合成空间QA数据。EmbodiedScan 构建面向具身AI的全模态3D感知套件。" data-en="NeurIPS 2023's 3D-Aware VQA introduced 3D perception into VQA. CVPR 2024's SpatialVLM first systematically endowed VLMs with quantitative spatial reasoning, generating large-scale synthetic spatial QA data. EmbodiedScan built a holistic multi-modal 3D perception suite for embodied AI.">
+          NeurIPS 2023 的 3D-Aware VQA 工作将3D感知引入VQA。CVPR 2024 的 SpatialVLM 首次系统赋予VLM定量空间推理能力，生成大规模合成空间QA数据。EmbodiedScan 构建面向具身AI的全模态3D感知套件。
+        </p>
+        <div class="tl-tags"><span class="tag td">3D</span><span class="tag bench">Benchmark</span><span class="tag method">Synthetic Data</span></div>
+      </div>
+    </div>
+
+    <div class="tl-year">
+      <div class="tl-dot-col">
+        <div class="tl-year-label">2024</div>
+        <div class="tl-dot" style="background:#10b981"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div class="tl-content">
+        <h4 data-zh="基准爆发：系统性评测与数据构建" data-en="Benchmark Explosion: Systematic Evaluation & Data Construction">基准爆发：系统性评测与数据构建</h4>
+        <p data-zh="VSI-Bench（视频空间智能基准）、SPACE（苹果）、OpenEQA（Facebook）等大量评测基准涌现，揭示主流模型的空间推理盲区。多视角推理（CoSpace, All-Angles-Bench）开始受到关注。" data-en="A wave of evaluation benchmarks emerged including VSI-Bench (video spatial intelligence), SPACE (Apple), and OpenEQA (Facebook), revealing spatial reasoning blind spots of mainstream models. Multi-view reasoning (CoSpace, All-Angles-Bench) started gaining attention.">
+          VSI-Bench（视频空间智能基准）、SPACE（苹果）、OpenEQA（Facebook）等大量评测基准涌现，揭示主流模型的空间推理盲区。多视角推理（CoSpace, All-Angles-Bench）开始受到关注。
+        </p>
+        <div class="tl-tags"><span class="tag bench">VSI-Bench</span><span class="tag bench">SPACE</span><span class="tag bench">OpenEQA</span></div>
+      </div>
+    </div>
+
+    <div class="tl-year">
+      <div class="tl-dot-col">
+        <div class="tl-year-label">2025</div>
+        <div class="tl-dot" style="background:#ec4899"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div class="tl-content">
+        <h4 data-zh="RL革命：R1范式激活空间推理" data-en="RL Revolution: R1 Paradigm Activates Spatial Reasoning">RL革命：R1范式激活空间推理</h4>
+        <p data-zh="DeepSeek R1 的出现催生了大量 R1 风格的空间推理工作（2025下半年集中爆发）：R1-Zero-VSI、SpaceR、VideoChat-R1、Embodied-R、MetaSpatial、SVQA-R1。思维链（CoT）推理引入空间领域。同时，合成数据+监督微调路线持续强化（SpatialDreamer, SpaceTools, SpatialGeo, SpatialLadder）。" data-en="The emergence of DeepSeek R1 spawned numerous R1-style spatial reasoning works (concentrated explosion in H2 2025): R1-Zero-VSI, SpaceR, VideoChat-R1, Embodied-R, MetaSpatial, SVQA-R1. Chain-of-thought (CoT) reasoning was introduced to the spatial domain. Simultaneously, the synthetic data + supervised fine-tuning route continued to strengthen (SpatialDreamer, SpaceTools, SpatialGeo, SpatialLadder).">
+          DeepSeek R1 的出现催生了大量 R1 风格的空间推理工作（2025下半年集中爆发）：R1-Zero-VSI、SpaceR、VideoChat-R1、Embodied-R、MetaSpatial、SVQA-R1。思维链（CoT）推理引入空间领域。同时，合成数据+监督微调路线持续强化（SpatialDreamer, SpaceTools, SpatialGeo, SpatialLadder）。
+        </p>
+        <div class="tl-tags"><span class="tag rl">R1/RL</span><span class="tag method">CoT</span><span class="tag method">Synthetic Data</span></div>
+      </div>
+    </div>
+
+    <div class="tl-year">
+      <div class="tl-dot-col">
+        <div class="tl-year-label">2026</div>
+        <div class="tl-dot" style="background:#f87171"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div class="tl-content">
+        <h4 data-zh="🆕 深度融合：几何+推理+RL的全面整合" data-en="🆕 Deep Fusion: Full Integration of Geometry + Reasoning + RL">🆕 深度融合：几何+推理+RL的全面整合</h4>
+        <p data-zh="2026年前3个月，空间推理呈现三条融合主线：(1) 层次化3D理解（HiSpatial, N3D-VLM），(2) 几何先验引导推理（Thinking with Geometry, LaMP），(3) 对内部机制的深度解析（Attention in Space, Dual Mechanisms）。基准体系愈发精细化（SpatiaLQA, STI-Bench, SITE, SPAR-Bench）。" data-en="In the first 3 months of 2026, spatial reasoning shows three convergent threads: (1) hierarchical 3D understanding (HiSpatial, N3D-VLM), (2) geometry-prior-guided reasoning (Thinking with Geometry, LaMP), (3) deep analysis of internal mechanisms (Attention in Space, Dual Mechanisms). The benchmark ecosystem is becoming increasingly fine-grained (SpatiaLQA, STI-Bench, SITE, SPAR-Bench).">
+          2026年前3个月，空间推理呈现三条融合主线：(1) 层次化3D理解（HiSpatial, N3D-VLM），(2) 几何先验引导推理（Thinking with Geometry, LaMP），(3) 对内部机制的深度解析（Attention in Space, Dual Mechanisms）。基准体系愈发精细化（SpatiaLQA, STI-Bench, SITE, SPAR-Bench）。
+        </p>
+        <div class="tl-tags"><span class="tag td">3D Fusion</span><span class="tag new">🆕 2026</span><span class="tag method">Mechanistic</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SINGLE IMAGE ===== -->
+<section id="single">
+  <div class="section-header">
+    <div class="section-icon" style="background:#1e3a5f">🖼</div>
+    <h2 data-zh="单图空间推理代表论文" data-en="Single-Image Spatial Reasoning: Key Papers">单图空间推理代表论文</h2>
+  </div>
+  <p class="section-desc" data-zh="从单张 RGB 图像推断空间关系、深度、方向和距离。涵盖基准构建、模型训练方法和推理增强三大子方向。" data-en="Inferring spatial relations, depth, orientation, and distance from a single RGB image. Covers three sub-directions: benchmark construction, model training methods, and reasoning enhancement.">
+    从单张 RGB 图像推断空间关系、深度、方向和距离。涵盖基准构建、模型训练方法和推理增强三大子方向。
+  </p>
+
+  <div class="subsection-title" data-zh="🆕 2026 最新工作" data-en="🆕 2026 Latest Works">🆕 2026 最新工作</div>
+  <div class="papers-grid">
+
+    <div class="paper-card highlight">
+      <div class="pc-date">2026-03 <span class="pc-venue">CVPR 2026</span></div>
+      <h4><a href="https://arxiv.org/abs/2603.25411" target="_blank">HiSpatial: Taming Hierarchical 3D Spatial Understanding in Vision-Language Models</a></h4>
+      <p class="pc-summary" data-zh="层次化3D空间理解框架，实现从粗粒度场景到细粒度物体的多层级空间推理。CVPR 2026 收录，配套 project page。" data-en="Hierarchical 3D spatial understanding framework achieving multi-level spatial reasoning from coarse scene to fine-grained objects. Accepted at CVPR 2026 with a project page.">
+        层次化3D空间理解框架，实现从粗粒度场景到细粒度物体的多层级空间推理。CVPR 2026 收录，配套 project page。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag td">3D</span><span class="tag new">CVPR 2026</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2603.25411" target="_blank">↗ 2603.25411</a>
+      </div>
+    </div>
+
+    <div class="paper-card highlight">
+      <div class="pc-date">2026-03 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/abs/2603.23404" target="_blank">Unleashing Spatial Reasoning in MLLMs via Textual Representation Guided Reasoning</a></h4>
+      <p class="pc-summary" data-zh="利用文本表示作为中间媒介引导空间推理，将3D场景的结构信息转换为VLM可直接处理的文本化空间描述，显著提升3D-QA性能。" data-en="Uses textual representation as an intermediate medium to guide spatial reasoning, converting 3D scene structural information into text-format spatial descriptions directly processable by VLMs, significantly improving 3D-QA performance.">
+        利用文本表示作为中间媒介引导空间推理，将3D场景的结构信息转换为VLM可直接处理的文本化空间描述，显著提升3D-QA性能。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag method">Text-Guided</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2603.23404" target="_blank">↗ 2603.23404</a>
+      </div>
+    </div>
+
+    <div class="paper-card highlight">
+      <div class="pc-date">2026-03 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/abs/2603.22279" target="_blank">3D-Layout-R1: Structured Reasoning for Language-Instructed Spatial Editing</a></h4>
+      <p class="pc-summary" data-zh="将R1推理范式扩展到3D空间布局编辑，VLM通过结构化推理链生成空间感知的场景编辑方案，支持语言指令驱动的精确物体摆放。" data-en="Extends the R1 reasoning paradigm to 3D spatial layout editing; VLMs generate spatially-aware scene editing plans through structured reasoning chains, enabling precise language-instructed object placement.">
+        将R1推理范式扩展到3D空间布局编辑，VLM通过结构化推理链生成空间感知的场景编辑方案，支持语言指令驱动的精确物体摆放。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag rl">R1</span><span class="tag td">3D Layout</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2603.22279" target="_blank">↗ 2603.22279</a>
+      </div>
+    </div>
+
+    <div class="paper-card highlight">
+      <div class="pc-date">2026-03 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/abs/2603.20662" target="_blank">Attention in Space: Functional Roles of VLM Heads for Spatial Reasoning</a></h4>
+      <p class="pc-summary" data-zh="首个系统分析VLM注意力头在空间推理中功能角色的工作。揭示不同注意力头分别负责位置定位、深度感知和关系推理等不同空间子任务，为模型可解释性和干预提供理论基础。" data-en="The first systematic analysis of functional roles of VLM attention heads in spatial reasoning. Reveals that different attention heads are responsible for different spatial subtasks such as position localization, depth perception, and relation reasoning, providing theoretical foundations for model interpretability and intervention.">
+        首个系统分析VLM注意力头在空间推理中功能角色的工作。揭示不同注意力头分别负责位置定位、深度感知和关系推理等不同空间子任务，为模型可解释性和干预提供理论基础。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag method">Mechanistic</span><span class="tag survey">Interpretability</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2603.20662" target="_blank">↗ 2603.20662</a>
+      </div>
+    </div>
+
+    <div class="paper-card highlight">
+      <div class="pc-date">2026-03 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/abs/2603.00409" target="_blank">SSR: Pushing the Limit of Spatial Intelligence with Structured Scene Reasoning</a></h4>
+      <p class="pc-summary" data-zh="在 VSI-Bench 上推进空间智能上限，引入结构化场景表示辅助推理，通过层次化场景图+逐步推理链突破现有SOTA。" data-en="Advances the upper bound of spatial intelligence on VSI-Bench by introducing structured scene representations for reasoning, breaking existing SOTA through hierarchical scene graphs and step-by-step reasoning chains.">
+        在 VSI-Bench 上推进空间智能上限，引入结构化场景表示辅助推理，通过层次化场景图+逐步推理链突破现有SOTA。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag method">Structured</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2603.00409" target="_blank">↗ 2603.00409</a>
+      </div>
+    </div>
+
+    <div class="paper-card highlight">
+      <div class="pc-date">2026-02 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/abs/2602.06037" target="_blank">Thinking with Geometry: Active Geometry Integration for Spatial Reasoning</a></h4>
+      <p class="pc-summary" data-zh="主动几何集成框架：在推理过程中动态调用深度估计、3D重建等几何工具作为辅助信息，实现几何感知与语言推理的紧密耦合。" data-en="Active geometry integration framework: dynamically invokes geometric tools such as depth estimation and 3D reconstruction as auxiliary information during reasoning, achieving tight coupling of geometric perception and language reasoning.">
+        主动几何集成框架：在推理过程中动态调用深度估计、3D重建等几何工具作为辅助信息，实现几何感知与语言推理的紧密耦合。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag td">Geometry</span><span class="tag method">Tool-Use</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2602.06037" target="_blank">↗ 2602.06037</a>
+      </div>
+    </div>
+
+    <div class="paper-card highlight">
+      <div class="pc-date">2026-02 <span class="pc-venue">CVPR 2026</span></div>
+      <h4><a href="https://arxiv.org/abs/2602.20901" target="_blank">SpatiaLQA: A Benchmark for Evaluating Spatial Logical Reasoning in VLMs</a></h4>
+      <p class="pc-summary" data-zh="首个系统评测VLM空间逻辑推理能力的基准，涵盖传递性推理、空间排列组合和多步推断，揭示现有VLM在逻辑一致性上的严重不足。" data-en="The first benchmark systematically evaluating VLMs' spatial logical reasoning capabilities, covering transitive reasoning, spatial permutation, and multi-step inference, revealing severe deficiencies in logical consistency of existing VLMs.">
+        首个系统评测VLM空间逻辑推理能力的基准，涵盖传递性推理、空间排列组合和多步推断，揭示现有VLM在逻辑一致性上的严重不足。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag bench">Benchmark</span><span class="tag new">CVPR 2026</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2602.20901" target="_blank">↗ 2602.20901</a>
+      </div>
+    </div>
+
+    <div class="paper-card highlight">
+      <div class="pc-date">2026-02 <span class="pc-venue">ICLR 2026</span></div>
+      <h4><a href="https://arxiv.org/abs/2602.03916" target="_blank">SpatiaLab: Can VLMs Perform Spatial Reasoning in the Wild?</a></h4>
+      <p class="pc-summary" data-zh="首个野外真实场景空间推理基准，收录多样化真实世界图像，覆盖室内/室外/医疗/工业等场景，测试模型在无约束条件下的空间泛化能力。" data-en="The first in-the-wild spatial reasoning benchmark for real-world scenes, covering diverse real-world images spanning indoor/outdoor/medical/industrial scenarios, testing models' spatial generalization under unconstrained conditions.">
+        首个野外真实场景空间推理基准，收录多样化真实世界图像，覆盖室内/室外/医疗/工业等场景，测试模型在无约束条件下的空间泛化能力。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag bench">Wild Benchmark</span><span class="tag new">ICLR 2026</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2602.03916" target="_blank">↗ 2602.03916</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="subsection-title" data-zh="2025 核心工作" data-en="2025 Core Works">2025 核心工作</div>
+  <div class="papers-grid">
+
+    <div class="paper-card rl">
+      <div class="pc-date">2025-04 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/pdf/2504.00883" target="_blank">Improved Visual-Spatial Reasoning via R1-Zero-Like Training</a></h4>
+      <p class="pc-summary" data-zh="首个将R1风格强化学习应用于视觉空间推理的工作，在无人工标注推理链的情况下，通过GRPO训练涌现出空间推理能力，构建VSI-100K合成数据集。" data-en="The first work applying R1-style reinforcement learning to visual spatial reasoning; spatial reasoning capability emerges through GRPO training without human-annotated reasoning chains, building the VSI-100K synthetic dataset.">
+        首个将R1风格强化学习应用于视觉空间推理的工作，在无人工标注推理链的情况下，通过GRPO训练涌现出空间推理能力，构建VSI-100K合成数据集。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag rl">R1/RL</span></div>
+        <a class="pc-link" href="https://arxiv.org/pdf/2504.00883" target="_blank">↗ 2504.00883</a>
+      </div>
+    </div>
+
+    <div class="paper-card method">
+      <div class="pc-date">2025-03 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/pdf/2503.18470" target="_blank">MetaSpatial: Reinforcing 3D Spatial Reasoning in VLMs for the Metaverse</a></h4>
+      <p class="pc-summary" data-zh="面向元宇宙应用的3D空间推理强化学习框架，通过物理一致性奖励函数指导VLM生成符合物理约束的空间布局方案。" data-en="RL framework for 3D spatial reasoning in VLMs targeting metaverse applications; guides VLMs to generate physically consistent spatial layout solutions through physics-consistency reward functions.">
+        面向元宇宙应用的3D空间推理强化学习框架，通过物理一致性奖励函数指导VLM生成符合物理约束的空间布局方案。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag rl">RL</span><span class="tag td">3D</span></div>
+        <a class="pc-link" href="https://arxiv.org/pdf/2503.18470" target="_blank">↗ 2503.18470</a>
+      </div>
+    </div>
+
+    <div class="paper-card method">
+      <div class="pc-date">2025-12 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/pdf/2512.07733" target="_blank">SpatialDreamer: Incentivizing Spatial Reasoning via Active Mental Imagery</a></h4>
+      <p class="pc-summary" data-zh="受人类心理旋转启发，训练VLM在回答空间问题前主动生成心理意象（mental imagery）作为推理脚手架，显著提升对称性和旋转类空间推理。" data-en="Inspired by human mental rotation, trains VLMs to proactively generate mental imagery as a reasoning scaffold before answering spatial questions, significantly improving symmetry and rotation-type spatial reasoning.">
+        受人类心理旋转启发，训练VLM在回答空间问题前主动生成心理意象（mental imagery）作为推理脚手架，显著提升对称性和旋转类空间推理。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag method">Mental Imagery</span></div>
+        <a class="pc-link" href="https://arxiv.org/pdf/2512.07733" target="_blank">↗ 2512.07733</a>
+      </div>
+    </div>
+
+    <div class="paper-card method">
+      <div class="pc-date">2025-12 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/pdf/2512.04069" target="_blank">SpaceTools: Tool-Augmented Spatial Reasoning via Double Interactive RL</a></h4>
+      <p class="pc-summary" data-zh="工具增强的空间推理框架，通过双交互强化学习训练VLM学会主动调用深度估计、目标检测等视觉工具，以工具输出为锚点进行精确空间推断。" data-en="Tool-augmented spatial reasoning framework; trains VLMs through double interactive RL to proactively invoke visual tools such as depth estimation and object detection, using tool outputs as anchors for precise spatial inference.">
+        工具增强的空间推理框架，通过双交互强化学习训练VLM学会主动调用深度估计、目标检测等视觉工具，以工具输出为锚点进行精确空间推断。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag rl">Interactive RL</span><span class="tag method">Tool-Use</span></div>
+        <a class="pc-link" href="https://arxiv.org/pdf/2512.04069" target="_blank">↗ 2512.04069</a>
+      </div>
+    </div>
+
+    <div class="paper-card bench">
+      <div class="pc-date">2025-05 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/pdf/2505.05456" target="_blank">SITE: Towards Spatial Intelligence Thorough Evaluation</a></h4>
+      <p class="pc-summary" data-zh="系统性全面评测基准，覆盖距离估计、方向判断、尺寸比较、遮挡推理等8大空间子任务，揭示各主流VLM在不同空间能力维度上的细粒度差异。" data-en="Systematic comprehensive evaluation benchmark covering 8 spatial subtasks including distance estimation, direction judgment, size comparison, and occlusion reasoning, revealing fine-grained differences of mainstream VLMs across different spatial capability dimensions.">
+        系统性全面评测基准，覆盖距离估计、方向判断、尺寸比较、遮挡推理等8大空间子任务，揭示各主流VLM在不同空间能力维度上的细粒度差异。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag bench">Benchmark</span></div>
+        <a class="pc-link" href="https://arxiv.org/pdf/2505.05456" target="_blank">↗ 2505.05456</a>
+      </div>
+    </div>
+
+    <div class="paper-card bench">
+      <div class="pc-date">2024-01 <span class="pc-venue">CVPR 2024</span></div>
+      <h4><a href="https://arxiv.org/abs/2401.12168" target="_blank">SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities</a></h4>
+      <p class="pc-summary" data-zh="里程碑工作：首次通过大规模合成空间QA数据（含定量距离/尺寸问答）系统赋予VLM定量空间推理能力，构建链式空间推理训练管线。" data-en="Milestone work: the first to systematically endow VLMs with quantitative spatial reasoning capabilities through large-scale synthetic spatial QA data (containing quantitative distance/size Q&A), building a chain spatial reasoning training pipeline.">
+        里程碑工作：首次通过大规模合成空间QA数据（含定量距离/尺寸问答）系统赋予VLM定量空间推理能力，构建链式空间推理训练管线。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag method">Synthetic Data</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2401.12168" target="_blank">↗ 2401.12168</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== VIDEO ===== -->
+<section id="video">
+  <div class="section-header">
+    <div class="section-icon" style="background:#1a3a2a">🎬</div>
+    <h2 data-zh="视频时空空间推理" data-en="Video Spatio-Temporal Spatial Reasoning">视频时空空间推理</h2>
+  </div>
+  <p class="section-desc" data-zh="在时序视频帧中理解动态空间变化：物体运动轨迹、相机位姿变化、跨帧空间一致性。是难度最高的子方向，2025年有大量基准和RL方法涌现。" data-en="Understanding dynamic spatial changes in temporal video frames: object motion trajectories, camera pose changes, and cross-frame spatial consistency. The most challenging sub-direction, with a large number of benchmarks and RL methods emerging in 2025.">
+    在时序视频帧中理解动态空间变化：物体运动轨迹、相机位姿变化、跨帧空间一致性。是难度最高的子方向，2025年有大量基准和RL方法涌现。
+  </p>
+  <div class="papers-grid">
+
+    <div class="paper-card video">
+      <div class="pc-date">2025-01 <span class="pc-venue">CVPR 2025</span></div>
+      <h4><a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Yang_Thinking_in_Space_How_Multimodal_Large_Language_Models_See_Remember_CVPR_2025_paper.pdf" target="_blank">Thinking in Space: How MLLMs See, Remember, and Recall Spaces</a></h4>
+      <p class="pc-summary" data-zh="构建 VSI-Bench 视频空间智能基准（288个真实场景视频），揭示最强VLM（GPT-4o等）在视频空间推理上的严重局限，随后催生大量后续工作。VSI-Bench 已成为该方向最重要的评测基准。" data-en="Builds VSI-Bench video spatial intelligence benchmark (288 real-scene videos), revealing severe limitations of the strongest VLMs (GPT-4o, etc.) in video spatial reasoning. VSI-Bench has since become the most important evaluation benchmark in this direction.">
+        构建 VSI-Bench 视频空间智能基准（288个真实场景视频），揭示最强VLM（GPT-4o等）在视频空间推理上的严重局限，随后催生大量后续工作。VSI-Bench 已成为该方向最重要的评测基准。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag bench">VSI-Bench</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2501.00601" target="_blank">↗ VSI-Bench</a>
+      </div>
+    </div>
+
+    <div class="paper-card rl">
+      <div class="pc-date">2025-04 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/abs/2504.01805v2" target="_blank">SpaceR: Reinforcing MLLMs in Video Spatial Reasoning</a></h4>
+      <p class="pc-summary" data-zh="首个视频空间推理的R1风格RL训练框架，构建专门的视频空间推理奖励机制，在VSI-Bench、STI-Bench和SPAR-Bench上取得SOTA，验证RL对视频空间推理的有效性。" data-en="First R1-style RL training framework for video spatial reasoning; builds dedicated reward mechanisms for video spatial reasoning, achieving SOTA on VSI-Bench, STI-Bench, and SPAR-Bench, validating the effectiveness of RL for video spatial reasoning.">
+        首个视频空间推理的R1风格RL训练框架，构建专门的视频空间推理奖励机制，在VSI-Bench、STI-Bench和SPAR-Bench上取得SOTA，验证RL对视频空间推理的有效性。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag rl">R1/RL</span><span class="tag video">Video</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2504.01805" target="_blank">↗ 2504.01805</a>
+      </div>
+    </div>
+
+    <div class="paper-card bench">
+      <div class="pc-date">2025-03 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/pdf/2503.23765" target="_blank">STI-Bench: Are MLLMs Ready for Precise Spatial-Temporal World Understanding?</a></h4>
+      <p class="pc-summary" data-zh="精确时空理解基准，专注于物理量化测量（速度、加速度、运动轨迹），要求模型在视频中完成精确数值预测而非定性判断，揭示VLM在物理量化上的巨大差距。" data-en="Precise spatio-temporal understanding benchmark focusing on physical quantitative measurements (speed, acceleration, motion trajectories), requiring models to make precise numerical predictions rather than qualitative judgments in videos, revealing the huge gap of VLMs in physical quantification.">
+        精确时空理解基准，专注于物理量化测量（速度、加速度、运动轨迹），要求模型在视频中完成精确数值预测而非定性判断，揭示VLM在物理量化上的巨大差距。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag bench">STI-Bench</span><span class="tag video">Video</span></div>
+        <a class="pc-link" href="https://arxiv.org/pdf/2503.23765" target="_blank">↗ 2503.23765</a>
+      </div>
+    </div>
+
+    <div class="paper-card method">
+      <div class="pc-date">2025-05 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/pdf/2505.20279" target="_blank">VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction</a></h4>
+      <p class="pc-summary" data-zh="将指令对齐的3D重建过程注入VLM推理，从视频帧中在线重建3D场景，再以重建结果作为空间感知锚点回答空间问题，兼顾重建精度和推理效率。" data-en="Injects instruction-aligned 3D reconstruction into VLM reasoning; online reconstructs 3D scenes from video frames, then uses reconstruction results as spatial perception anchors to answer spatial questions, balancing reconstruction accuracy and reasoning efficiency.">
+        将指令对齐的3D重建过程注入VLM推理，从视频帧中在线重建3D场景，再以重建结果作为空间感知锚点回答空间问题，兼顾重建精度和推理效率。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag td">3D Recon</span><span class="tag video">Video</span></div>
+        <a class="pc-link" href="https://arxiv.org/pdf/2505.20279" target="_blank">↗ 2505.20279</a>
+      </div>
+    </div>
+
+    <div class="paper-card rl">
+      <div class="pc-date">2025-04 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/pdf/2504.12680" target="_blank">Embodied-R: Collaborative Framework for Embodied Spatial Reasoning via RL</a></h4>
+      <p class="pc-summary" data-zh="具身空间推理的协作式RL框架，结合在线数据收集与奖励设计，激活大模型在具身场景下的空间推理能力，在多个具身QA基准上取得显著提升。" data-en="Collaborative RL framework for embodied spatial reasoning; combines online data collection and reward design to activate large models' spatial reasoning capabilities in embodied scenarios, achieving significant improvements on multiple embodied QA benchmarks.">
+        具身空间推理的协作式RL框架，结合在线数据收集与奖励设计，激活大模型在具身场景下的空间推理能力，在多个具身QA基准上取得显著提升。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag rl">RL</span><span class="tag video">Embodied</span></div>
+        <a class="pc-link" href="https://arxiv.org/pdf/2504.12680" target="_blank">↗ 2504.12680</a>
+      </div>
+    </div>
+
+    <div class="paper-card bench">
+      <div class="pc-date">2025-03 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/pdf/2503.22976" target="_blank">From Flatland to Space: Teaching VLMs to Perceive and Reason in 3D (SPAR-Bench)</a></h4>
+      <p class="pc-summary" data-zh="SPAR-Bench：专注从2D视频感知过渡到3D空间推理，构建大规模训练数据+评测体系，支持距离估计、方向判断、物体计数等多种空间子任务。" data-en="SPAR-Bench: focuses on the transition from 2D video perception to 3D spatial reasoning, building large-scale training data + evaluation system supporting multiple spatial subtasks including distance estimation, direction judgment, and object counting.">
+        SPAR-Bench：专注从2D视频感知过渡到3D空间推理，构建大规模训练数据+评测体系，支持距离估计、方向判断、物体计数等多种空间子任务。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag bench">SPAR-Bench</span></div>
+        <a class="pc-link" href="https://arxiv.org/pdf/2503.22976" target="_blank">↗ 2503.22976</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== MULTI-VIEW ===== -->
+<section id="multiview">
+  <div class="section-header">
+    <div class="section-icon" style="background:#1a2a3a">📐</div>
+    <h2 data-zh="多视角与3D场景理解" data-en="Multi-View & 3D Scene Understanding">多视角与3D场景理解</h2>
+  </div>
+  <p class="section-desc" data-zh="利用多张视角图像或点云重建三维场景，实现度量级空间推理。与单图方法相比，具有更准确的深度信息和更完整的场景结构，是向真实世界应用的重要桥梁。" data-en="Reconstructing 3D scenes using multi-view images or point clouds for metric-level spatial reasoning. Compared to single-image methods, provides more accurate depth information and more complete scene structure, serving as an important bridge to real-world applications.">
+    利用多张视角图像或点云重建三维场景，实现度量级空间推理。与单图方法相比，具有更准确的深度信息和更完整的场景结构，是向真实世界应用的重要桥梁。
+  </p>
+  <div class="papers-grid">
+
+    <div class="paper-card td">
+      <div class="pc-date">2026-03 <span class="pc-venue">CVPR 2026</span></div>
+      <h4><a href="https://arxiv.org/abs/2603.25411" target="_blank">HiSpatial: Taming Hierarchical 3D Spatial Understanding in VLMs</a></h4>
+      <p class="pc-summary" data-zh="层次化3D理解的代表作，从对象级→区域级→场景级三层递进建立空间理解能力，在SQA3D和ScanQA上取得CVPR 2026最优结果。" data-en="Representative work on hierarchical 3D understanding; establishes spatial understanding capabilities through three progressive levels from object→region→scene, achieving CVPR 2026 best results on SQA3D and ScanQA.">
+        层次化3D理解的代表作，从对象级→区域级→场景级三层递进建立空间理解能力，在SQA3D和ScanQA上取得CVPR 2026最优结果。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag td">Hierarchical</span><span class="tag new">CVPR 2026</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2603.25411" target="_blank">↗ 2603.25411</a>
+      </div>
+    </div>
+
+    <div class="paper-card td">
+      <div class="pc-date">2025-12 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/abs/2512.16561" target="_blank">N3D-VLM: Native 3D Grounding Enables Accurate Spatial Reasoning in VLMs</a></h4>
+      <p class="pc-summary" data-zh="原生3D定位框架，在VLM骨干中直接引入3D坐标空间，无需2D→3D中间转换，实现端到端的精确空间推理。支持点云和多视角图像两种输入形式。" data-en="Native 3D grounding framework that directly introduces 3D coordinate space into the VLM backbone without 2D→3D intermediate conversion, enabling end-to-end precise spatial reasoning. Supports both point cloud and multi-view image inputs.">
+        原生3D定位框架，在VLM骨干中直接引入3D坐标空间，无需2D→3D中间转换，实现端到端的精确空间推理。支持点云和多视角图像两种输入形式。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag td">Native 3D</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2512.16561" target="_blank">↗ 2512.16561</a>
+      </div>
+    </div>
+
+    <div class="paper-card td">
+      <div class="pc-date">2025-01 <span class="pc-venue">CVPR 2025</span></div>
+      <h4><a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Zheng_Video-3D_LLM_Learning_Position-Aware_Video_Representation_for_3D_Scene_Understanding_CVPR_2025_paper.pdf" target="_blank">Video-3D LLM: Learning Position-Aware Video Representation for 3D Scene Understanding</a></h4>
+      <p class="pc-summary" data-zh="位置感知视频表示学习，将绝对3D坐标信息编码入视频帧特征，使LLM能在视频流中建立稳定的3D空间参考系，是视频+3D方向的重要基线。" data-en="Position-aware video representation learning that encodes absolute 3D coordinate information into video frame features, enabling LLMs to establish stable 3D spatial reference frames in video streams. An important baseline for the video+3D direction.">
+        位置感知视频表示学习，将绝对3D坐标信息编码入视频帧特征，使LLM能在视频流中建立稳定的3D空间参考系，是视频+3D方向的重要基线。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag td">3D</span><span class="tag video">Video</span></div>
+        <a class="pc-link" href="#" target="_blank">↗ CVPR 2025</a>
+      </div>
+    </div>
+
+    <div class="paper-card bench">
+      <div class="pc-date">2025-03 <span class="pc-venue">ARXIV</span></div>
+      <h4><a href="https://arxiv.org/abs/2503.13111" target="_blank">MM-Spatial: Exploring 3D Spatial Understanding in Multimodal LLMs</a></h4>
+      <p class="pc-summary" data-zh="苹果研究团队构建的多模态3D空间理解基准（Cubify Anything VQA），专注于真实世界物体的度量估计（尺寸、位置、距离），揭示当前VLM在精确3D度量推理上的局限。" data-en="Multi-modal 3D spatial understanding benchmark (Cubify Anything VQA) built by Apple research team, focusing on metric estimation (size, position, distance) of real-world objects, revealing current VLMs' limitations in precise 3D metric reasoning.">
+        苹果研究团队构建的多模态3D空间理解基准（Cubify Anything VQA），专注于真实世界物体的度量估计（尺寸、位置、距离），揭示当前VLM在精确3D度量推理上的局限。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag bench">Benchmark</span><span class="tag td">Metric 3D</span></div>
+        <a class="pc-link" href="https://arxiv.org/abs/2503.13111" target="_blank">↗ 2503.13111</a>
+      </div>
+    </div>
+
+    <div class="paper-card td">
+      <div class="pc-date">2024-01 <span class="pc-venue">CVPR 2024</span></div>
+      <h4><a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_EmbodiedScan_A_Holistic_Multi-Modal_3D_Perception_Suite_Towards_Embodied_AI_CVPR_2024_paper.pdf" target="_blank">EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI</a></h4>
+      <p class="pc-summary" data-zh="面向具身AI的全模态3D感知套件，整合RGB、深度和点云三种模态，覆盖3D目标检测、语义理解和空间关系推理，是多视角空间推理的重要基础数据集和评测框架。" data-en="Holistic multi-modal 3D perception suite for embodied AI, integrating RGB, depth, and point cloud modalities, covering 3D object detection, semantic understanding, and spatial relation reasoning. An important foundational dataset and evaluation framework for multi-view spatial reasoning.">
+        面向具身AI的全模态3D感知套件，整合RGB、深度和点云三种模态，覆盖3D目标检测、语义理解和空间关系推理，是多视角空间推理的重要基础数据集和评测框架。
+      </p>
+      <div class="pc-footer">
+        <div class="pc-tags"><span class="tag td">Multi-Modal 3D</span><span class="tag bench">EmbodiedScan</span></div>
+        <a class="pc-link" href="#" target="_blank">↗ CVPR 2024</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== BENCHMARKS TABLE ===== -->
+<section id="benchmarks">
+  <div class="section-header">
+    <div class="section-icon" style="background:#2d1b4b">📊</div>
+    <h2 data-zh="核心评测基准汇总" data-en="Core Benchmark Summary">核心评测基准汇总</h2>
+  </div>
+  <p class="section-desc" data-zh="视觉空间推理领域已形成多层次、多模态的评测体系。以下汇总最具影响力的基准，按输入模态分类。" data-en="The visual spatial reasoning field has formed a multi-level, multi-modal evaluation system. The following summarizes the most influential benchmarks, classified by input modality.">
+    视觉空间推理领域已形成多层次、多模态的评测体系。以下汇总最具影响力的基准，按输入模态分类。
+  </p>
+  <div class="bench-table-wrap">
+    <table class="bench-table">
+      <thead>
+        <tr>
+          <th data-zh="基准名称" data-en="Benchmark">基准名称</th>
+          <th data-zh="模态" data-en="Modality">模态</th>
+          <th data-zh="来源" data-en="Venue">来源</th>
+          <th data-zh="时间" data-en="Date">时间</th>
+          <th data-zh="核心能力测试" data-en="Core Ability Tested">核心能力测试</th>
+          <th data-zh="链接" data-en="Link">链接</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>SIBench</strong></td>
+          <td data-zh="单图" data-en="Single Img">单图</td>
+          <td>ARXIV</td>
+          <td>25-09</td>
+          <td data-zh="23项视觉空间推理任务全面测评" data-en="23 comprehensive visual spatial reasoning tasks">23项视觉空间推理任务全面测评</td>
+          <td><a href="https://arxiv.org/abs/2509.18905" target="_blank">↗ link</a></td>
+        </tr>
+        <tr>
+          <td><strong>VSI-Bench</strong></td>
+          <td data-zh="视频" data-en="Video">视频</td>
+          <td>CVPR 2025</td>
+          <td>25-01</td>
+          <td data-zh="视频场景内物体大小/距离/计数/定位" data-en="Object size/distance/counting/localization in video scenes">视频场景内物体大小/距离/计数/定位</td>
+          <td><a href="https://arxiv.org/abs/2501.00601" target="_blank">↗ link</a></td>
+        </tr>
+        <tr>
+          <td><strong>STI-Bench</strong></td>
+          <td data-zh="视频" data-en="Video">视频</td>
+          <td>ARXIV</td>
+          <td>25-03</td>
+          <td data-zh="精确时空量化（速度/加速度/轨迹）" data-en="Precise spatio-temporal quantification (speed/acceleration/trajectory)">精确时空量化（速度/加速度/轨迹）</td>
+          <td><a href="https://arxiv.org/pdf/2503.23765" target="_blank">↗ link</a></td>
+        </tr>
+        <tr>
+          <td><strong>SPAR-Bench</strong></td>
+          <td data-zh="视频" data-en="Video">视频</td>
+          <td>ARXIV</td>
+          <td>25-03</td>
+          <td data-zh="2D→3D空间感知过渡评测" data-en="2D→3D spatial perception transition evaluation">2D→3D空间感知过渡评测</td>
+          <td><a href="https://arxiv.org/pdf/2503.22976" target="_blank">↗ link</a></td>
+        </tr>
+        <tr>
+          <td><strong>SITE</strong></td>
+          <td data-zh="单图" data-en="Single Img">单图</td>
+          <td>ARXIV</td>
+          <td>25-05</td>
+          <td data-zh="8大空间子任务全面评测" data-en="Comprehensive evaluation of 8 spatial subtasks">8大空间子任务全面评测</td>
+          <td><a href="https://arxiv.org/pdf/2505.05456" target="_blank">↗ link</a></td>
+        </tr>
+        <tr>
+          <td><strong>SpatiaLQA</strong></td>
+          <td data-zh="单图" data-en="Single Img">单图</td>
+          <td>CVPR 2026</td>
+          <td>26-02</td>
+          <td data-zh="空间逻辑推理（传递性/排列/多步推断）" data-en="Spatial logical reasoning (transitivity/permutation/multi-step)">空间逻辑推理（传递性/排列/多步推断）</td>
+          <td><a href="https://arxiv.org/abs/2602.20901" target="_blank">↗ link</a></td>
+        </tr>
+        <tr>
+          <td><strong>SpatiaLab</strong></td>
+          <td data-zh="单图（野外）" data-en="Single Img (Wild)">单图（野外）</td>
+          <td>ICLR 2026</td>
+          <td>26-02</td>
+          <td data-zh="真实场景多领域空间泛化" data-en="Real-scene multi-domain spatial generalization">真实场景多领域空间泛化</td>
+          <td><a href="https://arxiv.org/abs/2602.03916" target="_blank">↗ link</a></td>
+        </tr>
+        <tr>
+          <td><strong>SPACE</strong></td>
+          <td data-zh="视频" data-en="Video">视频</td>
+          <td>ICLR 2025</td>
+          <td>24-10</td>
+          <td data-zh="前沿模型空间认知能力" data-en="Frontier model spatial cognition capability">前沿模型空间认知能力</td>
+          <td><a href="https://arxiv.org/pdf/2410.06468" target="_blank">↗ link</a></td>
+        </tr>
+        <tr>
+          <td><strong>OpenEQA</strong></td>
+          <td data-zh="视频（具身）" data-en="Video (Embodied)">视频（具身）</td>
+          <td>CVPR 2024</td>
+          <td>—</td>
+          <td data-zh="具身问答（导航+空间理解）" data-en="Embodied QA (navigation + spatial understanding)">具身问答（导航+空间理解）</td>
+          <td><a href="https://github.com/facebookresearch/open-eqa" target="_blank">↗ link</a></td>
+        </tr>
+        <tr>
+          <td><strong>SpaCE-10</strong></td>
+          <td data-zh="多模态" data-en="Multi-modal">多模态</td>
+          <td>ARXIV</td>
+          <td>25-06</td>
+          <td data-zh="组合式空间智能10维度测评" data-en="Compositional spatial intelligence 10-dimension evaluation">组合式空间智能10维度测评</td>
+          <td><a href="https://arxiv.org/abs/2506.07966v1" target="_blank">↗ link</a></td>
+        </tr>
+        <tr>
+          <td><strong>CoSpace</strong></td>
+          <td data-zh="多视角" data-en="Multi-View">多视角</td>
+          <td>CVPR 2025</td>
+          <td>25-01</td>
+          <td data-zh="连续空间感知能力评测" data-en="Continuous space perception capability evaluation">连续空间感知能力评测</td>
+          <td><a href="#" target="_blank">↗ CVPR 2025</a></td>
+        </tr>
+        <tr>
+          <td><strong>SRBench</strong></td>
+          <td data-zh="单图" data-en="Single Img">单图</td>
+          <td>ARXIV</td>
+          <td>25-03</td>
+          <td data-zh="空间关系推理差距分析" data-en="Spatial relation reasoning gap analysis">空间关系推理差距分析</td>
+          <td><a href="https://arxiv.org/pdf/2503.19707" target="_blank">↗ link</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== TRENDS ===== -->
+<section id="trends">
+  <div class="section-header">
+    <div class="section-icon" style="background:#2d1f00">📈</div>
+    <h2 data-zh="趋势深度分析（2025–2026）" data-en="In-Depth Trend Analysis (2025–2026)">趋势深度分析（2025–2026）</h2>
+  </div>
+  <p class="section-desc" data-zh="基于100+篇论文的系统梳理，归纳视觉空间推理领域的6大核心趋势，这些趋势相互交织，共同塑造该领域的未来方向。" data-en="Based on systematic review of 100+ papers, we identify 6 core trends in visual spatial reasoning that are intertwined and collectively shaping the future direction of the field.">
+    基于100+篇论文的系统梳理，归纳视觉空间推理领域的6大核心趋势，这些趋势相互交织，共同塑造该领域的未来方向。
+  </p>
+  <div class="trend-grid">
+
+    <div class="trend-card">
+      <div class="tc-num">01</div>
+      <h3 data-zh="🔥 强化学习范式主导" data-en="🔥 RL Paradigm Dominates">🔥 强化学习范式主导</h3>
+      <p data-zh="2025年下半年起，R1风格强化学习成为视觉空间推理的主流训练范式，彻底改变了原有的监督微调路线。" data-en="Since H2 2025, R1-style reinforcement learning has become the dominant training paradigm for visual spatial reasoning, fundamentally changing the previous supervised fine-tuning approach.">
+        2025年下半年起，R1风格强化学习成为视觉空间推理的主流训练范式，彻底改变了原有的监督微调路线。
+      </p>
+      <ul>
+        <li data-zh="核心优势：无需人工标注推理链，自动涌现空间推理能力" data-en="Key advantage: no need for manually annotated reasoning chains; spatial reasoning capability emerges automatically">核心优势：无需人工标注推理链，自动涌现空间推理能力</li>
+        <li data-zh="代表工作：R1-Zero-VSI, SpaceR, MetaSpatial, SVQA-R1, VideoChat-R1, Embodied-R" data-en="Key works: R1-Zero-VSI, SpaceR, MetaSpatial, SVQA-R1, VideoChat-R1, Embodied-R">代表工作：R1-Zero-VSI, SpaceR, MetaSpatial, SVQA-R1, VideoChat-R1, Embodied-R</li>
+        <li data-zh="关键挑战：空间奖励函数设计、多步推理稳定性" data-en="Key challenges: spatial reward function design, multi-step reasoning stability">关键挑战：空间奖励函数设计、多步推理稳定性</li>
+      </ul>
+    </div>
+
+    <div class="trend-card">
+      <div class="tc-num">02</div>
+      <h3 data-zh="📐 几何感知深度融合" data-en="📐 Deep Geometry Perception Integration">📐 几何感知深度融合</h3>
+      <p data-zh="深度估计、3D重建等几何工具与VLM语言推理的深度融合，形成'感知+推理'双轨范式，是2026年最显著的新趋势。" data-en="Deep integration of geometric tools such as depth estimation and 3D reconstruction with VLM language reasoning, forming a 'perception + reasoning' dual-track paradigm. This is the most notable new trend in 2026.">
+        深度估计、3D重建等几何工具与VLM语言推理的深度融合，形成"感知+推理"双轨范式，是2026年最显著的新趋势。
+      </p>
+      <ul>
+        <li data-zh="主动几何工具调用（Thinking with Geometry, SpaceTools）" data-en="Active geometry tool invocation (Thinking with Geometry, SpaceTools)">主动几何工具调用（Thinking with Geometry, SpaceTools）</li>
+        <li data-zh="原生3D感知集成（N3D-VLM, HiSpatial, VLM-3R）" data-en="Native 3D perception integration (N3D-VLM, HiSpatial, VLM-3R)">原生3D感知集成（N3D-VLM, HiSpatial, VLM-3R）</li>
+        <li data-zh="3D场景流作为运动先验（LaMP 2026）" data-en="3D scene flow as motion prior (LaMP 2026)">3D场景流作为运动先验（LaMP 2026）</li>
+      </ul>
+    </div>
+
+    <div class="trend-card">
+      <div class="tc-num">03</div>
+      <h3 data-zh="🧠 内部机制可解释性研究兴起" data-en="🧠 Rise of Internal Mechanism Interpretability">🧠 内部机制可解释性研究兴起</h3>
+      <p data-zh="2026年出现多项研究开始探究VLM空间推理的内部机制，从'什么效果好'转向'为什么这样工作'。" data-en="Multiple studies emerged in 2026 exploring the internal mechanisms of VLM spatial reasoning, shifting from 'what works well' to 'why does it work this way'.">
+        2026年出现多项研究开始探究VLM空间推理的内部机制，从"什么效果好"转向"为什么这样工作"。
+      </p>
+      <ul>
+        <li data-zh="Attention in Space：注意力头功能角色分析" data-en="Attention in Space: attention head functional role analysis">Attention in Space：注意力头功能角色分析</li>
+        <li data-zh="Dual Mechanisms：VLM空间推理的双机制研究" data-en="Dual Mechanisms: dual-mechanism study of VLM spatial reasoning">Dual Mechanisms：VLM空间推理的双机制研究</li>
+        <li data-zh="意义：为模型干预、能力增强提供理论依据" data-en="Significance: provides theoretical basis for model intervention and capability enhancement">意义：为模型干预、能力增强提供理论依据</li>
+      </ul>
+    </div>
+
+    <div class="trend-card">
+      <div class="tc-num">04</div>
+      <h3 data-zh="📊 评测体系精细化" data-en="📊 Benchmark Ecosystem Refinement">📊 评测体系精细化</h3>
+      <p data-zh="空间推理基准从粗粒度关系分类演进为细粒度多维度量化评测，覆盖范围更广、难度更高、更接近真实应用场景。" data-en="Spatial reasoning benchmarks have evolved from coarse-grained relation classification to fine-grained multi-dimensional quantitative evaluation with broader coverage, higher difficulty, and closer alignment to real application scenarios.">
+        空间推理基准从粗粒度关系分类演进为细粒度多维度量化评测，覆盖范围更广、难度更高、更接近真实应用场景。
+      </p>
+      <ul>
+        <li data-zh="量化度量：精确距离/速度/尺寸（STI-Bench, VSI-Bench）" data-en="Quantitative metrics: precise distance/speed/size (STI-Bench, VSI-Bench)">量化度量：精确距离/速度/尺寸（STI-Bench, VSI-Bench）</li>
+        <li data-zh="逻辑推理：多步空间逻辑链（SpatiaLQA 2026）" data-en="Logical reasoning: multi-step spatial logic chains (SpatiaLQA 2026)">逻辑推理：多步空间逻辑链（SpatiaLQA 2026）</li>
+        <li data-zh="野外泛化：真实场景多样性（SpatiaLab 2026）" data-en="Wild generalization: real-scene diversity (SpatiaLab 2026)">野外泛化：真实场景多样性（SpatiaLab 2026）</li>
+      </ul>
+    </div>
+
+    <div class="trend-card">
+      <div class="tc-num">05</div>
+      <h3 data-zh="🤖 具身化落地加速" data-en="🤖 Accelerated Embodied Deployment">🤖 具身化落地加速</h3>
+      <p data-zh="空间推理能力快速向机器人操控、导航、具身问答等应用落地，感知-推理-执行的完整闭环已初步建立。" data-en="Spatial reasoning capabilities are rapidly deployed to applications including robot manipulation, navigation, and embodied QA. The complete closed loop of perception-reasoning-execution has been initially established.">
+        空间推理能力快速向机器人操控、导航、具身问答等应用落地，感知-推理-执行的完整闭环已初步建立。
+      </p>
+      <ul>
+        <li data-zh="机器人空间参照（RoboRefer, SG-VLA）" data-en="Robot spatial reference (RoboRefer, SG-VLA)">机器人空间参照（RoboRefer, SG-VLA）</li>
+        <li data-zh="具身问答基础（VeBrain, Embodied-R, Robot-R1）" data-en="Embodied QA foundation (VeBrain, Embodied-R, Robot-R1)">具身问答基础（VeBrain, Embodied-R, Robot-R1）</li>
+        <li data-zh="主动感知（EgoVLM, EgoDTM, ST-Think）" data-en="Active perception (EgoVLM, EgoDTM, ST-Think)">主动感知（EgoVLM, EgoDTM, ST-Think）</li>
+      </ul>
+    </div>
+
+    <div class="trend-card">
+      <div class="tc-num">06</div>
+      <h3 data-zh="🌐 多模态数据规模化" data-en="🌐 Multi-Modal Data Scaling">🌐 多模态数据规模化</h3>
+      <p data-zh="合成数据生成与多模态数据增强是提升空间推理能力的重要支撑，从结构化合成到视频+3D的大规模预训练均在快速发展。" data-en="Synthetic data generation and multi-modal data augmentation are important supports for improving spatial reasoning capabilities, with rapid development from structured synthesis to large-scale pre-training on video+3D.">
+        合成数据生成与多模态数据增强是提升空间推理能力的重要支撑，从结构化合成到视频+3D的大规模预训练均在快速发展。
+      </p>
+      <ul>
+        <li data-zh="合成空间数据（SpatialVLM, SpatialDreamer, SpaRE）" data-en="Synthetic spatial data (SpatialVLM, SpatialDreamer, SpaRE)">合成空间数据（SpatialVLM, SpatialDreamer, SpaRE）</li>
+        <li data-zh="视频几何先验预训练（VG-LLM, Spatial-MLLM）" data-en="Video geometry prior pre-training (VG-LLM, Spatial-MLLM)">视频几何先验预训练（VG-LLM, Spatial-MLLM）</li>
+        <li data-zh="渐进式课程学习（SpatialLadder, SpatialGeo）" data-en="Progressive curriculum learning (SpatialLadder, SpatialGeo)">渐进式课程学习（SpatialLadder, SpatialGeo）</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== HOT ===== -->
+<section id="hot">
+  <div class="section-header">
+    <div class="section-icon" style="background:#7c2d12">🔥</div>
+    <h2 data-zh="近期热点 TOP 12（2026-03-29 更新）" data-en="Recent Hot Papers TOP 12 (Updated 2026-03-29)">近期热点 TOP 12（2026-03-29 更新）</h2>
+  </div>
+  <div class="hot-list">
+    <div class="hot-item"><div class="num">1</div><div class="info"><h5>HiSpatial <span style="color:#f59e0b">CVPR26</span></h5><p data-zh="层次化3D空间理解，对象→区域→场景三级递进" data-en="Hierarchical 3D spatial understanding, object→region→scene three-level progression">层次化3D空间理解，对象→区域→场景三级递进</p><a href="https://arxiv.org/abs/2603.25411" target="_blank">↗ 2603.25411</a></div></div>
+    <div class="hot-item"><div class="num">2</div><div class="info"><h5>R1-Zero-VSI</h5><p data-zh="R1风格RL激活视觉空间推理，无需标注推理链" data-en="R1-style RL activating visual spatial reasoning without annotated reasoning chains">R1风格RL激活视觉空间推理，无需标注推理链</p><a href="https://arxiv.org/pdf/2504.00883" target="_blank">↗ 2504.00883</a></div></div>
+    <div class="hot-item"><div class="num">3</div><div class="info"><h5>SpaceR</h5><p data-zh="首个视频空间推理R1框架，VSI/STI/SPAR三榜SOTA" data-en="First R1 framework for video spatial reasoning, SOTA on VSI/STI/SPAR">首个视频空间推理R1框架，VSI/STI/SPAR三榜SOTA</p><a href="https://arxiv.org/abs/2504.01805" target="_blank">↗ 2504.01805</a></div></div>
+    <div class="hot-item"><div class="num">4</div><div class="info"><h5>Attention in Space 🆕</h5><p data-zh="首个VLM空间推理注意力头功能角色分析，可解释性新突破" data-en="First functional role analysis of VLM attention heads for spatial reasoning, new interpretability breakthrough">首个VLM空间推理注意力头功能角色分析，可解释性新突破</p><a href="https://arxiv.org/abs/2603.20662" target="_blank">↗ 2603.20662</a></div></div>
+    <div class="hot-item"><div class="num">5</div><div class="info"><h5>SpatiaLQA <span style="color:#f59e0b">CVPR26</span></h5><p data-zh="空间逻辑推理基准，传递性+多步推断" data-en="Spatial logical reasoning benchmark, transitivity + multi-step inference">空间逻辑推理基准，传递性+多步推断</p><a href="https://arxiv.org/abs/2602.20901" target="_blank">↗ 2602.20901</a></div></div>
+    <div class="hot-item"><div class="num">6</div><div class="info"><h5>3D-Layout-R1 🆕</h5><p data-zh="R1推理范式扩展到3D空间布局编辑" data-en="R1 reasoning paradigm extended to 3D spatial layout editing">R1推理范式扩展到3D空间布局编辑</p><a href="https://arxiv.org/abs/2603.22279" target="_blank">↗ 2603.22279</a></div></div>
+    <div class="hot-item"><div class="num">7</div><div class="info"><h5>Thinking with Geometry</h5><p data-zh="主动几何工具调用融合空间推理，感知+推理双轨范式" data-en="Active geometry tool invocation fused with spatial reasoning, perception+reasoning dual-track paradigm">主动几何工具调用融合空间推理，感知+推理双轨范式</p><a href="https://arxiv.org/abs/2602.06037" target="_blank">↗ 2602.06037</a></div></div>
+    <div class="hot-item"><div class="num">8</div><div class="info"><h5>Unleashing SR via Text 🆕</h5><p data-zh="文本表示引导3D空间推理，中间表示桥接感知与推理" data-en="Text representation guided 3D spatial reasoning, intermediate representation bridging perception and reasoning">文本表示引导3D空间推理，中间表示桥接感知与推理</p><a href="https://arxiv.org/abs/2603.23404" target="_blank">↗ 2603.23404</a></div></div>
+    <div class="hot-item"><div class="num">9</div><div class="info"><h5>SpatialDreamer</h5><p data-zh="主动心理意象作为推理脚手架，受人类认知启发" data-en="Active mental imagery as reasoning scaffold, inspired by human cognition">主动心理意象作为推理脚手架，受人类认知启发</p><a href="https://arxiv.org/pdf/2512.07733" target="_blank">↗ 2512.07733</a></div></div>
+    <div class="hot-item"><div class="num">10</div><div class="info"><h5>N3D-VLM</h5><p data-zh="原生3D定位集成VLM，端到端精确空间推理" data-en="Native 3D grounding integrated VLM, end-to-end precise spatial reasoning">原生3D定位集成VLM，端到端精确空间推理</p><a href="https://arxiv.org/abs/2512.16561" target="_blank">↗ 2512.16561</a></div></div>
+    <div class="hot-item"><div class="num">11</div><div class="info"><h5>LanteRn 🆕</h5><p data-zh="潜在视觉结构化推理，新型推理链架构" data-en="Latent visual structured reasoning, novel reasoning chain architecture">潜在视觉结构化推理，新型推理链架构</p><a href="https://arxiv.org/abs/2603.25629" target="_blank">↗ 2603.25629</a></div></div>
+    <div class="hot-item"><div class="num">12</div><div class="info"><h5>SpatiaLab <span style="color:#f59e0b">ICLR26</span></h5><p data-zh="野外真实场景空间推理基准，多领域泛化评测" data-en="In-the-wild real-scene spatial reasoning benchmark, multi-domain generalization evaluation">野外真实场景空间推理基准，多领域泛化评测</p><a href="https://arxiv.org/abs/2602.03916" target="_blank">↗ 2602.03916</a></div></div>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<footer>
+  <span data-zh="数据来源：ArXiv · CVPR · NeurIPS · ICLR · ACM MM" data-en="Sources: ArXiv · CVPR · NeurIPS · ICLR · ACM MM">数据来源：ArXiv · CVPR · NeurIPS · ICLR · ACM MM</span> &nbsp;|&nbsp;
+  <span data-zh="整理日期：2026-03-29" data-en="Updated: 2026-03-29">整理日期：2026-03-29</span> &nbsp;|&nbsp;
+  <span data-zh="收录论文 110+ 篇" data-en="110+ Papers">收录论文 110+ 篇</span> &nbsp;|&nbsp;
+  <a href="https://github.com/SIBench/Awesome-Visual-Spatial-Reasoning" style="color:#6366f1">GitHub Repo</a> &nbsp;|&nbsp;
+  <a href="https://arxiv.org/abs/2509.18905" style="color:#6366f1">SIBench Paper</a>
+</footer>
+
+<button id="lang-btn" onclick="toggleLang()">EN</button>
+<script>
+(function() {
+  let currentLang = 'zh';
+  window.toggleLang = function() {
+    currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    const btn = document.getElementById('lang-btn');
+    btn.textContent = currentLang === 'zh' ? 'EN' : '中';
+    document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+    document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+      const val = el.getAttribute('data-' + currentLang);
+      if (val !== null) el.textContent = val;
+    });
+    document.title = currentLang === 'zh'
+      ? 'Visual Spatial Reasoning Survey | 视觉空间推理综述 (2020–2026)'
+      : 'Visual Spatial Reasoning Survey (2020–2026)';
+  };
+  // active nav on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+    });
+  });
+})();
+</script>
+</body>
+</html>
