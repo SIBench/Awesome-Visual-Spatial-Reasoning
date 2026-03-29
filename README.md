@@ -157,6 +157,69 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
 </thead>
 <tbody>
     <tr>
+    <td><a href="https://arxiv.org/abs/2603.25411">HiSpatial: Taming Hierarchical 3D Spatial Understanding in Vision-Language Models</a></td>
+    <td>CVPR 2026</td>
+    <td>26-03</td>
+    <td>--</td>
+    <td>--</td>
+    <td>SQA3D, ScanQA</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2603.25629">LanteRn: Latent Visual Structured Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>26-03</td>
+    <td>--</td>
+    <td>--</td>
+    <td>--</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2603.23404">Unleashing Spatial Reasoning in Multimodal Large Language Models via Textual Representation Guided Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>26-03</td>
+    <td>--</td>
+    <td>--</td>
+    <td>VSI-Bench, ScanQA</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2603.22279">3D-Layout-R1: Structured Reasoning for Language-Instructed Spatial Editing</a></td>
+    <td>ARXIV</td>
+    <td>26-03</td>
+    <td>--</td>
+    <td>--</td>
+    <td>--</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2603.20662">Attention in Space: Functional Roles of VLM Heads for Spatial Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>26-03</td>
+    <td>--</td>
+    <td>--</td>
+    <td>SpatialBench</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2602.06037">Thinking with Geometry: Active Geometry Integration for Spatial Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>26-02</td>
+    <td>--</td>
+    <td>--</td>
+    <td>VSI-Bench, CVBench</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/search/?searchtype=all&query=SpatialBoost">SpatialBoost: Enhancing Visual Representation through Language-Guided Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>26-03</td>
+    <td>--</td>
+    <td>--</td>
+    <td>ScanQA, CVBench</td>
+    <td>--</td>
+  </tr>
+    <tr>
     <td><a href="https://arxiv.org/abs/2603.00409">SSR: Pushing the Limit of Spatial Intelligence with Structured Scene Reasoning</a></td>
     <td>ARXIV</td>
     <td>26-03</td>
