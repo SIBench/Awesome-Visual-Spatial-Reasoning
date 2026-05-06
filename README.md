@@ -51,6 +51,7 @@
 
 # News and Updates
 
+- [x] 🆕🔥✨26.5.6 - Added 4 new papers (2026.03~2026.04) including SpatiO, World2VLM, ReVSI, and Holi-Spatial.
 - [x] 🆕🔥✨26.3.29 - Added 7 new papers (2026.03.22~2026.03.29) and launched **[📖 Interactive Bilingual Survey Page](https://sibench.github.io/Awesome-Visual-Spatial-Reasoning/survey.html)** covering 110+ papers with ZH/EN toggle, timeline, trend analysis, and benchmark summary.
 - [x] 🆕🔥✨26.3.23 - Added 9 new papers (2025.10 ~ 2026.03) covering benchmarks, training methods, and spatial reasoning frameworks.
 - [x] 📜📜📜25.9.23 - Preprint a survey article on visual spatial reasoning tasks.
@@ -157,6 +158,15 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
 </tr>
 </thead>
 <tbody>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2604.21190">SpatiO: Adaptive Test-Time Orchestration of Vision-Language Agents for Spatial Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>26-04</td>
+    <td>--</td>
+    <td>--</td>
+    <td>3DSRBench, CV-Bench, Omni3D-Bench</td>
+    <td>--</td>
+  </tr>
     <tr>
     <td><a href="https://arxiv.org/abs/2603.25411">HiSpatial: Taming Hierarchical 3D Spatial Understanding in Vision-Language Models</a></td>
     <td>CVPR 2026</td>
@@ -993,6 +1003,33 @@ VLMs for the Metaverse</a></td>
 </tr>
 </thead>
 <tbody>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2604.26934">World2VLM: Distilling World Model Imagination into VLMs for Dynamic Spatial Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>26-04</td>
+    <td><a href="https://github.com/Gaoyuan-Li/World2VLM">link</a></td>
+    <td>--</td>
+    <td>SAT-Real, VSI-Bench, MindCube</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2604.24300">ReVSI: Rebuilding Visual Spatial Intelligence Evaluation for Accurate Assessment of VLM 3D Reasoning</a></td>
+    <td>ARXIV</td>
+    <td>26-04</td>
+    <td>--</td>
+    <td>--</td>
+    <td>ReVSI</td>
+    <td>--</td>
+  </tr>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2603.07660">Holi-Spatial: Evolving Video Streams into Holistic 3D Spatial Intelligence</a></td>
+    <td>ICML 2026</td>
+    <td>26-03</td>
+    <td><a href="https://github.com/Visionary-Laboratory/holi-spatial">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/Visionary-Laboratory/holi-spatial.svg?style=social&label=Star" alt="Star count" /></td>
+    <td>Holi-Spatial-4M</td>
+    <td>--</td>
+  </tr>
     <tr>
     <td><a href="https://arxiv.org/abs/2601.05172">CoV: Chain-of-View Prompting for Spatial Reasoning</a></td>
     <td>ARXIV</td>
