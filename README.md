@@ -213,6 +213,15 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
     <td>--</td>
   </tr>
     <tr>
+    <td><a href="https://arxiv.org/abs/2603.18892">MultihopSpatial: Multi-hop Compositional Spatial Reasoning Benchmark for Vision-Language Model</a></td>
+    <td>ECCV 2026</td>
+    <td>26-03</td>
+    <td><a href="https://github.com/youngwanLEE/multihopspatial">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/youngwanLEE/multihopspatial.svg?style=social&label=Star" alt="Star count"/></td>
+    <td>MultihopSpatial</td>
+    <td><img src="https://raw.githubusercontent.com/youngwanLEE/multihopspatial/main/static/figures/hop_statistic.png" alt="img" /></td>
+  </tr>
+    <tr>
     <td><a href="https://arxiv.org/abs/2602.06037">Thinking with Geometry: Active Geometry Integration for Spatial Reasoning</a></td>
     <td>ARXIV</td>
     <td>26-02</td>
