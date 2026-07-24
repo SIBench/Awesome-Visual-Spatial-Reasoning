@@ -159,6 +159,15 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
 </thead>
 <tbody>
     <tr>
+    <td><a href="https://arxiv.org/abs/2607.21072">Show, Don't Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text</a></td>
+    <td>ARXIV</td>
+    <td>26-07</td>
+    <td><a href="https://github.com/ZJU-OmniAI/ProVisE">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/ZJU-OmniAI/ProVisE.svg?style=social&label=Star" alt="Star count"/></td>
+    <td>SpatialGen-Bench</td>
+    <td><img src="https://raw.githubusercontent.com/ZJU-OmniAI/ProVisE/main/assets/protocolized-visual-evaluation.png" alt="img" /></td>
+  </tr>
+    <tr>
     <td><a href="https://arxiv.org/abs/2604.21190">SpatiO: Adaptive Test-Time Orchestration of Vision-Language Agents for Spatial Reasoning</a></td>
     <td>ARXIV</td>
     <td>26-04</td>
