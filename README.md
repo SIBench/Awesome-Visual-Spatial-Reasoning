@@ -1022,6 +1022,15 @@ VLMs for the Metaverse</a></td>
 </thead>
 <tbody>
     <tr>
+    <td><a href="https://arxiv.org/abs/2609.23038">Spatial-Interactor: Learning Spatial Reasoning through Interaction with the Observable Physical World</a></td>
+    <td>ARXIV</td>
+    <td>26-09</td>
+    <td><a href="https://github.com/ZJU-OmniAI/Spatial-Interactor">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/ZJU-OmniAI/Spatial-Interactor.svg?style=social&label=Star" alt="Star count" /></td>
+    <td>VSI-Bench, VSTI, MindCube, SPBench-MV</td>
+    <td>--</td>
+  </tr>
+    <tr>
     <td><a href="https://arxiv.org/abs/2604.26934">World2VLM: Distilling World Model Imagination into VLMs for Dynamic Spatial Reasoning</a></td>
     <td>ARXIV</td>
     <td>26-04</td>
