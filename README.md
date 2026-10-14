@@ -159,6 +159,15 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
 </thead>
 <tbody>
     <tr>
+    <td><a href="https://arxiv.org/abs/2608.21170">Is Visual Prompting All You Need? Studying VLM Spatial Reasoning under Progressive Visual Scaffolds</a></td>
+    <td>EMNLP 2026 FINDINGS</td>
+    <td>26-08</td>
+    <td>--</td>
+    <td>--</td>
+    <td>SPaRC</td>
+    <td>--</td>
+  </tr>
+    <tr>
     <td><a href="https://arxiv.org/abs/2607.21072">Show, Don't Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text</a></td>
     <td>ARXIV</td>
     <td>26-07</td>
@@ -1500,6 +1509,15 @@ Reconstruction and Spatial Reasoning</a></td>
 </tr>
 </thead>
 <tbody>
+    <tr>
+    <td><a href="https://arxiv.org/abs/2604.09338">Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym</a></td>
+    <td>ARXIV</td>
+    <td>26-04</td>
+    <td><a href="https://github.com/lkaesberg/Spatial-Gym">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/lkaesberg/Spatial-Gym.svg?style=social&label=Star" alt="Star count"/></td>
+    <td>Spatial-Gym</td>
+    <td>--</td>
+  </tr>
     <tr>
     <td><a href="https://arxiv.org/abs/2510.08531">SpatialLadder: Progressive Training for Spatial Reasoning in Vision-Language Models</a></td>
     <td>ARXIV</td>
