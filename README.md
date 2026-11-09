@@ -158,6 +158,15 @@ To facilitate the community's quick understanding of visual-spatial reasoning, w
 </tr>
 </thead>
 <tbody>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2610.22276">MJev-Spatial: System One Spatial Intelligence via Native Attention Matching</a></td>
+    <td>ARXIV</td>
+    <td>26-10</td>
+    <td><a href="https://github.com/Fr0zenCrane/MJev-Spatial">link</a></td>
+    <td><img src="https://img.shields.io/github/stars/Fr0zenCrane/MJev-Spatial.svg?style=social&amp;label=Star" alt="Star count"/></td>
+    <td>CV-Bench, Ref-Spatial, Where2Place, Point-Bench</td>
+    <td><img src="https://raw.githubusercontent.com/Fr0zenCrane/MJev-Spatial/main/assets/figure-1-teaser.png" alt="MJev-Spatial overview" /></td>
+  </tr>
     <tr>
     <td><a href="https://arxiv.org/abs/2608.21170">Is Visual Prompting All You Need? Studying VLM Spatial Reasoning under Progressive Visual Scaffolds</a></td>
     <td>EMNLP 2026 FINDINGS</td>
